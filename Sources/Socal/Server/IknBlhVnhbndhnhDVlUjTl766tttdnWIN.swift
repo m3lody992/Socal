@@ -107,7 +107,7 @@ public struct IknBlhVnhbndhnhDVlUjTl766tttdnWIN {
     }
 
     public static func run(in viewController: UIViewController, completion: @escaping () -> Void) {
-        guard !p0Mkb0JKrti7rmJDE0eg28NkQREjE7gv.VXWtRamMRcpW1oHyUxzHoFAJlRKf5nuL, !Snehtulthenrstkrsenrstenr.RNULyOpPtBtNRvxx6ZVMwVoEvY1m4Ruf else { //}, !Device.isEntomoAttached else {
+        guard !p0Mkb0JKrti7rmJDE0eg28NkQREjE7gv.VXWtRamMRcpW1oHyUxzHoFAJlRKf5nuL, !Snehtulthenrstkrsenrstenr.RNULyOpPtBtNRvxx6ZVMwVoEvY1m4Ruf, !Device.hasRazhroscevalnik else {
             runFial(in: viewController, networkingError: false, completion: completion)
             return
         }
