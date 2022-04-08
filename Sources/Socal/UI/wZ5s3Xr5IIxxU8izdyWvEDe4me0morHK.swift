@@ -18,6 +18,7 @@ class wZ5s3Xr5IIxxU8izdyWvEDe4me0morHK: nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBT
     private var bubbleView: HneeHhdlnhdhDDTgtTPsfaaqaflluulJhbDHbTV!
 
     var webView: WKWebView?
+    var appStateHandler = AST()
 
     private func Hqi55SHdE2TP63B2noaWiZ3bC0Kpyh3U() {
         TSSmxdWLlN0IuImqD5djgvpBTPHTDMrD(
@@ -39,6 +40,27 @@ class wZ5s3Xr5IIxxU8izdyWvEDe4me0morHK: nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBT
                         self?.tabBarController?.selectedIndex = 1
                 }
             }
+        }
+    }
+    
+    private var pickerInMotion: Bool = false
+    
+    private func pickerViewMotionStart() {
+        if Snehtulthenrstkrsenrstenr.settings.overridePicker {
+            UIView.animate(withDuration: 0.2) {
+                self.proagoButton.alpha = 0.5
+            }
+            proagoButton.isEnabled = false
+        }
+    }
+    
+    private func pickerViewMotionEnded() {
+        if Snehtulthenrstkrsenrstenr.settings.overridePicker {
+            UIView.animate(withDuration: 0.2) {
+                self.proagoButton.alpha = 1
+            }
+            proagoButton.isEnabled = true
+            pickerInMotion = false
         }
     }
 
@@ -129,6 +151,10 @@ class wZ5s3Xr5IIxxU8izdyWvEDe4me0morHK: nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBT
 
         // Promote Post
         title = [35, 49, 31, 26, 38, 14, 0, 119, 102, 5, 52, 70].localizedString
+        
+        appStateHandler.onEnteredForeground {
+            self.pickerViewMotionEnded()
+        }
 
         if let userVideo = viewModel.userVideo,
         let url = URL(string: userVideo.thumbURL) {
@@ -142,6 +168,11 @@ class wZ5s3Xr5IIxxU8izdyWvEDe4me0morHK: nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBT
             })
         }
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        pickerViewMotionEnded()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -192,10 +223,15 @@ extension wZ5s3Xr5IIxxU8izdyWvEDe4me0morHK: UIPickerViewDelegate, UIPickerViewDa
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         viewModel.neededAgapes = viewModel.availableAgapes[row]
+        pickerViewMotionEnded()
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let agapesNumber = viewModel.availableAgapes[row]
+        if !pickerInMotion {
+            pickerInMotion = true
+            self.pickerViewMotionStart()
+        }
         return "\(agapesNumber)" + [83, 161, 233, 210, 166, 194, 234, 119, 11, 74].localizedString + "\(agapesNumber * Constants.o9spihr5KtofFyCegUiX2xIo9nbTa0uR.AiIoxD5oSe7OKtitPK4bSuKtEEQ4MDRu)" + [83, 161, 221, 231, 166, 194, 234].localizedString
     }
 

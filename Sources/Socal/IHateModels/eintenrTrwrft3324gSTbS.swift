@@ -178,6 +178,7 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var rateInfoInapp: qY144uEcX8zeWak6nEWohqiHPZJNcTuV = .init(title: "", text: "")
     var showRateInfoAppstrAlert: Bool = true
     var rateInfoAppstr: qY144uEcX8zeWak6nEWohqiHPZJNcTuV = .init(title: "", text: "")
+    var overridePicker: Bool = false
 }
 
 
