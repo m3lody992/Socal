@@ -124,6 +124,7 @@ struct WrappedKC: KCInterface {
 
 public protocol PrivacySettings {
     func privacySettingsCalculate(privacySettings: Gdc4PizrTGlf0QoU9mXDtfjBmZKz4bP9) -> Bool
+    func privacyGeoSettingsCalculate(privacySettings: GeoSettings) -> Bool
     func ZzzzSettingsCalculate(a: String, b: Int) -> [UInt8]?
     func lIVoXP9I7p92NfyyJgVBC7tQZSXYBhea(_ seira: oeB6MAVyZn0uE5rOgq6oTx4zRweenss6) -> Bool
     func makeSsseigg(seiraData: AddSeiraData, na: Int) -> y8I9eiX6Jwl77A5Q9svrvXHhxyQQz1Rj?

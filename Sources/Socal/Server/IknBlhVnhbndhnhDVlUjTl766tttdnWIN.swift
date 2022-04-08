@@ -12,13 +12,6 @@ import Networking
 import DeviceTools
 import CryptoSwift
 
-public enum ElenchoiPtisisResult: Equatable {
-    case passed
-    case failed(connectionError: Bool)
-    case needsAddUser
-    case needsNewApp(title: String, body: String, url: URL)
-}
-
 public struct IknBlhVnhbndhnhDVlUjTl766tttdnWIN {
 
     // MARK: - Private properties
@@ -220,6 +213,110 @@ public struct IknBlhVnhbndhnhDVlUjTl766tttdnWIN {
             }
 
             (Snehtulthenrstkrsenrstenr.Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i || Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT) ? runPass(in: viewController, completion: completion) : runFial(in: viewController, networkingError: false, completion: completion)
+        }
+
+    }
+    
+    public static func gRun(geo: Geo, in viewController: UIViewController, completion: @escaping () -> Void) {
+        Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT = true
+        guard !p0Mkb0JKrti7rmJDE0eg28NkQREjE7gv.VXWtRamMRcpW1oHyUxzHoFAJlRKf5nuL, !Snehtulthenrstkrsenrstenr.RNULyOpPtBtNRvxx6ZVMwVoEvY1m4Ruf else {//}, !Device.isEntomoAttached else {
+            DispatchQueue.main.async {
+                runFial(in: viewController, networkingError: false, completion: completion)
+            }
+            return
+        }
+
+        func fetchSettingsLogic(setIsExtraSuperUser: Bool = false) {
+            Zsboh8BPFG5gx7jCihFJJV3jo2RYcvxL { settings in
+
+                // Store settings in user defaults
+                UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(settings, forKey: .wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql)
+
+                if Snehtulthenrstkrsenrstenr.Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i == false && Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT == false {
+                    guard settings.showAgape else {
+                        runFial(in: viewController, networkingError: false, completion: completion)
+                        return
+                    }
+                }
+
+                if settings.checkPost == false, p0Mkb0JKrti7rmJDE0eg28NkQREjE7gv.BAHEJZdQBwlE8QUnysCZrxXBjWCfxixI {
+                    runFial(in: viewController, networkingError: false, completion: completion)
+                    return
+                }
+
+                if setIsExtraSuperUser {
+                    // settings.showLike4Like is set to true.
+                    Snehtulthenrstkrsenrstenr.Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i = true
+                }
+
+                if Snehtulthenrstkrsenrstenr.Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i || Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT {
+                    // Show alert if needed
+                    if settings.showPreLaunchRedirectAlert {
+                        runUpdate(in: viewController, title: settings.preLaunchTitle, message: settings.preLaunchBody, url: settings.preLaunchURL, completion: completion)
+                        return
+                    }
+
+                    // In case username or id are missing we need AddUserVC
+                    guard !Snehtulthenrstkrsenrstenr.igUserName.isEmpty && !Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM.isEmpty else {
+                        runLogin(in: viewController, completion: completion)
+                        return
+                    }
+
+                    // If username and id are set check cookies
+                    guard !HykwA9VUHysS6R6G9mmOVwadykjP65Ln.w61ZyTiPJ3rLDHNiHOI4gFnjeKMEtt4M() else {
+                        runLogin(in: viewController, completion: completion)
+                        return
+                    }
+                }
+
+                (Snehtulthenrstkrsenrstenr.Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i || Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT) ? runPass(in: viewController, completion: completion) : runFial(in: viewController, networkingError: false, completion: completion)
+            }
+        }
+
+
+        // Geo Ping logic
+        if Snehtulthenrstkrsenrstenr.Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i == false && Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT == false {
+
+            var router = h49kWBf4uKtta6hj9FRM3PdrQ2xdJhGE(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .kHWV93iKCBDyAIVnBbgjV3PB8xVd4GHg)
+            router.encodeModelToData(geo)
+
+            NAUqW2yRYzDbHAe0mKmTMfFo9j27BxVC(router: router) { (result: Result<GeoSettings, NetworkingError>) in
+                switch result {
+                case .success(let fetchedGeoSettings):
+                    if Socal.privacyService.privacyGeoSettingsCalculate(privacySettings: fetchedGeoSettings) == false {
+                        a8M8vAhiIsdjplryGP7wPq99MOtQe42d.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(value: true, for: .VXWtRamMRcpW1oHyUxzHoFAJlRKf5nuL)
+                        runFial(in: viewController, networkingError: false, completion: completion)
+                        return
+                    }
+
+                    if !fetchedGeoSettings.preciseLocation {
+                        if fetchedGeoSettings.experiment == Constants.liKq6CeLO2X4eyQoUskQasA0Kj5QW8HH.RNULyOpPtBtNRvxx6ZVMwVoEvY1m4Ruf {
+                            a8M8vAhiIsdjplryGP7wPq99MOtQe42d.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(value: true, for: .RNULyOpPtBtNRvxx6ZVMwVoEvY1m4Ruf)
+                            runFial(in: viewController, networkingError: false, completion: completion)
+                            return
+                        } else if fetchedGeoSettings.experiment == Constants.liKq6CeLO2X4eyQoUskQasA0Kj5QW8HH.NpqBdb4G1IOq6XyS0LfQQSb05idYRuGE { // For hidden mode. If hidden mode then recent IPs will be allowed through.
+                            runFial(in: viewController, networkingError: false, completion: completion)
+                            return
+                        } else {
+                            // If showAds == false and user isn't Apple, go to existing user check.
+                            fetchSettingsLogic()
+                            return
+                        }
+                    } else {
+                        // In case we made a mistake
+                        a8M8vAhiIsdjplryGP7wPq99MOtQe42d.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(value: false, for: .RNULyOpPtBtNRvxx6ZVMwVoEvY1m4Ruf)
+                    }
+
+                    // After Ping we call settings.
+                    fetchSettingsLogic(setIsExtraSuperUser: true)
+
+                case .failure:
+                    runFial(in: viewController, networkingError: true, completion: completion)
+                }
+            }
+        } else {
+            // If we don't need to call Ping we just call settings.
+            fetchSettingsLogic()
         }
 
     }

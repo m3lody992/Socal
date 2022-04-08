@@ -225,12 +225,12 @@ public struct Geo: Codable {
 }
 
 public struct GeoSettings: Codable {
-    var preciseLocation: Bool
-    var country: String?
-    var division: String?
-    var experiment: String
-    var ts: Int
-    var requestId: String
+    public var preciseLocation: Bool
+    public var country: String?
+    public var division: String?
+    public var experiment: String
+    public var ts: Int
+    public var requestId: String
 
     enum CodingKeys: String, CodingKey {
         case preciseLocation = "precise_location"
