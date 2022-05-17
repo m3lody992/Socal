@@ -310,14 +310,17 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                     source == .inApp ? self.onError?([48, 34, 30, 80, 61, 90, 9, 62, 93, 15, 103, 81, 17, 7, 43, 20, 52, 47, 75, 51, 35, 51, 16, 113].localizedString, true) : self.onFailedIGAppAgape?() // "Can't like current post!"
                 }
             } else if let message = apiError.message, message.contains(Snehtulthenrstkrsenrstenr.settings.tryAgainText), let tryAgainBlock = tryAgainBlock {
+                // We don't need to add feedback count here because the try again block will call this method again if failed and it will get handled then.
                 tryAgainBlock()
             } else {
+                Snehtulthenrstkrsenrstenr.FhlFRNvTXArz03XGs8dC5ROY7zLInnnb += 1
                 presentErrorIfNotTryAgain()
             }
             // Report the message every time
             self.FGwhIlQzGektIZe2WXHKJXoEMm5gou5C(forQueueItem: item, reason: .IMGZh5eFBRK1ypnweoDfIQ6Ci4sgyLbZ(apiError.message))
         } else {
             // Fallback if status isn't ok or fail
+            Snehtulthenrstkrsenrstenr.FhlFRNvTXArz03XGs8dC5ROY7zLInnnb += 1
             presentErrorIfNotTryAgain()
             self.FGwhIlQzGektIZe2WXHKJXoEMm5gou5C(forQueueItem: item, reason: .pw4US666q3l0sL1jMbWBYUABnZ5D95bX(apiError.status))
         }
