@@ -157,7 +157,7 @@ class plvfanJy57korPhTnR5rbJs1bKhDUFto: UITableViewCell {
             self?.action?()
         }
         button.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(button)
+        contentView.addSubview(button)
         
         NSLayoutConstraint.activate([
             button.topAnchor.constraint(equalTo: topAnchor, constant: 16),
