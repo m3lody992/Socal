@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
         "state": {
           "branch": null,
-          "revision": "12f2389aca4a07e0dd54c86ec23d0721ed88b8db",
-          "version": "1.4.3"
+          "revision": "19b3c3ceed117c5cc883517c4e658548315ba70b",
+          "version": "1.6.0"
         }
       },
       {
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/m3lody992/DeviceTools",
         "state": {
           "branch": "main",
-          "revision": "ae7e1ed5fad529eccecce44457c5033c2471eb4d",
+          "revision": "9d4bb9099d6409d3e1bc6a4c50c67b5017f6cec5",
           "version": null
         }
       },
@@ -24,7 +24,7 @@
         "repositoryURL": "https://github.com/m3lody992/InfoServices",
         "state": {
           "branch": "main",
-          "revision": "51e91456ffc0d76fbfa6f21f89f573a23c07f740",
+          "revision": "fb797997b37b637f0d7ab1af4b8b0fabb6c5e9f1",
           "version": null
         }
       },
@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
         "state": {
           "branch": null,
-          "revision": "32e4acdf6971f58f5ad552389cf2d7d016334eaf",
-          "version": "7.2.0"
+          "revision": "af4be924ad984cf4d16f4ae4df424e79a443d435",
+          "version": "7.6.2"
         }
       },
       {
@@ -75,10 +75,10 @@
       },
       {
         "package": "UITools",
-        "repositoryURL": "https://github.com/m3lody992/uitools",
+        "repositoryURL": "https://github.com/m3lody992/UITools",
         "state": {
           "branch": "main",
-          "revision": "3f7f301627c7a3c2a92a3721f6b5a3349bee9d6f",
+          "revision": "5514cbef63c1680c6539eb9755a87dd3f00cd656",
           "version": null
         }
       }
