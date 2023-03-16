@@ -22,7 +22,7 @@ struct re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh {
         case .failure(let error):
             if case .errorObject(let apiError, _, _) = error {
                 if apiError.status == [21, 34, 25, 27].localizedString { // "fail"
-                    if let message = apiError.message, message in Snehtulthenrstkrsenrstenr.settings.logoutResponses {
+                    if let message = apiError.message, Snehtulthenrstkrsenrstenr.settings.logoutResponses.contains(message) {
                         CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu(message: message)
                     } else if Snehtulthenrstkrsenrstenr.settings.presentNotificationOnUnknownError {
                         PresentScheduledNotificationService.addNotificationAndPresent(
