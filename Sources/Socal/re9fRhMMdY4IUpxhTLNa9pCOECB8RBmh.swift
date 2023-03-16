@@ -23,8 +23,24 @@ struct re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh {
             if case .errorObject(let apiError, _, _) = error {
                 if apiError.status == [21, 34, 25, 27].localizedString { // "fail"
                     if apiError.message in Snehtulthenrstkrsenrstenr.settings.logoutResponses {
-                        CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
+                        CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu(message: apiError.message)
+                    } else if Snehtulthenrstkrsenrstenr.settings.presentNotificationOnUnknownError {
+                        PresentScheduledNotificationService.addNotificationAndPresent(
+                            .init(
+                                title: [38, 45, 27, 25, 38, 13, 11, 119, 115, 24, 53, 93, 22].localizedString,
+                                message: apiError.message,
+                                imageURL: nil,
+                                buttons: [.okDismiss],
+                                completion: onOk))
                     }
+                } else if Snehtulthenrstkrsenrstenr.settings.presentNotificationOnUnknownError {
+                    PresentScheduledNotificationService.addNotificationAndPresent(
+                        .init(
+                            title: apiError.status,
+                            message: apiError.message,
+                            imageURL: nil,
+                            buttons: [.okDismiss],
+                            completion: onOk))
                 }
                 vULrR9Tr4opBhOHXAJmkZvsdcrbyds13.dOPsc0f0MLLWhYcXA0M5iNsg0Hwem8vA(info: .caGjHIwgpSBNRgNwDIgd4XRxEquVmt2z(location: location, reason: [22, 49, 2, 24, 59, 37].localizedString + "\(apiError.status)_\(apiError.message ?? [6, 45, 27, 25, 38, 13, 11].localizedString)")) // "unknown"
                 completion?(.failure(apiError))

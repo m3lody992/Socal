@@ -54,11 +54,16 @@ struct CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP {
         UIApplication.getTopViewController() as? nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBTluhdvd
     }
 
-    static func Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu() {
+    static func Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu(message: String? = nil) {
         vULrR9Tr4opBhOHXAJmkZvsdcrbyds13.o3CAZydKeqMUJVmxCOZEAJCfuWvJE1DT()
         // "Login Error", "We are having trouble detecting your login. Please try loging in again."
         DispatchQueue.main.async {
-            P9OCaExEPOLED2cowxoK6G6wpRgyyfi5?.TSSmxdWLlN0IuImqD5djgvpBTPHTDMrD(withTitle: [58, 45, 3, 3, 40, 29, 23, 54, 91, 74, 52, 87, 23, 6, 48, 30, 52, 123, 14, 59, 60, 41, 22, 53, 87].localizedString, andMessage: [42, 44, 5, 5, 105, 9, 0, 36, 69, 3, 40, 92, 68, 29, 56, 2, 122, 62, 19, 51, 37, 50, 1, 52, 29, 120, 126, 62, 32, 66, 33, 22, 99, 28, 24, 46, 90, 12, 57, 22, 11, 32, 83, 13, 27, 119].localizedString, buttons: [.ok]) { // "Instagram session expired", "Your session has expired. Please log in again."
+            
+            var messageString = [42, 44, 5, 5, 105, 9, 0, 36, 69, 3, 40, 92, 68, 29, 56, 2, 122, 62, 19, 51, 37, 50, 1, 52, 29, 120, 126, 62, 32, 66, 33, 22, 99, 28, 24, 46, 90, 12, 57, 22, 11, 32, 83, 13, 27, 119].localizedString // "Your session has expired. Please log in again."
+            if let message = message {
+                messageString = String(format: [42, 44, 5, 5, 105, 9, 0, 36, 69, 3, 40, 92, 68, 29, 56, 2, 122, 62, 19, 51, 37, 50, 1, 52, 29, 120, 126, 62, 32, 66, 33, 22, 99, 28, 24, 46, 90, 12, 57, 22, 11, 32, 83, 13, 27, 119, 123, 8, 62, 10, 48, 35, 46, 94, 112, 22, 24].localizedString, message) // "Your session has expired. Please log in again.\nReason: %@"
+            }
+            P9OCaExEPOLED2cowxoK6G6wpRgyyfi5?.TSSmxdWLlN0IuImqD5djgvpBTPHTDMrD(withTitle: [58, 45, 3, 3, 40, 29, 23, 54, 91, 74, 52, 87, 23, 6, 48, 30, 52, 123, 14, 59, 60, 41, 22, 53, 87].localizedString, andMessage: messageString, buttons: [.ok]) { // "Instagram session expired"
                 NoxTT2OqMEib1GdxDZe5Lk3wJ00NEjCh()
                 let loginVC = SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL()
                 loginVC.state = .YwkxTMkowEtPVTTkPJ1kICieW1yze4ma
