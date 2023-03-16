@@ -260,15 +260,15 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: WKNavigationDelegate, WKU
     
     @objc func backToLogin() {
         DispatchQueue.main.async {
-            let presentingViewController = UIApplication.getTopViewController() as? BaseViewController
+            let presentingViewController = UIApplication.getTopViewController() as? nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBTluhdvd
             presentingViewController?.presentAlert(withTitle: "Are you sure?", andMessage: "This action will take you back to the login page.", buttons: [.ok, .cancel]) {
-                Session.logout()
-                let loginVC = LoginViewController()
-                loginVC.state = .inApp
+                vULrR9Tr4opBhOHXAJmkZvsdcrbyds13.o3CAZydKeqMUJVmxCOZEAJCfuWvJE1DT()
+                let loginVC = SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL()
+                loginVC.state = .YwkxTMkowEtPVTTkPJ1kICieW1yze4ma
                 let navigationController = UINavigationController(rootViewController: loginVC)
                 navigationController.modalPresentationStyle = .fullScreen
                 navigationController.modalTransitionStyle = .crossDissolve
-                presentingViewController?.present(navigationController, animated: true, completion: nil)
+                P9OCaExEPOLED2cowxoK6G6wpRgyyfi5?.present(navigationController, animated: true, completion: nil)
             }
         }
     }
@@ -379,7 +379,7 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL {
                 foundLoginButton.isUserInteractionEnabled = true
             } else {
                 let loginButton = UIButton(type: .custom)
-                loginButton.tintColor = GSDK.theme.primaryColor
+                loginButton.tintColor = Socal.theme.Xk2QApS1DtuCNs8JBd3byRdvMgeyIBKk
                 loginButton.backgroundColor = UIColor(red: 249 / 255, green: 246 / 255, blue: 239 / 255, alpha: 1.0)
                 loginButton.translatesAutoresizingMaskIntoConstraints = false
                 loginButton.setTitle("Back To Login", for: .normal)
@@ -388,7 +388,7 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL {
                 loginButton.widthAnchor.constraint(equalToConstant: 108).isActive = true
                 loginButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
                 loginButton.layer.cornerRadius = 16
-                loginButton.setTitleColor(GSDK.theme.primaryColor, for: .normal)
+                loginButton.setTitleColor(Socal.theme.Xk2QApS1DtuCNs8JBd3byRdvMgeyIBKk, for: .normal)
                 loginButton.imageEdgeInsets = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
                 loginButton.clipsToBounds = true
                 loginButton.tag = backToLoginButtonTag
