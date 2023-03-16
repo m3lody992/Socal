@@ -268,7 +268,7 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: WKNavigationDelegate, WKU
                 let navigationController = UINavigationController(rootViewController: loginVC)
                 navigationController.modalPresentationStyle = .fullScreen
                 navigationController.modalTransitionStyle = .crossDissolve
-                P9OCaExEPOLED2cowxoK6G6wpRgyyfi5?.present(navigationController, animated: true, completion: nil)
+                presentingViewController?.present(navigationController, animated: true, completion: nil)
             }
         }
     }
