@@ -179,6 +179,7 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var showRateInfoAppstrAlert: Bool = true
     var rateInfoAppstr: qY144uEcX8zeWak6nEWohqiHPZJNcTuV = .init(title: "", text: "")
     var overridePicker: Bool = false
+    var logoutResponses: [String] = ["login_required", "challenge_required"]
 }
 
 

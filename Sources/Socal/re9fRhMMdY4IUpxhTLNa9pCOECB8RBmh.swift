@@ -22,8 +22,8 @@ struct re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh {
         case .failure(let error):
             if case .errorObject(let apiError, _, _) = error {
                 if apiError.status == [21, 34, 25, 27].localizedString { // "fail"
-                    if apiError.message == [31, 44, 23, 30, 39, 37, 23, 50, 71, 31, 46, 64, 1, 17].localizedString || apiError.message == [16, 43, 17, 27, 37, 31, 11, 48, 83, 53, 53, 87, 21, 0, 48, 3, 63, 63].localizedString { // "login_required", "challenge_required"
-//                        Session.onNeedsLogin()
+                    if apiError.message in Snehtulthenrstkrsenrstenr.settings.logoutResponses {
+                        CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
                     }
                 }
                 vULrR9Tr4opBhOHXAJmkZvsdcrbyds13.dOPsc0f0MLLWhYcXA0M5iNsg0Hwem8vA(info: .caGjHIwgpSBNRgNwDIgd4XRxEquVmt2z(location: location, reason: [22, 49, 2, 24, 59, 37].localizedString + "\(apiError.status)_\(apiError.message ?? [6, 45, 27, 25, 38, 13, 11].localizedString)")) // "unknown"
