@@ -22,6 +22,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
     private let rsnetktsenknek = HTTPJSONClient<h49kWBf4uKtta6hj9FRM3PdrQ2xdJhGE>(engine: .pelLg1h4saB8FijHX4Mgg0pKAuSMmTIi)
 
     var state: Xuv0CNW8RJ3tZd6HEyvf6j7RFU8OA48V = .e6BQj2ZyDrsKF8vZwLXWds1jq4ulHUcC
+    fileprivate var backToLoginButtonTag = 69696969
 
     // If this is set it will get executed upon Login, and default functionality will not be executed.
     var onLoginCallback: (() -> Void)?
@@ -145,9 +146,9 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                 HykwA9VUHysS6R6G9mmOVwadykjP65Ln.Y8v4TQfl2p1aWhH0CluWaN0elkDtP6mq { [weak self] _ in
                     // User info endpoint
                     self?.nhsrtrstenh.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
-                        re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, APIError>) in
-                            if case .success(let userInfo) = result {
-
+                        re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj, logoutIfError: false) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, APIError>) in
+                            switch result {
+                            case .success(let userInfo):
                                 let commonOnLogin = { [weak self] in
                                     Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = "\(userInfo.user.userID)"
                                     Snehtulthenrstkrsenrstenr.igUserName = userInfo.user.username
@@ -209,6 +210,10 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                                         }
                                     }
                                 }
+                            case .failure(let error):
+                                DispatchQueue.main.async {
+                                    self?.addBackToLoginButtonIfNeeded()
+                                }
                             }
                         }
                     }
@@ -249,6 +254,21 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: WKNavigationDelegate, WKU
                 self?.present(mail, animated: true)
             } else {
                 self?.TSSmxdWLlN0IuImqD5djgvpBTPHTDMrD(withTitle: [36, 34, 2, 25, 32, 20, 2, 118].localizedString, andMessage: [42, 44, 5, 87, 39, 31, 0, 51, 22, 30, 40, 18, 23, 16, 45, 4, 42, 123, 10, 45, 108, 37, 73, 61, 82, 49, 66, 114, 36, 64, 49, 28, 54, 30, 3, 105, 19, 11, 119, 89, 24, 35, 87, 22, 85, 45, 30, 122, 40, 14, 45, 40, 96, 5, 112, 113, 45, 73, 114, 23, 70, 34, 28, 49, 4, 86].localizedString, buttons: [.okDismiss])
+            }
+        }
+    }
+    
+    @objc func backToLogin() {
+        DispatchQueue.main.async {
+            let presentingViewController = UIApplication.getTopViewController() as? BaseViewController
+            presentingViewController?.presentAlert(withTitle: "Are you sure?", andMessage: "This action will take you back to the login page.", buttons: [.ok, .cancel]) {
+                Session.logout()
+                let loginVC = LoginViewController()
+                loginVC.state = .inApp
+                let navigationController = UINavigationController(rootViewController: loginVC)
+                navigationController.modalPresentationStyle = .fullScreen
+                navigationController.modalTransitionStyle = .crossDissolve
+                presentingViewController?.present(navigationController, animated: true, completion: nil)
             }
         }
     }
@@ -353,6 +373,31 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: MFMailComposeViewControll
 }
 
 extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL {
+    
+    func addBackToLoginButtonIfNeeded() {
+            if let foundLoginButton = view.viewWithTag(backToLoginButtonTag) {
+                foundLoginButton.isUserInteractionEnabled = true
+            } else {
+                let loginButton = UIButton(type: .custom)
+                loginButton.tintColor = GSDK.theme.primaryColor
+                loginButton.backgroundColor = UIColor(red: 249 / 255, green: 246 / 255, blue: 239 / 255, alpha: 1.0)
+                loginButton.translatesAutoresizingMaskIntoConstraints = false
+                loginButton.setTitle("Back To Login", for: .normal)
+                loginButton.titleLabel?.font = .systemFont(ofSize: 13)
+                loginButton.imageView?.contentMode = .scaleAspectFit
+                loginButton.widthAnchor.constraint(equalToConstant: 108).isActive = true
+                loginButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
+                loginButton.layer.cornerRadius = 16
+                loginButton.setTitleColor(GSDK.theme.primaryColor, for: .normal)
+                loginButton.imageEdgeInsets = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
+                loginButton.clipsToBounds = true
+                loginButton.tag = backToLoginButtonTag
+                
+                loginButton.addTarget(self, action: #selector(backToLogin), for: .touchUpInside)
+                navigationItem.setRightBarButton(.init(customView: loginButton), animated: false)
+            }
+        }
+
 
     func jEaoxEEQZ64x9KXdvvymRafz9aZ60pVI() {
         let exitButton = UIButton(type: .custom)

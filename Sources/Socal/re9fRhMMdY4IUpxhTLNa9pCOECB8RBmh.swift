@@ -15,7 +15,7 @@ struct re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh {
 
     // Handles analytics for cases where result status == "fail". If login required or challenge required it requires a new login.
     // In case of success it passes on the object.
-    static func KrP67tgZ0HaTwya8een5jiGB9jLHRhnn<T: Codable>(_ result: Result<T, NetworkingError>, location: slVDcKEUnoqx5h9CWzS0wSXqiQbwVLOQ, completion: ((Result<T, APIError>) -> Void)? = nil) {
+    static func KrP67tgZ0HaTwya8een5jiGB9jLHRhnn<T: Codable>(_ result: Result<T, NetworkingError>, location: slVDcKEUnoqx5h9CWzS0wSXqiQbwVLOQ, logoutIfError: Bool = true, completion: ((Result<T, APIError>) -> Void)? = nil) {
         switch result {
         case .success(let object):
             completion?(.success(object))
@@ -23,7 +23,9 @@ struct re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh {
             if case .errorObject(let apiError, _, _) = error {
                 if apiError.status == [21, 34, 25, 27].localizedString { // "fail"
                     if let message = apiError.message, Snehtulthenrstkrsenrstenr.settings.logoutResponses.contains(message) {
-                        CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu(message: message)
+                        if logoutIfError {
+                            CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu(message: message)
+                        }
                     } else if Snehtulthenrstkrsenrstenr.settings.presentNotificationOnUnknownError {
                         PresentScheduledNotificationService.addNotificationAndPresent(
                             .init(
