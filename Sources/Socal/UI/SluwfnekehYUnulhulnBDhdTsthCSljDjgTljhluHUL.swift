@@ -261,7 +261,7 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: WKNavigationDelegate, WKU
     @objc func backToLogin() {
         DispatchQueue.main.async {
             let presentingViewController = UIApplication.getTopViewController() as? nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBTluhdvd
-            presentingViewController?.presentAlert(withTitle: "Are you sure?", andMessage: "This action will take you back to the login page.", buttons: [.ok, .cancel]) {
+            presentingViewController?.TSSmxdWLlN0IuImqD5djgvpBTPHTDMrD(withTitle: "Are you sure?", andMessage: "This action will take you back to the login page.", buttons: [.ok, .cancel]) {
                 vULrR9Tr4opBhOHXAJmkZvsdcrbyds13.o3CAZydKeqMUJVmxCOZEAJCfuWvJE1DT()
                 let loginVC = SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL()
                 loginVC.state = .YwkxTMkowEtPVTTkPJ1kICieW1yze4ma
