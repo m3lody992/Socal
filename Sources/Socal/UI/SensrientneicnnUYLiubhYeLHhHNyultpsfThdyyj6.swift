@@ -176,10 +176,6 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             }
             self?.vfKUVGuyNUSpPLCrMoX6pvvD9nEvaXTE(animated: true)
             self?.zN2s6qOln2IWPGgTtJh3wzAQw35sKueU()
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self?.sHaJ81eqJ8fplXeYHyL9aTTBTuEH4TJv()
-            }
         }
 
         viewModel.onFailedIGAppAgape = { [weak self] in
@@ -196,9 +192,6 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
                 self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
                 // "Error"
                 self?.TSSmxdWLlN0IuImqD5djgvpBTPHTDMrD(withTitle: [54, 49, 2, 24, 59].localizedString, andMessage: message, buttons: [.okDismiss])
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self?.sHaJ81eqJ8fplXeYHyL9aTTBTuEH4TJv()
             }
         }
 
