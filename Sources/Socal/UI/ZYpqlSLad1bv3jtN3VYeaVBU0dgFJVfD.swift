@@ -86,9 +86,7 @@ class ZYpqlSLad1bv3jtN3VYeaVBU0dgFJVfD: nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBT
         let reelsButton = UIButton(type: .custom)
         reelsButton.tintColor = Socal.theme.Xk2QApS1DtuCNs8JBd3byRdvMgeyIBKk
         reelsButton.setTitle("Add Reels", for: .normal)
-        reelsButton.titleLabel?.font = .systemFont(ofSize: 14)
-        reelsButton.widthAnchor.constraint(equalToConstant: 80).isActive = true
-        reelsButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        reelsButton.titleLabel?.font = .systemFont(ofSize: 16)
         reelsButton.setTitleColor(Socal.theme.Xk2QApS1DtuCNs8JBd3byRdvMgeyIBKk, for: .normal)
         
         reelsButton.addTarget(self, action: #selector(getReels), for: .touchUpInside)
