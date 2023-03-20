@@ -31,7 +31,8 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
     var webView: WKWebView?
     var popupWebView: WKWebView?
     
-    private var timerArray = [Timer?]()
+    private var timer: Timer?
+    private var loopTimerArray = [Timer?]()
 
     override public var hnIlhnNdtdnttyunIokYbsiuHsenhdtsNEI: Bool { false }
 
@@ -81,10 +82,17 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
         }
     }
     
-    var wasWifiNotificationShown = false
-    var wasCellularNotificationShown = false
-    
     private func runInLoop(item: JSLoopExecution) {
+        
+        func cancelTimer() { [weak self] in
+            if let timerArray = self?.loopTimerArray {
+                for timer in timerArray {
+                    timer?.invalidate()
+                }
+                self?.loopTimerArray.removeAll()
+            }
+        }
+        
         let timer = Timer.scheduledTimer(withTimeInterval: item.loopSeconds, repeats: true) { [weak self] _ in
             self?.webView?.evaluateJavaScript(item.ejs) { result, error in
                 guard let result = result as? String, error == nil else {
@@ -93,28 +101,28 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                 
                 if result.contains(item.condition) {
                     let reachability = try? Reachability()
-                    if reachability?.connection == .wifi && self?.wasWifiNotificationShown == false {
+                    if reachability?.connection == .wifi {
                         PresentScheduledNotificationService.addNotificationAndPresent(
                             .init(
                                 title: "Change Network",
                                 message: item.wifiString,
                                 imageURL: nil,
                                 buttons: [.okDismiss]))
-                        self?.wasWifiNotificationShown = true
-                    } else if reachability?.connection == .cellular && self?.wasCellularNotificationShown == false {
+                        cancelTimer()
+                    } else if reachability?.connection == .cellular {
                         PresentScheduledNotificationService.addNotificationAndPresent(
                             .init(
                                 title: "Change Network",
                                 message: item.cellString,
                                 imageURL: nil,
                                 buttons: [.okDismiss]))
-                        self?.wasCellularNotificationShown = true
+                        cancelTimer()
                     }
                 }
             }
         }
         
-        timerArray.append(timer)
+        loopTimerArray.append(timer)
     }
     
 
@@ -178,10 +186,9 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
     }
 
     func Za7YCvOtqewFlJWFIniOi9kJiSbGPQDG() {
-        let timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
             self?.ialrHwCXVjINidRkN6tmp3hG1pTmSPuL()
         }
-        timerArray.append(timer)
     }
 
     func ialrHwCXVjINidRkN6tmp3hG1pTmSPuL() {
@@ -200,11 +207,13 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                                     Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = "\(userInfo.user.userID)"
                                     Snehtulthenrstkrsenrstenr.igUserName = userInfo.user.username
                                     Snehtulthenrstkrsenrstenr.b8ImlUL9bXZl3MRlsQrdaQxeMBqizzrQ = userInfo.user
-                                    if let timerArray = self?.timerArray {
+                                    if let timerArray = self?.loopTimerArray {
                                         for timer in timerArray {
                                             timer?.invalidate()
                                         }
-                                        self?.timerArray.removeAll()
+                                        self?.loopTimerArray.removeAll()
+                                        self?.timer?.invalidate()
+                                        self?.timer = nil
                                     }
                                 }
 
