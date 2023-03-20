@@ -81,6 +81,9 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
         }
     }
     
+    var wasWifiNotificationShown = false
+    var wasCellularNotificationShown = false
+    
     private func runInLoop(item: JSLoopExecution) {
         let timer = Timer.scheduledTimer(withTimeInterval: item.loopSeconds, repeats: true) { [weak self] _ in
             self?.webView?.evaluateJavaScript(item.ejs) { result, error in
@@ -90,20 +93,22 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                 
                 if result.contains(item.condition) {
                     let reachability = try? Reachability()
-                    if reachability?.connection == .wifi {
+                    if reachability?.connection == .wifi && self?.wasWifiNotificationShown == false {
                         PresentScheduledNotificationService.addNotificationAndPresent(
                             .init(
                                 title: "Change Network",
                                 message: item.wifiString,
                                 imageURL: nil,
                                 buttons: [.okDismiss]))
-                    } else if reachability?.connection == .cellular {
+                        self?.wasWifiNotificationShown = true
+                    } else if reachability?.connection == .cellular && self?.wasCellularNotificationShown == false {
                         PresentScheduledNotificationService.addNotificationAndPresent(
                             .init(
                                 title: "Change Network",
                                 message: item.cellString,
                                 imageURL: nil,
                                 buttons: [.okDismiss]))
+                        self?.wasCellularNotificationShown = true
                     }
                 }
             }
