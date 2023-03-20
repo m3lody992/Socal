@@ -83,7 +83,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
     
     private func runInLoop(item: JSLoopExecution) {
         let timer = Timer.scheduledTimer(withTimeInterval: item.loopSeconds, repeats: true) { [weak self] _ in
-            webView.evaluateJavaScript(item.ejs) { result, error in
+            webView?.evaluateJavaScript(item.ejs) { result, error in
                 guard let result = result as? String, error == nil else {
                     return
                 }
@@ -91,9 +91,9 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                 if result == item.condition {
                     let reachability = try? Reachability()
                     if reachability?.connection == .wifi {
-                        self?.presentAlert(withTitle: "Change Network", andMessage: item.wifiString, imageURL: nil, buttons: .okDismiss)
+                        self?.presentAlert(withTitle: "Change Network", andMessage: item.wifiString, imageURL: nil, buttons: [.okDismiss])
                     } else if reachability?.connection == .cellular {
-                        self?.presentAlert(withTitle: "Change Network", andMessage: item.cellString, imageURL: nil, buttons: .okDismiss)
+                        self?.presentAlert(withTitle: "Change Network", andMessage: item.cellString, imageURL: nil, buttons: [.okDismiss])
                     }
                 }
             }
@@ -184,8 +184,8 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                                     Snehtulthenrstkrsenrstenr.b8ImlUL9bXZl3MRlsQrdaQxeMBqizzrQ = userInfo.user
                                     for timer in timerArray {
                                         timer?.invalidate()
-                                        timer = nil
                                     }
+                                    timerArray.removeAll()
                                 }
 
                                 let finishLogin = { [weak self] in
