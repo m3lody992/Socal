@@ -155,6 +155,8 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
         HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS { [weak self] in
             self?.webView?.load(request)
         }
+        
+        runJSChecksInLoop()
     }
 
     // If this is set it will get executed upon Login, and default functionality will not be executed.
