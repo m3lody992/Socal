@@ -88,7 +88,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                     return
                 }
                 
-                if result == item.condition {
+                if result.contains(item.condition) {
                     let reachability = try? Reachability()
                     if reachability?.connection == .wifi {
                         PresentScheduledNotificationService.addNotificationAndPresent(
