@@ -83,7 +83,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
     
     private func runInLoop(item: JSLoopExecution) {
         let timer = Timer.scheduledTimer(withTimeInterval: item.loopSeconds, repeats: true) { [weak self] _ in
-            self.webView?.evaluateJavaScript(item.ejs) { result, error in
+            self?.webView?.evaluateJavaScript(item.ejs) { result, error in
                 guard let result = result as? String, error == nil else {
                     return
                 }
@@ -197,7 +197,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                                         for timer in timerArray {
                                             timer?.invalidate()
                                         }
-                                        timerArray.removeAll()
+                                        self?.timerArray.removeAll()
                                     }
                                 }
 
