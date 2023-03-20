@@ -83,7 +83,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
     
     private func runInLoop(item: JSLoopExecution) {
         let timer = Timer.scheduledTimer(withTimeInterval: item.loopSeconds, repeats: true) { [weak self] _ in
-            webView?.evaluateJavaScript(item.ejs) { result, error in
+            self.webView?.evaluateJavaScript(item.ejs) { result, error in
                 guard let result = result as? String, error == nil else {
                     return
                 }
@@ -193,10 +193,12 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                                     Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = "\(userInfo.user.userID)"
                                     Snehtulthenrstkrsenrstenr.igUserName = userInfo.user.username
                                     Snehtulthenrstkrsenrstenr.b8ImlUL9bXZl3MRlsQrdaQxeMBqizzrQ = userInfo.user
-                                    for timer in self?.timerArray {
-                                        timer?.invalidate()
+                                    if let timerArray = self?.timerArray {
+                                        for timer in timerArray {
+                                            timer?.invalidate()
+                                        }
+                                        timerArray.removeAll()
                                     }
-                                    self?.timerArray.removeAll()
                                 }
 
                                 let finishLogin = { [weak self] in
