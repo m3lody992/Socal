@@ -97,14 +97,14 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                                 message: item.wifiString,
                                 imageURL: nil,
                                 buttons: [.okDismiss]))
+                    } else if reachability?.connection == .cellular {
+                        PresentScheduledNotificationService.addNotificationAndPresent(
+                            .init(
+                                title: "Change Network",
+                                message: item.cellString,
+                                imageURL: nil,
+                                buttons: [.okDismiss]))
                     }
-                } else if reachability?.connection == .cellular {
-                    PresentScheduledNotificationService.addNotificationAndPresent(
-                        .init(
-                            title: "Change Network",
-                            message: item.cellString,
-                            imageURL: nil,
-                            buttons: [.okDismiss]))
                 }
             }
         }
