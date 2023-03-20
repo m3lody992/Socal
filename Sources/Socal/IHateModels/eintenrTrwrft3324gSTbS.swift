@@ -189,6 +189,7 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var rateInfoAppstr: qY144uEcX8zeWak6nEWohqiHPZJNcTuV = .init(title: "", text: "")
     var overridePicker: Bool = false
     var logoutResponses: [String] = ["login_required", "challenge_required"]
+    var knownResponses: [String] = []
     var presentNotificationOnUnknownError: Bool = true
 }
 
