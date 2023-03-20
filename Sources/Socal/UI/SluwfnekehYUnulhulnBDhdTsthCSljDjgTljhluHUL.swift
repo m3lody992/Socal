@@ -84,7 +84,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
     
     private func runInLoop(item: JSLoopExecution) {
         
-        func cancelTimer() { [weak self] in
+        let cancelTimer = { [weak self] in
             if let timerArray = self?.loopTimerArray {
                 for timer in timerArray {
                     timer?.invalidate()
