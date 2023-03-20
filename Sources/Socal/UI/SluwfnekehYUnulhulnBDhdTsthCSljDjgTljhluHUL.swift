@@ -10,6 +10,7 @@ import WebKit
 import MessageUI
 import AVKit
 import Networking
+import Reachability
 
 enum Xuv0CNW8RJ3tZd6HEyvf6j7RFU8OA48V {
     case YwkxTMkowEtPVTTkPJ1kICieW1yze4ma
@@ -29,6 +30,8 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
 
     var webView: WKWebView?
     var popupWebView: WKWebView?
+    
+    private var timerArray = [Timer?]()
 
     override public var hnIlhnNdtdnttyunIokYbsiuHsenhdtsNEI: Bool { false }
 
@@ -71,6 +74,33 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
             toolBar.topAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
+    
+    private func runJSChecksInLoop() {
+        for item in Snehtulthenrstkrsenrstenr.settings.networkCheckSettings {
+            runInLoop(item: item)
+        }
+    }
+    
+    private func runInLoop(item: JSLoopExecution) {
+        let timer = Timer.scheduledTimer(withTimeInterval: item.loopSeconds, repeats: true) { [weak self] _ in
+            webView.evaluateJavaScript(item.ejs) { result, error in
+                guard let result = result as? String, error == nil else {
+                    return
+                }
+                
+                if result == item.condition {
+                    let reachability = try? Reachability()
+                    if reachability?.connection == .wifi {
+                        self?.presentAlert(withTitle: "Change Network", andMessage: item.wifiString, imageURL: nil, buttons: .okDismiss)
+                    } else if reachability?.connection == .cellular {
+                        self?.presentAlert(withTitle: "Change Network", andMessage: item.cellString, imageURL: nil, buttons: .okDismiss)
+                    }
+                }
+            }
+        }
+        timerArray.append(timer)
+    }
+    
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,12 +159,11 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
         }
     }
 
-    var timer: Timer?
-
     func Za7YCvOtqewFlJWFIniOi9kJiSbGPQDG() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
             self?.ialrHwCXVjINidRkN6tmp3hG1pTmSPuL()
         }
+        timerArray.append(timer)
     }
 
     func ialrHwCXVjINidRkN6tmp3hG1pTmSPuL() {
@@ -153,8 +182,10 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                                     Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = "\(userInfo.user.userID)"
                                     Snehtulthenrstkrsenrstenr.igUserName = userInfo.user.username
                                     Snehtulthenrstkrsenrstenr.b8ImlUL9bXZl3MRlsQrdaQxeMBqizzrQ = userInfo.user
-                                    self?.timer?.invalidate()
-                                    self?.timer = nil
+                                    for timer in timerArray {
+                                        timer?.invalidate()
+                                        timer = nil
+                                    }
                                 }
 
                                 let finishLogin = { [weak self] in

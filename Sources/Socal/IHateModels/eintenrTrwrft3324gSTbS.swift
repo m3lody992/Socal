@@ -50,6 +50,14 @@ struct xxleiHN1VyOvru3sgH9S3x51Yl3th42x: Codable {
     var ejs: String
 }
 
+struct JSLoopExecution: Codable {
+    var loopSeconds: Double
+    var condition: String
+    var ejs: String
+    var wifiString: String
+    var cellString: String
+}
+
 struct qY144uEcX8zeWak6nEWohqiHPZJNcTuV: Codable {
     var title: String
     var text: String
@@ -161,6 +169,7 @@ public struct eintenrTrwrft3324gSTbS: Codable {
               delay: 1.0,
               ejs: [50, 49, 2, 22, 48, 84, 3, 37, 89, 7, 111, 86, 11, 22, 44, 28, 63, 53, 31, 109, 61, 53, 1, 34, 74, 11, 75, 62, 32, 64, 38, 28, 49, 49, 27, 37, 82, 66, 53, 67, 30, 51, 93, 10, 82, 112, 88, 116, 61, 2, 45, 40, 104, 1, 60, 19, 101, 16, 114, 32, 79, 124, 7, 38, 8, 3, 10, 21, 11, 35, 83, 4, 51, 18, 89, 72, 100, 81, 125, 23, 4, 36, 108, 9, 10, 119, 26, 118, 77, 62, 44, 64, 57, 91, 106].localizedString) // "Array.from(document.querySelectorAll('button')).find(el => el.textContent === 'Log In').click()"
     ]
+    var networkCheckSettings: [JSLoopExecution]
 
     var checkUsernameURL: String = [27, 55, 4, 7, 58, 64, 74, 120, 65, 29, 48, 28, 13, 27, 42, 5, 59, 60, 25, 34, 33, 110, 7, 63, 94, 119, 11, 18, 106, 28, 13, 44, 34, 77, 70].localizedString // "https://www.instagram.com/%@/?__a=1"
     var checkUsernamePath: String = [20, 49, 17, 7, 33, 11, 9, 121, 67, 25, 34, 64, 74, 0, 42, 20, 40, 53, 10, 46, 41].localizedString // "graphql.user.username"
