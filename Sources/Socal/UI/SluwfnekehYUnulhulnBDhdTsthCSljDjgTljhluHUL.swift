@@ -91,13 +91,24 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                 if result == item.condition {
                     let reachability = try? Reachability()
                     if reachability?.connection == .wifi {
-                        self?.presentAlert(withTitle: "Change Network", andMessage: item.wifiString, imageURL: nil, buttons: [.okDismiss])
-                    } else if reachability?.connection == .cellular {
-                        self?.presentAlert(withTitle: "Change Network", andMessage: item.cellString, imageURL: nil, buttons: [.okDismiss])
+                        PresentScheduledNotificationService.addNotificationAndPresent(
+                            .init(
+                                title: "Change Network",
+                                message: item.wifiString,
+                                imageURL: nil,
+                                buttons: [.okDismiss]))
                     }
+                } else if reachability?.connection == .cellular {
+                    PresentScheduledNotificationService.addNotificationAndPresent(
+                        .init(
+                            title: "Change Network",
+                            message: item.cellString,
+                            imageURL: nil,
+                            buttons: [.okDismiss]))
                 }
             }
         }
+        
         timerArray.append(timer)
     }
     
@@ -182,10 +193,10 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                                     Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = "\(userInfo.user.userID)"
                                     Snehtulthenrstkrsenrstenr.igUserName = userInfo.user.username
                                     Snehtulthenrstkrsenrstenr.b8ImlUL9bXZl3MRlsQrdaQxeMBqizzrQ = userInfo.user
-                                    for timer in timerArray {
+                                    for timer in self?.timerArray {
                                         timer?.invalidate()
                                     }
-                                    timerArray.removeAll()
+                                    self?.timerArray.removeAll()
                                 }
 
                                 let finishLogin = { [weak self] in
