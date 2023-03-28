@@ -33,6 +33,11 @@ public class Snehtulthenrstkrsenrstenr {
         get { return a8M8vAhiIsdjplryGP7wPq99MOtQe42d.AjWzBFwCcunOSqpymDeR8rLcWaJKDr8T(for: .igAjax) ?? [].localizedString }
         set { a8M8vAhiIsdjplryGP7wPq99MOtQe42d.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(value: newValue, for: .igAjax) }
     }
+    
+    static var igClaim: String {
+        get { return a8M8vAhiIsdjplryGP7wPq99MOtQe42d.AjWzBFwCcunOSqpymDeR8rLcWaJKDr8T(for: .igClaim) ?? [].localizedString }
+        set { a8M8vAhiIsdjplryGP7wPq99MOtQe42d.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(value: newValue, for: .igClaim) }
+    }
 
     static var Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i: Bool {
         get { UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i) ?? false }

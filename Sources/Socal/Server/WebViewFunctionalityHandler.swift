@@ -176,6 +176,10 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
             if let ajaxString = headers["x-instagram-ajax"] as? String {
                 Snehtulthenrstkrsenrstenr.igAjax = ajaxString
             }
+            
+            if let igClaim = headers["x-ig-www-claim"] as? String {
+                Snehtulthenrstkrsenrstenr.igClaim = igClaim
+            }
         }
 
         if let response = navigationResponse.response as? HTTPURLResponse, !(200...299).contains(response.statusCode) {

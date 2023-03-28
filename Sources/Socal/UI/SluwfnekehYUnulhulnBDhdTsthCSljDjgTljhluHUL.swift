@@ -406,6 +406,23 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: WKNavigationDelegate, WKU
         GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
         WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
     }
+    
+    public func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        
+        if let response = navigationResponse.response as? HTTPURLResponse {
+            let headers = response.allHeaderFields
+            print("ALL HEADERS LOGIN:")
+            print(headers)
+            print("x-instagram-ajax: \(headers["x-instagram-ajax"])")
+            if let ajaxString = headers["x-instagram-ajax"] as? String {
+                Snehtulthenrstkrsenrstenr.igAjax = ajaxString
+            }
+            print("x-ig-www-claim: \(headers["x-ig-www-claim"])")
+            if let igClaim = headers["x-ig-www-claim"] as? String {
+                Snehtulthenrstkrsenrstenr.igClaim = igClaim
+            }
+        }
+    }
 
     public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
