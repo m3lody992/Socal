@@ -23,6 +23,81 @@ extension Array where Element == HTTPCookie {
     var A4pXfEk2FPho7TAH2TS2ix30iRPqfo7L: HTTPCookie? {
         first(where: { $0.name == Snehtulthenrstkrsenrstenr.settings.midCookieName })
     }
+    
+    var rur: HTTPCookie? {
+        first(where: { $0.name == "rur" })
+    }
+    
+    var shbid: HTTPCookie? {
+        first(where: { $0.name == "shbid" })
+    }
+    
+    var shbts: HTTPCookie? {
+        first(where: { $0.name == "shbts" })
+    }
+    
+    var dsUserID: HTTPCookie? {
+        first(where: { $0.name == "ds_user_id" })
+    }
+    
+    var igDID: HTTPCookie? {
+        first(where: { $0.name == "ig_did" })
+    }
+    
+    var datr: HTTPCookie? {
+        first(where: { $0.name == "datr" })
+    }
+    
+}
+
+extension WKWebView {
+    
+    func storeRolloutHash(completion: (() -> Void)? = nil) {
+        webView.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.rolloutHashEJS) { result, error in
+            if let result = result as? String {
+                Snehtulthenrstkrsenrstenr.rolloutHash = result
+            }
+        }
+    }
+
+    func storeAndApplyWebViewCookies(completion: (() -> Void)? = nil) {
+        DispatchQueue.main.async {
+            HykwA9VUHysS6R6G9mmOVwadykjP65Ln.Y8v4TQfl2p1aWhH0CluWaN0elkDtP6mq { _ in
+                for cookie in HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0 {
+                    self.configuration.websiteDataStore.httpCookieStore.setCookie(cookie)
+                }
+                completion?()
+            }
+        }
+    }
+
+    func applyWebViewCookies() {
+        DispatchQueue.main.async {
+            for cookie in HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0 {
+                self.configuration.websiteDataStore.httpCookieStore.setCookie(cookie)
+            }
+        }
+    }
+
+    func removeWebViewCookies(completion: (() -> Void)? = nil) {
+        DispatchQueue.main.async {
+            let cookieStore = self.configuration.websiteDataStore.httpCookieStore
+            let dispatchGroup = DispatchGroup()
+            cookieStore.getAllCookies { cookies in
+                for cookie in cookies {
+                    dispatchGroup.enter()
+                    cookieStore.delete(cookie) {
+                        dispatchGroup.leave()
+                    }
+                }
+            }
+            dispatchGroup.notify(queue: .main) {
+                self.configuration.processPool = WKProcessPool()
+                completion?()
+            }
+        }
+    }
+
 }
 
 struct HykwA9VUHysS6R6G9mmOVwadykjP65Ln {

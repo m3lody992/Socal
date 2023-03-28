@@ -23,6 +23,7 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
 
     var presentingItem: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO?
     var queue: [dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO]?
+    private var webViewHandler = WebViewFunctionalityHandler()
 
     var onSuccessfulAgape: (() -> Void)?
     var onFailedIGAppAgape: (() -> Void)?
@@ -116,6 +117,14 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     func WeHwft3DSzKISvkrSqqeg53QTFnS6FcG() {
         ATowJK3a6XSoyuEAXJhMV55Mo5x9iBfR { item in
             guard let item = item else { return }
+            self.webViewHandler.loadPage(forItem: item) { result in
+                switch result {
+                case .success(let webView):
+                    print("SUCCESS loading video")
+                case .failure(let reason):
+                    print("REKT: \(reason.rawValue)")
+                }
+            }
             self.presentingItem = item
             self.onNewVideoLoaded?(item)
             self.VtBiJuZCNeSZbQq4GNluKKyE9EnjutB8(queueItem: item)
@@ -208,8 +217,10 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
         if queueItem.mediaType == [16, 34, 2, 24, 60, 9, 0, 59].localizedString { // "carousel"
             likeInfo.carouselIndex = [67].localizedString // "0"
         }
+        
+        APIRequests.agape(info: likeInfo)
 
-        Q9yYADO5wqVEHvEqMmqaz8Sf2EC4XJAJ(mediaInfo: likeInfo)
+//        Q9yYADO5wqVEHvEqMmqaz8Sf2EC4XJAJ(mediaInfo: likeInfo)
     }
 
     private func Q9yYADO5wqVEHvEqMmqaz8Sf2EC4XJAJ(mediaInfo: XJTHek0OiCGWMfHBH6dzhZJvcB5PBxFW) {

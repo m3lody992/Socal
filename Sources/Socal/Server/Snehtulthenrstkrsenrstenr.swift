@@ -23,6 +23,16 @@ public class Snehtulthenrstkrsenrstenr {
     public static var settings: eintenrTrwrft3324gSTbS {
         UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql) ?? .init()
     }
+    
+    public static var rolloutHash: String {
+        get { return UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .rolloutHash) ?? [].localizedString}
+        set { UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(newValue, forKey: .rolloutHash) }
+    }
+    
+    static var igAjax: String {
+        get { return a8M8vAhiIsdjplryGP7wPq99MOtQe42d.AjWzBFwCcunOSqpymDeR8rLcWaJKDr8T(for: .igAjax) ?? [].localizedString }
+        set { a8M8vAhiIsdjplryGP7wPq99MOtQe42d.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(value: newValue, for: .igAjax) }
+    }
 
     static var Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i: Bool {
         get { UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i) ?? false }
