@@ -422,6 +422,8 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: WKNavigationDelegate, WKU
                 Snehtulthenrstkrsenrstenr.igClaim = igClaim
             }
         }
+        
+        decisionHandler(.allow)
     }
 
     public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
