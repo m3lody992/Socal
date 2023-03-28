@@ -173,7 +173,7 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
             print("ALL HEADERS:")
             print(headers)
             print("x-instagram-ajax: \(headers["x-instagram-ajax"])")
-            if let ajaxString = headers["x-instagram-ajax"] {
+            if let ajaxString = headers["x-instagram-ajax"] as? String {
                 Snehtulthenrstkrsenrstenr.igAjax = ajaxString
             }
         }

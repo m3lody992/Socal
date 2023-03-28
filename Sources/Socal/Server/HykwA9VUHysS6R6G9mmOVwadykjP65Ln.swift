@@ -53,7 +53,7 @@ extension Array where Element == HTTPCookie {
 extension WKWebView {
     
     func storeRolloutHash(completion: (() -> Void)? = nil) {
-        webView.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.rolloutHashEJS) { result, error in
+        evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.rolloutHashEJS) { result, error in
             if let result = result as? String {
                 Snehtulthenrstkrsenrstenr.rolloutHash = result
             }
