@@ -6,10 +6,11 @@
 //
 
 import WebKit
+import Foundation
 
 public typealias InfoResult<T> = Result<T, FailReason>
 
-class WebViewFunctionalityHandler {
+class WebViewFunctionalityHandler: NSObject {
 
     private (set) var webView: WKWebView?
     private var temporaryLoadCompletionHolder: ((InfoResult<WKWebView?>) -> Void)?
