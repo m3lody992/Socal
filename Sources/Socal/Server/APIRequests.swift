@@ -9,8 +9,8 @@ import Foundation
 
 struct APIRequests {
     
-    static func agape(info: XJTHek0OiCGWMfHBH6dzhZJvcB5PBxFW) {
-        var urlBuilder = URLComponents(string: String(format: Snehtulthenrstkrsenrstenr.settings.agapeURL, info.mediaID))
+    static func agape(info: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO) {
+        var urlBuilder = URLComponents(string: String(format: Snehtulthenrstkrsenrstenr.settings.agapeURL, info.adId))
         
         guard let url = urlBuilder?.url else {
             print("BIG BAD")
