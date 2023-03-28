@@ -45,9 +45,9 @@ struct APIRequests {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             print(response)
-            if let headers = response as? HTTPURLResponse)?.allHeaderFields {
+            if let response = (response as? HTTPURLResponse) {
                 print("HEADAER FROM API")
-                print(headers)
+                print(response.allHeaderFields)
             } else {
                 print("KURAC headers")
             }
