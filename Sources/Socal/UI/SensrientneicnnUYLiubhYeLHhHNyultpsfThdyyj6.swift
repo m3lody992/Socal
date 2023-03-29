@@ -160,7 +160,7 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             self?.yYREW5u9ItKwldvE6kcfkK8hVJKW9KBv(forQueueItem: item)
             let vw = self?.viewModel.claimHandler.webView
             self?.imageView!.addSubview(vw!)
-            vw!.frame = self?.imageView!.frame
+            vw!.frame = (self?.imageView!.frame)!
         }
 
         viewModel.onNoNewVideos = { [weak self] in

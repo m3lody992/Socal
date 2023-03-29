@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
         "state": {
           "branch": null,
-          "revision": "32e4acdf6971f58f5ad552389cf2d7d016334eaf",
-          "version": "7.2.0"
+          "revision": "af4be924ad984cf4d16f4ae4df424e79a443d435",
+          "version": "7.6.2"
         }
       },
       {
@@ -75,10 +75,10 @@
       },
       {
         "package": "UITools",
-        "repositoryURL": "https://github.com/m3lody992/uitools",
+        "repositoryURL": "https://github.com/m3lody992/UITools",
         "state": {
           "branch": "main",
-          "revision": "3f7f301627c7a3c2a92a3721f6b5a3349bee9d6f",
+          "revision": "4cc814ce3734b4539fa6ecb4aec4d41a7b93a29e",
           "version": null
         }
       }
