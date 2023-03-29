@@ -111,6 +111,9 @@ class bOfTArcDw0ZXaX7j9HTVjr8XnnzwJZnY: URLProtocol, NSURLConnectionDataDelegate
         if claimMatches.count > 0,
            let data = mutableData as? Data,
            let _ = try? JSONSerialization.jsonObject(with: data) {
+            if let httpUrlResponse = self.response as? NSHTTPURLResponse {
+                print("HEADERS ON DSP\(httpUrlResponse.allHeaderFields)")
+            }
             for callback in DSP.claimCallbacks {
                 callback(data)
             }

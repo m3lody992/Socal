@@ -51,11 +51,6 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
 
     func EPjnvXNElTGXsReEp9nQvgpdXSJWlTHz() {
         DSP.activate()
-        DSP.addClaimCallback { data in
-            print("got dsp data:")
-            print(data)
-            print(String(data: data, encoding: .utf8))
-        }
         claimHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { result in
             switch result {
             case .success:
@@ -63,6 +58,7 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             case .failure(let reason):
                 print("FAILU")
             }
+            DSP.deactivate()
         }
 //        HykwA9VUHysS6R6G9mmOVwadykjP65Ln.EO9L5nENGaWyq0m8EOFFQU7NKOgWazsl()
     }
