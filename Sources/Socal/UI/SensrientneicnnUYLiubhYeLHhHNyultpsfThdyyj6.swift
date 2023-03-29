@@ -212,6 +212,10 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             self?.skipButton.alpha = isLoading ? 0.5 : 1.0
             self?.agapeButton.alpha = isLoading ? 0.5 : 1.0
         }
+        
+        let vw = viewModel.claimHandler.webView
+        view?.addSubview(vw)
+        vw?.frame = view?.bounds
 
     }
 

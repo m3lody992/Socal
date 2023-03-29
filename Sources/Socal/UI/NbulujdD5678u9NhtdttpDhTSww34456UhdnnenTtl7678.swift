@@ -24,7 +24,7 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     var presentingItem: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO?
     var queue: [dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO]?
     private var webViewHandler = WebViewFunctionalityHandler()
-    private var claimHandler = WebViewFunctionalityHandler()
+    var claimHandler = WebViewFunctionalityHandler()
 
     var onSuccessfulAgape: (() -> Void)?
     var onFailedIGAppAgape: (() -> Void)?
