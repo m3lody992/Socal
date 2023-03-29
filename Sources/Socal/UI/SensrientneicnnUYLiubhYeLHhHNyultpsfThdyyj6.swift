@@ -214,8 +214,8 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
         }
         
         let vw = viewModel.claimHandler.webView
-        imageView?.addSubview(vw!)
-        vw!.frame = imageView!.bounds
+        imageView!.addSubview(vw!)
+        vw!.frame = imageView!.frame
 
     }
 
