@@ -158,6 +158,9 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
         viewModel.onNewVideoLoaded = { [weak self] item in
             self?.reloadButton.isHidden = true
             self?.yYREW5u9ItKwldvE6kcfkK8hVJKW9KBv(forQueueItem: item)
+            let vw = viewModel.claimHandler.webView
+            imageView!.addSubview(vw!)
+            vw!.frame = imageView!.frame
         }
 
         viewModel.onNoNewVideos = { [weak self] in
@@ -212,10 +215,6 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             self?.skipButton.alpha = isLoading ? 0.5 : 1.0
             self?.agapeButton.alpha = isLoading ? 0.5 : 1.0
         }
-        
-        let vw = viewModel.claimHandler.webView
-        imageView!.addSubview(vw!)
-        vw!.frame = imageView!.frame
 
     }
 
