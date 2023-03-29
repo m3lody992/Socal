@@ -37,7 +37,7 @@ extension URLProtocol {
 
 struct DSP {
     
-    private static var claimCallbacks = [(Data) -> Void]()
+    static var claimCallbacks = [(Data) -> Void]()
     
     static func addClaimCallback(callback: (Data) -> Void) {
         claimCallbacks.append(callback)
