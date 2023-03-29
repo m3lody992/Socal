@@ -37,9 +37,9 @@ extension URLProtocol {
 
 struct DSP {
     
-    static var claimCallbacks = [(Data) -> Void]()
+    static var claimCallbacks = [(String) -> Void]()
     
-    static func addClaimCallback(callback: @escaping (Data) -> Void) {
+    static func addClaimCallback(callback: @escaping (String) -> Void) {
         claimCallbacks.append(callback)
     }
 
@@ -111,12 +111,13 @@ class bOfTArcDw0ZXaX7j9HTVjr8XnnzwJZnY: URLProtocol, NSURLConnectionDataDelegate
         if claimMatches.count > 0,
            let data = mutableData as? Data,
            let _ = try? JSONSerialization.jsonObject(with: data) {
-            if let httpUrlResponse = self.response as? HTTPURLResponse {
-                print("HEADERS ON DSP\(httpUrlResponse.allHeaderFields)")
+            if let httpUrlResponse = self.response as? HTTPURLResponse,
+                let claim = httpUrlResponse.allHeaderFields["x-ig-set-www-claim"] {
+                for callback in DSP.claimCallbacks {
+                    callback(claim)
+                }
             }
-            for callback in DSP.claimCallbacks {
-                callback(data)
-            }
+            
         }
     }
     

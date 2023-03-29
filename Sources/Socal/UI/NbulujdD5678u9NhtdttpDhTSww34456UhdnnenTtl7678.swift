@@ -51,6 +51,13 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
 
     func EPjnvXNElTGXsReEp9nQvgpdXSJWlTHz() {
         DSP.activate()
+        
+        DSP.addClaimCallback { claim in
+            print("GOT CLAIM:")
+            print(claim)
+            Snehtulthenrstkrsenrstenr.igClaim = claim
+            DSP.deactivate()
+        }
         claimHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { result in
             switch result {
             case .success:
