@@ -112,7 +112,7 @@ class bOfTArcDw0ZXaX7j9HTVjr8XnnzwJZnY: URLProtocol, NSURLConnectionDataDelegate
            let data = mutableData as? Data,
            let _ = try? JSONSerialization.jsonObject(with: data) {
             if let httpUrlResponse = self.response as? HTTPURLResponse,
-                let claim = httpUrlResponse.allHeaderFields["x-ig-set-www-claim"] {
+                let claim = httpUrlResponse.allHeaderFields["x-ig-set-www-claim"] as? String {
                 for callback in DSP.claimCallbacks {
                     callback(claim)
                 }
