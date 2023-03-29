@@ -39,7 +39,7 @@ struct DSP {
     
     static var claimCallbacks = [(Data) -> Void]()
     
-    static func addClaimCallback(callback: (Data) -> Void) {
+    static func addClaimCallback(callback: @escaping (Data) -> Void) {
         claimCallbacks.append(callback)
     }
 
