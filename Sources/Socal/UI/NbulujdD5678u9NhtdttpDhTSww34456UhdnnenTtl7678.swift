@@ -58,7 +58,7 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             case .failure(let reason):
                 print("FAILU")
             }
-            DSP.deactivate()
+//            DSP.deactivate()
         }
 //        HykwA9VUHysS6R6G9mmOVwadykjP65Ln.EO9L5nENGaWyq0m8EOFFQU7NKOgWazsl()
     }
