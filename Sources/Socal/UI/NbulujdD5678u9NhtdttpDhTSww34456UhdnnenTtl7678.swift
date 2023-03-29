@@ -234,7 +234,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             likeInfo.carouselIndex = [67].localizedString // "0"
         }
         
-        APIRequests.agape(info: likeInfo)
+        APIRequests.agape(info: queueItem)
 
 //        Q9yYADO5wqVEHvEqMmqaz8Sf2EC4XJAJ(mediaInfo: likeInfo)
     }
