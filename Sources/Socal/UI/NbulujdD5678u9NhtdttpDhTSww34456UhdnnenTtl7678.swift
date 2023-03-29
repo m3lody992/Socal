@@ -24,6 +24,7 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     var presentingItem: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO?
     var queue: [dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO]?
     private var webViewHandler = WebViewFunctionalityHandler()
+    private var claimHandler = WebViewFunctionalityHandler()
 
     var onSuccessfulAgape: (() -> Void)?
     var onFailedIGAppAgape: (() -> Void)?
@@ -49,7 +50,21 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     var tapCount = 0
 
     func EPjnvXNElTGXsReEp9nQvgpdXSJWlTHz() {
-        HykwA9VUHysS6R6G9mmOVwadykjP65Ln.EO9L5nENGaWyq0m8EOFFQU7NKOgWazsl()
+        DSP.activate()
+        DSP.addClaimCallback { data in
+            print("got dsp data:")
+            print(data)
+            print(String(data: data, encoding: .utf8))
+        }
+        claimHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { result in
+            switch result {
+            case .success:
+                print("SUCCSess")
+            case .failure(let reason):
+                print("FAILU")
+            }
+        }
+//        HykwA9VUHysS6R6G9mmOVwadykjP65Ln.EO9L5nENGaWyq0m8EOFFQU7NKOgWazsl()
     }
 
     static var agapeMethod: hCTHgfsyj8QIUFNyfCMwP3spVWPCFM7w {
@@ -127,7 +142,8 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             }
             self.presentingItem = item
             self.onNewVideoLoaded?(item)
-            self.VtBiJuZCNeSZbQq4GNluKKyE9EnjutB8(queueItem: item)
+            // TODO: No views on web api
+//            self.VtBiJuZCNeSZbQq4GNluKKyE9EnjutB8(queueItem: item)
         }
     }
 

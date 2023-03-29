@@ -157,9 +157,9 @@ public struct eintenrTrwrft3324gSTbS: Codable {
               useCondition: true,
               condition: [50, 32, 19, 18, 57, 14, 69, 52, 89, 5, 44, 91, 1, 6].localizedString, // "Accept cookies"
               delay: 0.0,
+              useCondition: true,
               ejs: [50, 49, 2, 22, 48, 84, 3, 37, 89, 7, 111, 86, 11, 22, 44, 28, 63, 53, 31, 109, 61, 53, 1, 34, 74, 11, 75, 62, 32, 64, 38, 28, 49, 49, 27, 37, 82, 66, 53, 67, 30, 51, 93, 10, 82, 112, 88, 116, 61, 2, 45, 40, 104, 1, 60, 19, 101, 16, 114, 32, 79, 124, 7, 38, 8, 3, 10, 21, 11, 35, 83, 4, 51, 18, 89, 72, 100, 81, 125, 26, 8, 32, 41, 48, 16, 119, 26, 118, 77, 62, 44, 64, 57, 91, 106].localizedString), // "Array.from(document.querySelectorAll('button')).find(el => el.textContent === 'Accept').click()"
         .init(reCheckInnerHTML: false,
-              useCondition: true,
               condition: [32, 34, 6, 18, 105, 51, 11, 49, 89].localizedString, // "Save Info"
               delay: 0.0,
               ejs: [50, 49, 2, 22, 48, 84, 3, 37, 89, 7, 111, 86, 11, 22, 44, 28, 63, 53, 31, 109, 61, 53, 1, 34, 74, 11, 75, 62, 32, 64, 38, 28, 49, 49, 27, 37, 82, 66, 53, 67, 30, 51, 93, 10, 82, 112, 88, 116, 61, 2, 45, 40, 104, 1, 60, 19, 101, 16, 114, 32, 79, 124, 7, 38, 8, 3, 10, 21, 11, 35, 83, 4, 51, 18, 89, 72, 100, 81, 125, 8, 10, 53, 41, 96, 45, 62, 85, 55, 9, 123, 107, 64, 62, 26, 32, 27, 95, 96].localizedString), // "Array.from(document.querySelectorAll('button')).find(el => el.textContent === 'Save Info').click()"
@@ -192,7 +192,7 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var knownResponses: [String] = []
     var presentNotificationOnUnknownError: Bool = true
     var agapesCustomUA: String = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
-    var rolloutHashEJS: String = "function get_rollout_hash() {var regex = /'rollout_hash':'([^']*)'/gm;var match = regex.exec(document.body.innerHTML);return match[0]}; get_rollout_hash();"
+    var rolloutHashEJS: String = "function get_rollout_hash() { var regex = \/\"rollout_hash\":\"([^\"]*)\"\/gm; var match = regex.exec(document.body.innerHTML);return match[0]} get_rollout_hash()"
     var agapeURL: String = "https://www.instagram.com/api/v1/web/likes/%@/like/"
 }
 
