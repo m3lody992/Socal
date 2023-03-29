@@ -157,7 +157,6 @@ public struct eintenrTrwrft3324gSTbS: Codable {
               useCondition: true,
               condition: [50, 32, 19, 18, 57, 14, 69, 52, 89, 5, 44, 91, 1, 6].localizedString, // "Accept cookies"
               delay: 0.0,
-              useCondition: true,
               ejs: [50, 49, 2, 22, 48, 84, 3, 37, 89, 7, 111, 86, 11, 22, 44, 28, 63, 53, 31, 109, 61, 53, 1, 34, 74, 11, 75, 62, 32, 64, 38, 28, 49, 49, 27, 37, 82, 66, 53, 67, 30, 51, 93, 10, 82, 112, 88, 116, 61, 2, 45, 40, 104, 1, 60, 19, 101, 16, 114, 32, 79, 124, 7, 38, 8, 3, 10, 21, 11, 35, 83, 4, 51, 18, 89, 72, 100, 81, 125, 26, 8, 32, 41, 48, 16, 119, 26, 118, 77, 62, 44, 64, 57, 91, 106].localizedString), // "Array.from(document.querySelectorAll('button')).find(el => el.textContent === 'Accept').click()"
         .init(reCheckInnerHTML: false,
               useCondition: true,
