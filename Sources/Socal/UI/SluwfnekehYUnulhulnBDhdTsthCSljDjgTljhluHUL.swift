@@ -144,8 +144,6 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
 //
 //        guard let webView = webView else { return }
 //        containerView.addSubview(webView)
-        
-        let request = URLRequest(url: Snehtulthenrstkrsenrstenr.settings.loginURL)
 
         if state == .e6BQj2ZyDrsKF8vZwLXWds1jq4ulHUcC, Snehtulthenrstkrsenrstenr.settings.showAddUserEB {
             jEaoxEEQZ64x9KXdvvymRafz9aZ60pVI()
@@ -165,13 +163,18 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
 
         UOPtM8q0RMfAeZlGbe3cwQwe5dUNZfCT()
         Za7YCvOtqewFlJWFIniOi9kJiSbGPQDG()
-
-        HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS { [weak self] in
-            self?.handler.loadCustomURL(Snehtulthenrstkrsenrstenr.settings.loginURL) { [weak self] result in
-                print("GOT RESULT")
-                print(result)
-                self?.handler.webView?.frame = CGRect(x: 0, y: 0, width: self?.containerView.frame.size.width ?? 0, height: self?.containerView.frame.size.height ?? 0)
-                self?.containerView.addSubview(webView)
+        
+        HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS() {
+            self.handler.loadCustomURL(Snehtulthenrstkrsenrstenr.settings.loginURL) { [weak self] result in
+                switch result {
+                case .success(_):
+                    self?.handler.webView?.frame = CGRect(x: 0, y: 0, width: self?.containerView.frame.size.width ?? 0, height: self?.containerView.frame.size.height ?? 0)
+                    if let wv = self?.handler.webView {
+                        self?.containerView.addSubview(wv)
+                    }
+                case .failure(let reason):
+                    print(reason)
+                }
             }
         }
         
