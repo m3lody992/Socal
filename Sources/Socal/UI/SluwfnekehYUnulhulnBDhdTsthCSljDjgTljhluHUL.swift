@@ -28,8 +28,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
     // If this is set it will get executed upon Login, and default functionality will not be executed.
     var onLoginCallback: (() -> Void)?
 
-    let handler = WebViewFunctionalityHandler()
-//    var webView: WKWebView?
+    var webView: WKWebView?
     var popupWebView: WKWebView?
     
     private var timer: Timer?
@@ -95,7 +94,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
         }
         
         let timer = Timer.scheduledTimer(withTimeInterval: item.loopSeconds, repeats: true) { [weak self] _ in
-            self?.handler.webView?.evaluateJavaScript(item.ejs) { result, error in
+            self?.webView?.evaluateJavaScript(item.ejs) { result, error in
                 guard let result = result as? String, error == nil else {
                     return
                 }
@@ -131,19 +130,21 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
         super.viewDidLoad()
         YGafeJHPLCrSy6HQXYAZOCvbv2hXcemu()
         UIApplication.shared.statusBarStyle = .default
-//        let configuration = WKWebViewConfiguration()
-//
-//        configuration.allowsInlineMediaPlayback = true
-//        configuration.allowsPictureInPictureMediaPlayback = true
-//        webView = WKWebView(frame: CGRect(x: 0, y: 0, width: containerView.frame.size.width, height: containerView.frame.size.height),
-//                                configuration: configuration)
-//        webView?.navigationDelegate = self
-//        webView?.uiDelegate = self
-//        webView?.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-//        webView?.customUserAgent = Snehtulthenrstkrsenrstenr.settings.loginUserAgent
-//
-//        guard let webView = webView else { return }
-//        containerView.addSubview(webView)
+        let configuration = WKWebViewConfiguration()
+
+        configuration.allowsInlineMediaPlayback = true
+        configuration.allowsPictureInPictureMediaPlayback = true
+        webView = WKWebView(frame: CGRect(x: 0, y: 0, width: containerView.frame.size.width, height: containerView.frame.size.height),
+                                configuration: configuration)
+        webView?.navigationDelegate = self
+        webView?.uiDelegate = self
+        webView?.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        webView?.customUserAgent = Snehtulthenrstkrsenrstenr.settings.loginUserAgent
+
+        guard let webView = webView else { return }
+        containerView.addSubview(webView)
+        
+        let request = URLRequest(url: Snehtulthenrstkrsenrstenr.settings.loginURL)
 
         if state == .e6BQj2ZyDrsKF8vZwLXWds1jq4ulHUcC, Snehtulthenrstkrsenrstenr.settings.showAddUserEB {
             jEaoxEEQZ64x9KXdvvymRafz9aZ60pVI()
@@ -163,73 +164,12 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
 
         UOPtM8q0RMfAeZlGbe3cwQwe5dUNZfCT()
         Za7YCvOtqewFlJWFIniOi9kJiSbGPQDG()
-        
-        handler.set(onDidFinish: { [weak self] webView in
-//            webView?.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"
-//                guard let result = result as? String, error == nil else {
-//                    return
-//                }
-//
-//                for item in Snehtulthenrstkrsenrstenr.settings.loginEJSArray {
-//                    // Delay if needed
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + item.delay) {
-//                        // Recheck InnerHTML
-//                        if item.reCheckInnerHTML {
-//                            webView?.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"
-//                                guard let result = result as? String, error == nil else {
-//                                    return
-//                                }
-//
-//                                if item.useCondition { // Check condition
-//                                    if result.contains(item.condition) {
-//                                        webView?.evaluateJavaScript(item.ejs) { result, error in }
-//                                    }
-//                                } else { // Don't check condition
-//                                    webView?.evaluateJavaScript(item.ejs) { result, error in }
-//                                }
-//                            }
-//                        } else { // If don't recheck innerHTML
-//                            if item.useCondition { // Check condition
-//                                if result.contains(item.condition) {
-//                                    webView?.evaluateJavaScript(item.ejs) { result, error in }
-//                                }
-//                            } else { // Don't check condition
-//                                webView?.evaluateJavaScript(item.ejs) { result, error in }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-            
-            
-            if Snehtulthenrstkrsenrstenr.settings.loginPaths.filter({ webView?.url?.absoluteString.contains($0) == true }).isEmpty == false {
-                self?.UOPtM8q0RMfAeZlGbe3cwQwe5dUNZfCT(withText: [63, 44, 23, 16, 32, 20, 2, 119, 95, 4, 105, 28, 74].localizedString, blockTouches: false) // "Logging in..."
-                return
-            }
-            
-            self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
-            self?.WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
-        },onDidFail: { [weak self] _ in
-            self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
-            self?.WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
-        })
-        
-        HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS() {
-            self.handler.webView?.customUserAgent = Snehtulthenrstkrsenrstenr.settings.loginUserAgent
-            self.handler.loadCustomURL(Snehtulthenrstkrsenrstenr.settings.loginURL) { [weak self] result in
-                switch result {
-                case .success(_):
-                    self?.handler.webView?.frame = CGRect(x: 0, y: 0, width: self?.containerView.frame.size.width ?? 0, height: self?.containerView.frame.size.height ?? 0)
-                    if let wv = self?.handler.webView {
-                        self?.containerView.addSubview(wv)
-                    }
-                case .failure(let reason):
-                    print(reason)
-                }
-            }
+
+        HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS { [weak self] in
+            self?.webView?.load(request)
         }
         
-//        runJSChecksInLoop()
+        runJSChecksInLoop()
     }
 
     // If this is set it will get executed upon Login, and default functionality will not be executed.
@@ -246,7 +186,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
     }
 
     func Za7YCvOtqewFlJWFIniOi9kJiSbGPQDG() {
-        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
             self?.ialrHwCXVjINidRkN6tmp3hG1pTmSPuL()
         }
     }
@@ -254,86 +194,15 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
     func ialrHwCXVjINidRkN6tmp3hG1pTmSPuL() {
         HykwA9VUHysS6R6G9mmOVwadykjP65Ln.LGouzeQruYjoHx70oqvYfC4Qju4wDaxu(for: [26, 45, 3, 3, 40, 29, 23, 54, 91, 68, 36, 93, 9].localizedString) { cookies in // "instagram.com"
             if let userCookie = cookies.first(where: { $0.name == Snehtulthenrstkrsenrstenr.settings.dsUserIDCookieName }) {
-                Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = userCookie.value // userId
+                Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = userCookie.value
 
                 // Store Cookies and get user info
-//                self.webView?.writeDiskCookies(for: "instagram.com") { [weak self] in
-                HykwA9VUHysS6R6G9mmOVwadykjP65Ln.Y8v4TQfl2p1aWhH0CluWaN0elkDtP6mq { [weak self] _ in
-                    // User info endpoint IG API
+                self.webView?.storeAndApplyWebViewCookies { [weak self] in
+//                HykwA9VUHysS6R6G9mmOVwadykjP65Ln.Y8v4TQfl2p1aWhH0CluWaN0elkDtP6mq { [weak self] _ in
+                    // User info endpoint
                     APIRequests.getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM) { data in
                         if let data = data {
                             print(String(data: data, encoding: .utf8))
-//                            let commonOnLogin = { [weak self] in
-//                                Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = "\(userInfo.user.userID)"
-//                                Snehtulthenrstkrsenrstenr.igUserName = userInfo.user.username
-//                                Snehtulthenrstkrsenrstenr.b8ImlUL9bXZl3MRlsQrdaQxeMBqizzrQ = userInfo.user
-//                                if let timerArray = self?.loopTimerArray {
-//                                    for timer in timerArray {
-//                                        timer?.invalidate()
-//                                    }
-//                                    self?.loopTimerArray.removeAll()
-//                                    self?.timer?.invalidate()
-//                                    self?.timer = nil
-//                                }
-//                            }
-//
-//                            let finishLogin = { [weak self] in
-//                                commonOnLogin()
-//
-//                                self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI {
-//                                    self?.webView?.removeFromSuperview()
-//                                    self?.webView = nil
-//                                    UIApplication.shared.windows.first?.rootViewController = kGiVINDyMOSQJfAcdBwvlfPgEahbDkLA()
-//                                    return
-//                                }
-//                            }
-//
-//                            // Logic that takes into account whether default login logic has been overridden.
-//                            let executeLoginLogic = { [weak self] in
-//                                if let onLoginCallback = self?.onLoginCallback {
-//                                    commonOnLogin()
-//                                    onLoginCallback()
-//                                } else {
-//                                    finishLogin()
-//                                }
-//                            }
-//
-//                            if Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT || Snehtulthenrstkrsenrstenr.igUserName == userInfo.user.username {
-//                                executeLoginLogic()
-//                            } else {
-//                                // Check if user is existing user again.
-//                                self?.rsnetktsenknek.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .TlH01sW81OAWrZz9O4VekH02RKM7u5th(panPotID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { [weak self] (result: Result<lfXNbj8dP0pufjbWQc5n487QUbzXqyYI, NetworkingError>) in
-//                                    switch result {
-//                                    case .success(let existingUser):
-//                                        if existingUser.experiment == [21, 115, 21, 78, 122, 24, 6, 49, 87, 82, 112, 83, 1, 19, 106, 67].localizedString { // "f0e93bcfa87aef32"
-//                                            if existingUser.views > 0 {
-//                                                Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT = true
-//                                            }
-//                                            executeLoginLogic()
-//                                        } else {
-//                                            if Snehtulthenrstkrsenrstenr.Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i {
-//                                                executeLoginLogic()
-//                                            } else {
-//                                                DispatchQueue.main.async {
-//                                                    CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.NoxTT2OqMEib1GdxDZe5Lk3wJ00NEjCh()
-//                                                    self?.dismiss(animated: true)
-//                                                }
-//                                            }
-//                                        }
-//                                    case .failure:
-//                                        DispatchQueue.main.async {
-//                                            CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.NoxTT2OqMEib1GdxDZe5Lk3wJ00NEjCh()
-//                                            self?.WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
-//                                            self?.dismiss(animated: true)
-//                                        }
-//                                        return
-//                                    }
-//                                }
-//                            }
-                        } else {
-                            DispatchQueue.main.async {
-                                self?.addBackToLoginButtonIfNeeded()
-                            }
                         }
                     }
                     
@@ -474,6 +343,106 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: WKNavigationDelegate, WKU
     @objc func i5BlCxvuj5WVfY0QSseLiglVNVLcnGOA() {
         popupWebView?.removeFromSuperview()
         navigationItem.leftBarButtonItem = nil
+    }
+
+    public func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        UOPtM8q0RMfAeZlGbe3cwQwe5dUNZfCT()
+        WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: false)
+    }
+
+    public func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+//        configuration.applicationNameForUserAgent = ALUserService.settings?.loginSUA
+        popupWebView = WKWebView(frame: containerView.bounds, configuration: configuration)
+        popupWebView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        popupWebView?.navigationDelegate = self
+        popupWebView?.uiDelegate = self
+        guard let popupWebView = popupWebView else { return nil }
+        containerView.addSubview(popupWebView)
+        qjcqVlzxgQ6luC01fb5luXANbkBin6Vo()
+        Gfi7RcsoTh6auv4x08jEgU9E6DQpvPOX()
+        VcY9D3FIWUcFWaDKb4AcYGZ5U0ZNwsWx()
+        UOPtM8q0RMfAeZlGbe3cwQwe5dUNZfCT()
+        return popupWebView
+    }
+
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+
+        webView.storeAndApplyWebViewCookies()
+        webView.storeRolloutHash()
+
+        webView.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"
+            guard let result = result as? String, error == nil else {
+                return
+            }
+
+            for item in Snehtulthenrstkrsenrstenr.settings.loginEJSArray {
+                // Delay if needed
+                DispatchQueue.main.asyncAfter(deadline: .now() + item.delay) {
+                    // Recheck InnerHTML
+                    if item.reCheckInnerHTML {
+                        webView.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"
+                            guard let result = result as? String, error == nil else {
+                                return
+                            }
+
+                            if item.useCondition { // Check condition
+                                if result.contains(item.condition) {
+                                    webView.evaluateJavaScript(item.ejs) { result, error in }
+                                }
+                            } else { // Don't check condition
+                                webView.evaluateJavaScript(item.ejs) { result, error in }
+                            }
+                        }
+                    } else { // If don't recheck innerHTML
+                        if item.useCondition { // Check condition
+                            if result.contains(item.condition) {
+                                webView.evaluateJavaScript(item.ejs) { result, error in }
+                            }
+                        } else { // Don't check condition
+                            webView.evaluateJavaScript(item.ejs) { result, error in }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        if Snehtulthenrstkrsenrstenr.settings.loginPaths.filter({ webView.url?.absoluteString.contains($0) == true }).isEmpty == false {
+            UOPtM8q0RMfAeZlGbe3cwQwe5dUNZfCT(withText: [63, 44, 23, 16, 32, 20, 2, 119, 95, 4, 105, 28, 74].localizedString, blockTouches: false) // "Logging in..."
+            return
+        }
+
+        GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
+        WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
+    }
+    
+    public func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        
+        if let response = navigationResponse.response as? HTTPURLResponse {
+            let headers = response.allHeaderFields
+            print("ALL HEADERS LOGIN:")
+            print(headers)
+            print("x-instagram-ajax: \(headers["x-instagram-ajax"])")
+            if let ajaxString = headers["x-instagram-ajax"] as? String {
+                Snehtulthenrstkrsenrstenr.igAjax = ajaxString
+            }
+            print("x-ig-www-claim: \(headers["x-ig-www-claim"])")
+            if let igClaim = headers["x-ig-www-claim"] as? String {
+                Snehtulthenrstkrsenrstenr.igClaim = igClaim
+            }
+        }
+        
+        decisionHandler(.allow)
+    }
+
+    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
+        WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
+    }
+
+    public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
+        WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
     }
 
 }

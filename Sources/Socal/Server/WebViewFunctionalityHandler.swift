@@ -139,7 +139,7 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
 
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         webView.storeAndApplyWebViewCookies()
-//        webView.storeRolloutHash()
+        webView.storeRolloutHash()
 
         if isWaitingForLoadResponse {
             temporaryLoadCompletionHolder?(.success(webView))
