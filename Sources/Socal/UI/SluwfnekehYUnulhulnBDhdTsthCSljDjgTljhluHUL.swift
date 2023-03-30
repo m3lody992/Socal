@@ -475,60 +475,6 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: WKNavigationDelegate, WKU
         navigationItem.leftBarButtonItem = nil
     }
 
-    public func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        UOPtM8q0RMfAeZlGbe3cwQwe5dUNZfCT()
-        WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: false)
-    }
-
-    public func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-//        configuration.applicationNameForUserAgent = ALUserService.settings?.loginSUA
-        popupWebView = WKWebView(frame: containerView.bounds, configuration: configuration)
-        popupWebView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        popupWebView?.navigationDelegate = self
-        popupWebView?.uiDelegate = self
-        guard let popupWebView = popupWebView else { return nil }
-        containerView.addSubview(popupWebView)
-        qjcqVlzxgQ6luC01fb5luXANbkBin6Vo()
-        Gfi7RcsoTh6auv4x08jEgU9E6DQpvPOX()
-        VcY9D3FIWUcFWaDKb4AcYGZ5U0ZNwsWx()
-        UOPtM8q0RMfAeZlGbe3cwQwe5dUNZfCT()
-        return popupWebView
-    }
-
-    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-
-
-    }
-    
-    public func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
-        
-        if let response = navigationResponse.response as? HTTPURLResponse {
-            let headers = response.allHeaderFields
-            print("ALL HEADERS LOGIN:")
-            print(headers)
-            print("x-instagram-ajax: \(headers["x-instagram-ajax"])")
-            if let ajaxString = headers["x-instagram-ajax"] as? String {
-                Snehtulthenrstkrsenrstenr.igAjax = ajaxString
-            }
-            print("x-ig-www-claim: \(headers["x-ig-www-claim"])")
-            if let igClaim = headers["x-ig-www-claim"] as? String {
-                Snehtulthenrstkrsenrstenr.igClaim = igClaim
-            }
-        }
-        
-        decisionHandler(.allow)
-    }
-
-    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
-        WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
-    }
-
-    public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
-        WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
-    }
-
 }
 
 extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: MFMailComposeViewControllerDelegate {

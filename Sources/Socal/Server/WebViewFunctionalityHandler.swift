@@ -204,7 +204,7 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
 
 //        let url = URL(string: "https://instagram.com")!
 //        webView.writeDiskCookies(for: url.host!){
-//            decisionHandler(.allow)
+            decisionHandler(.allow)
 //        }
     }
 
