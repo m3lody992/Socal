@@ -215,6 +215,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
         })
         
         HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS() {
+            self.handler.webView?.customUserAgent = Snehtulthenrstkrsenrstenr.settings.loginUserAgent
             self.handler.loadCustomURL(Snehtulthenrstkrsenrstenr.settings.loginURL) { [weak self] result in
                 switch result {
                 case .success(_):
