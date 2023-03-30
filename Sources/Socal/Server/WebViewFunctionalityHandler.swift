@@ -165,6 +165,14 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         fail(withReason: .pageLoadFailed)
     }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        //load cookie of current domain
+        let url = URL(string: "https://instagram.com")!
+        webView.loadDiskCookies(for: url.host!){
+            decisionHandler(.allow)
+        }
+    }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         
@@ -186,7 +194,11 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
             fail(withReason: .responseStatusCodeNotOk(statusCode: response.statusCode))
         }
 
-        decisionHandler(.allow)
+        let url = URL(string: "https://instagram.com")!
+        webView.writeDiskCookies(for: url.host!){
+            decisionHandler(.allow)
+        }
     }
 
 }
+
