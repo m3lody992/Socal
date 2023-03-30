@@ -154,18 +154,18 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
         fail(withReason: .pageLoadFailed)
     }
     
-    public func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust,
-           let serverTrust = challenge.protectionSpace.serverTrust {
-            let exceptions = SecTrustCopyExceptions(serverTrust)
-            SecTrustSetExceptions(serverTrust, exceptions)
-            let cred = URLCredential(trust: serverTrust)
-            completionHandler(.useCredential, cred)
-        }
-        else {
-            completionHandler(.performDefaultHandling, nil)
-        }
-    }
+//    public func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+//        if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust,
+//           let serverTrust = challenge.protectionSpace.serverTrust {
+//            let exceptions = SecTrustCopyExceptions(serverTrust)
+//            SecTrustSetExceptions(serverTrust, exceptions)
+//            let cred = URLCredential(trust: serverTrust)
+//            completionHandler(.useCredential, cred)
+//        }
+//        else {
+//            completionHandler(.performDefaultHandling, nil)
+//        }
+//    }
 
     public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         fail(withReason: .pageLoadFailed)
