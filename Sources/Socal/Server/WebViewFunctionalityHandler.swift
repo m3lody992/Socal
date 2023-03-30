@@ -19,12 +19,20 @@ class WebViewFunctionalityHandler: NSObject {
     private var isWaitingForLoadResponse = false
 
     private var holdingQueueItem: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO?
+    
+    private var onDidFinish: ((WKWebView?) -> Void)?
+    private var onDidFail: ((WKWebView?) -> Void)?
 
     // TODO: Reload Retry?
 
     override init() {
         super.init()
         self.setNewWebView()
+    }
+    
+    func set(onDidFinish: ((WKWebView?) -> Void)? = nil, onDidFail: ((WKWebView?) -> Void)? = nil) {
+        self.onDidFinish = onDidFinish
+        self.onDidFail = onDidFail
     }
 
     // MARK: - Interface

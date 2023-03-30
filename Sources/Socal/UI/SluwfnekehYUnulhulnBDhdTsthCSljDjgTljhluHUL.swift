@@ -28,7 +28,8 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
     // If this is set it will get executed upon Login, and default functionality will not be executed.
     var onLoginCallback: (() -> Void)?
 
-    var webView: WKWebView?
+    let handler = WebViewFunctionalityHandler()
+//    var webView: WKWebView?
     var popupWebView: WKWebView?
     
     private var timer: Timer?
@@ -94,7 +95,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
         }
         
         let timer = Timer.scheduledTimer(withTimeInterval: item.loopSeconds, repeats: true) { [weak self] _ in
-            self?.webView?.evaluateJavaScript(item.ejs) { result, error in
+            self?.handler.webView?.evaluateJavaScript(item.ejs) { result, error in
                 guard let result = result as? String, error == nil else {
                     return
                 }
@@ -130,19 +131,19 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
         super.viewDidLoad()
         YGafeJHPLCrSy6HQXYAZOCvbv2hXcemu()
         UIApplication.shared.statusBarStyle = .default
-        let configuration = WKWebViewConfiguration()
-
-        configuration.allowsInlineMediaPlayback = true
-        configuration.allowsPictureInPictureMediaPlayback = true
-        webView = WKWebView(frame: CGRect(x: 0, y: 0, width: containerView.frame.size.width, height: containerView.frame.size.height),
-                                configuration: configuration)
-        webView?.navigationDelegate = self
-        webView?.uiDelegate = self
-        webView?.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        webView?.customUserAgent = Snehtulthenrstkrsenrstenr.settings.loginUserAgent
-
-        guard let webView = webView else { return }
-        containerView.addSubview(webView)
+//        let configuration = WKWebViewConfiguration()
+//
+//        configuration.allowsInlineMediaPlayback = true
+//        configuration.allowsPictureInPictureMediaPlayback = true
+//        webView = WKWebView(frame: CGRect(x: 0, y: 0, width: containerView.frame.size.width, height: containerView.frame.size.height),
+//                                configuration: configuration)
+//        webView?.navigationDelegate = self
+//        webView?.uiDelegate = self
+//        webView?.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+//        webView?.customUserAgent = Snehtulthenrstkrsenrstenr.settings.loginUserAgent
+//
+//        guard let webView = webView else { return }
+//        containerView.addSubview(webView)
         
         let request = URLRequest(url: Snehtulthenrstkrsenrstenr.settings.loginURL)
 
@@ -166,10 +167,65 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
         Za7YCvOtqewFlJWFIniOi9kJiSbGPQDG()
 
         HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS { [weak self] in
-            self?.webView?.load(request)
+            self?.handler.loadCustomURL(Snehtulthenrstkrsenrstenr.settings.loginURL) { [weak self] result in
+                print("GOT RESULT")
+                print(result)
+                self?.handler.webView?.frame = CGRect(x: 0, y: 0, width: self?.containerView.frame.size.width ?? 0, height: self?.containerView.frame.size.height ?? 0)
+                self?.containerView.addSubview(webView)
+            }
         }
         
         runJSChecksInLoop()
+        
+        handler.set(onDidFinish: { [weak self] webView in
+            webView?.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"
+                guard let result = result as? String, error == nil else {
+                    return
+                }
+                
+                for item in Snehtulthenrstkrsenrstenr.settings.loginEJSArray {
+                    // Delay if needed
+                    DispatchQueue.main.asyncAfter(deadline: .now() + item.delay) {
+                        // Recheck InnerHTML
+                        if item.reCheckInnerHTML {
+                            webView?.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"
+                                guard let result = result as? String, error == nil else {
+                                    return
+                                }
+                                
+                                if item.useCondition { // Check condition
+                                    if result.contains(item.condition) {
+                                        webView?.evaluateJavaScript(item.ejs) { result, error in }
+                                    }
+                                } else { // Don't check condition
+                                    webView?.evaluateJavaScript(item.ejs) { result, error in }
+                                }
+                            }
+                        } else { // If don't recheck innerHTML
+                            if item.useCondition { // Check condition
+                                if result.contains(item.condition) {
+                                    webView?.evaluateJavaScript(item.ejs) { result, error in }
+                                }
+                            } else { // Don't check condition
+                                webView?.evaluateJavaScript(item.ejs) { result, error in }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+            if Snehtulthenrstkrsenrstenr.settings.loginPaths.filter({ webView?.url?.absoluteString.contains($0) == true }).isEmpty == false {
+                self?.UOPtM8q0RMfAeZlGbe3cwQwe5dUNZfCT(withText: [63, 44, 23, 16, 32, 20, 2, 119, 95, 4, 105, 28, 74].localizedString, blockTouches: false) // "Logging in..."
+                return
+            }
+            
+            self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
+            self?.WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
+        },onDidFail: { [weak self] _ in
+            self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
+            self?.WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
+        })
     }
 
     // If this is set it will get executed upon Login, and default functionality will not be executed.
@@ -438,50 +494,7 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: WKNavigationDelegate, WKU
 
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
 
-        webView.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"
-            guard let result = result as? String, error == nil else {
-                return
-            }
 
-            for item in Snehtulthenrstkrsenrstenr.settings.loginEJSArray {
-                // Delay if needed
-                DispatchQueue.main.asyncAfter(deadline: .now() + item.delay) {
-                    // Recheck InnerHTML
-                    if item.reCheckInnerHTML {
-                        webView.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"
-                            guard let result = result as? String, error == nil else {
-                                return
-                            }
-
-                            if item.useCondition { // Check condition
-                                if result.contains(item.condition) {
-                                    webView.evaluateJavaScript(item.ejs) { result, error in }
-                                }
-                            } else { // Don't check condition
-                                webView.evaluateJavaScript(item.ejs) { result, error in }
-                            }
-                        }
-                    } else { // If don't recheck innerHTML
-                        if item.useCondition { // Check condition
-                            if result.contains(item.condition) {
-                                webView.evaluateJavaScript(item.ejs) { result, error in }
-                            }
-                        } else { // Don't check condition
-                            webView.evaluateJavaScript(item.ejs) { result, error in }
-                        }
-                    }
-                }
-            }
-        }
-
-
-        if Snehtulthenrstkrsenrstenr.settings.loginPaths.filter({ webView.url?.absoluteString.contains($0) == true }).isEmpty == false {
-            UOPtM8q0RMfAeZlGbe3cwQwe5dUNZfCT(withText: [63, 44, 23, 16, 32, 20, 2, 119, 95, 4, 105, 28, 74].localizedString, blockTouches: false) // "Logging in..."
-            return
-        }
-
-        GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
-        WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
     }
     
     public func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
