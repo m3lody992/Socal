@@ -147,6 +147,7 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
             isWaitingForLoadResponse = false
         }
         
+        onDidFinish?(webView)
     }
     
     func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
@@ -168,10 +169,12 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
 
     public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         fail(withReason: .pageLoadFailed)
+        onDidFail?(webView)
     }
 
     public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         fail(withReason: .pageLoadFailed)
+        onDidFail?(webView)
     }
     
 //    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
@@ -200,6 +203,7 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
 
         if let response = navigationResponse.response as? HTTPURLResponse, !(200...299).contains(response.statusCode) {
             fail(withReason: .responseStatusCodeNotOk(statusCode: response.statusCode))
+            onDidFail?(webView)
         }
 
 //        let url = URL(string: "https://instagram.com")!
