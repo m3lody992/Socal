@@ -197,7 +197,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                 Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = userCookie.value
 
                 // Store Cookies and get user info
-                self.webView?.storeAndApplyWebViewCookies { [weak self] in
+                self.webView?.writeDiskCookies(for: "instagram.com") { [weak self] in
 //                HykwA9VUHysS6R6G9mmOVwadykjP65Ln.Y8v4TQfl2p1aWhH0CluWaN0elkDtP6mq { [weak self] _ in
                     // User info endpoint
                     self?.nhsrtrstenh.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
