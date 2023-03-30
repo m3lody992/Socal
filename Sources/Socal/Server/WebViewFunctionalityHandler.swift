@@ -139,7 +139,7 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
 
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         webView.storeAndApplyWebViewCookies()
-        webView.storeRolloutHash()
+//        webView.storeRolloutHash()
 
         if isWaitingForLoadResponse {
             temporaryLoadCompletionHolder?(.success(webView))
@@ -176,40 +176,14 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
         fail(withReason: .pageLoadFailed)
         onDidFail?(webView)
     }
-    
-//    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-//        //load cookie of current domain
-//        let url = URL(string: "https://instagram.com")!
-//        webView.loadDiskCookies(for: url.host!){
-//            decisionHandler(.allow)
-//        }
-//    }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
-        
-        if let response = navigationResponse.response as? HTTPURLResponse {
-            let headers = response.allHeaderFields
-            print("ALL HEADERS:")
-            print(headers)
-            print("x-instagram-ajax: \(headers["x-instagram-ajax"])")
-            if let ajaxString = headers["x-instagram-ajax"] as? String {
-                Snehtulthenrstkrsenrstenr.igAjax = ajaxString
-            }
-            
-            if let igClaim = headers["x-ig-www-claim"] as? String {
-                Snehtulthenrstkrsenrstenr.igClaim = igClaim
-            }
-        }
 
         if let response = navigationResponse.response as? HTTPURLResponse, !(200...299).contains(response.statusCode) {
             fail(withReason: .responseStatusCodeNotOk(statusCode: response.statusCode))
             onDidFail?(webView)
         }
-
-//        let url = URL(string: "https://instagram.com")!
-//        webView.writeDiskCookies(for: url.host!){
-            decisionHandler(.allow)
-//        }
+        decisionHandler(.allow)
     }
 
 }

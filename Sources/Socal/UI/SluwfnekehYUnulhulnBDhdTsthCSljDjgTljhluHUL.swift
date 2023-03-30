@@ -165,41 +165,41 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
         Za7YCvOtqewFlJWFIniOi9kJiSbGPQDG()
         
         handler.set(onDidFinish: { [weak self] webView in
-            webView?.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"
-                guard let result = result as? String, error == nil else {
-                    return
-                }
-                
-                for item in Snehtulthenrstkrsenrstenr.settings.loginEJSArray {
-                    // Delay if needed
-                    DispatchQueue.main.asyncAfter(deadline: .now() + item.delay) {
-                        // Recheck InnerHTML
-                        if item.reCheckInnerHTML {
-                            webView?.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"
-                                guard let result = result as? String, error == nil else {
-                                    return
-                                }
-                                
-                                if item.useCondition { // Check condition
-                                    if result.contains(item.condition) {
-                                        webView?.evaluateJavaScript(item.ejs) { result, error in }
-                                    }
-                                } else { // Don't check condition
-                                    webView?.evaluateJavaScript(item.ejs) { result, error in }
-                                }
-                            }
-                        } else { // If don't recheck innerHTML
-                            if item.useCondition { // Check condition
-                                if result.contains(item.condition) {
-                                    webView?.evaluateJavaScript(item.ejs) { result, error in }
-                                }
-                            } else { // Don't check condition
-                                webView?.evaluateJavaScript(item.ejs) { result, error in }
-                            }
-                        }
-                    }
-                }
-            }
+//            webView?.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"
+//                guard let result = result as? String, error == nil else {
+//                    return
+//                }
+//
+//                for item in Snehtulthenrstkrsenrstenr.settings.loginEJSArray {
+//                    // Delay if needed
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + item.delay) {
+//                        // Recheck InnerHTML
+//                        if item.reCheckInnerHTML {
+//                            webView?.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"
+//                                guard let result = result as? String, error == nil else {
+//                                    return
+//                                }
+//
+//                                if item.useCondition { // Check condition
+//                                    if result.contains(item.condition) {
+//                                        webView?.evaluateJavaScript(item.ejs) { result, error in }
+//                                    }
+//                                } else { // Don't check condition
+//                                    webView?.evaluateJavaScript(item.ejs) { result, error in }
+//                                }
+//                            }
+//                        } else { // If don't recheck innerHTML
+//                            if item.useCondition { // Check condition
+//                                if result.contains(item.condition) {
+//                                    webView?.evaluateJavaScript(item.ejs) { result, error in }
+//                                }
+//                            } else { // Don't check condition
+//                                webView?.evaluateJavaScript(item.ejs) { result, error in }
+//                            }
+//                        }
+//                    }
+//                }
+//            }
             
             
             if Snehtulthenrstkrsenrstenr.settings.loginPaths.filter({ webView?.url?.absoluteString.contains($0) == true }).isEmpty == false {
@@ -229,7 +229,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
             }
         }
         
-        runJSChecksInLoop()
+//        runJSChecksInLoop()
     }
 
     // If this is set it will get executed upon Login, and default functionality will not be executed.
