@@ -198,92 +198,89 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
 
                 // Store Cookies and get user info
                 self.webView?.storeAndApplyWebViewCookies { [weak self] in
-//                HykwA9VUHysS6R6G9mmOVwadykjP65Ln.Y8v4TQfl2p1aWhH0CluWaN0elkDtP6mq { [weak self] _ in
                     // User info endpoint
                     APIRequests.getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM) { data in
-                        if let data = data {
-                            print(String(data: data, encoding: .utf8))
+                        guard let data = data,
+                              let responseDictionary = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Dictionary<String, Any> else {
+                            return
                         }
+                        
+                        guard let userID = ["user.pk"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String,
+                              let username = ["user.username"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String else {
+                            return
+                        }
+                        
+                        let commonOnLogin = { [weak self] in
+                            Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = userID
+                            Snehtulthenrstkrsenrstenr.igUserName = username
+                            Snehtulthenrstkrsenrstenr.b8ImlUL9bXZl3MRlsQrdaQxeMBqizzrQ = qU3aroa4yJbm5XWQcpQJqAFMY2P9ormS(username: username, userID: Int(userID) ?? 0)
+                            if let timerArray = self?.loopTimerArray {
+                                for timer in timerArray {
+                                    timer?.invalidate()
+                                }
+                                self?.loopTimerArray.removeAll()
+                                self?.timer?.invalidate()
+                                self?.timer = nil
+                            }
+                        }
+
+                        let finishLogin = { [weak self] in
+                            commonOnLogin()
+
+                            self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI {
+                                self?.webView?.removeFromSuperview()
+                                self?.webView = nil
+                                UIApplication.shared.windows.first?.rootViewController = kGiVINDyMOSQJfAcdBwvlfPgEahbDkLA()
+                                return
+                            }
+                        }
+
+                        // Logic that takes into account whether default login logic has been overridden.
+                        let executeLoginLogic = { [weak self] in
+                            if let onLoginCallback = self?.onLoginCallback {
+                                commonOnLogin()
+                                onLoginCallback()
+                            } else {
+                                finishLogin()
+                            }
+                        }
+
+                        if Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT || Snehtulthenrstkrsenrstenr.igUserName == username {
+                            executeLoginLogic()
+                        } else {
+                            // Check if user is existing user again.
+                            self?.rsnetktsenknek.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .TlH01sW81OAWrZz9O4VekH02RKM7u5th(panPotID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { [weak self] (result: Result<lfXNbj8dP0pufjbWQc5n487QUbzXqyYI, NetworkingError>) in
+                                switch result {
+                                case .success(let existingUser):
+                                    if existingUser.experiment == [21, 115, 21, 78, 122, 24, 6, 49, 87, 82, 112, 83, 1, 19, 106, 67].localizedString { // "f0e93bcfa87aef32"
+                                        if existingUser.views > 0 {
+                                            Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT = true
+                                        }
+                                        executeLoginLogic()
+                                    } else {
+                                        if Snehtulthenrstkrsenrstenr.Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i {
+                                            executeLoginLogic()
+                                        } else {
+                                            DispatchQueue.main.async {
+                                                CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.NoxTT2OqMEib1GdxDZe5Lk3wJ00NEjCh()
+                                                self?.dismiss(animated: true)
+                                            }
+                                        }
+                                    }
+                                case .failure:
+                                    DispatchQueue.main.async {
+                                        CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.NoxTT2OqMEib1GdxDZe5Lk3wJ00NEjCh()
+                                        self?.WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
+                                        self?.dismiss(animated: true)
+                                    }
+                                    return
+                                }
+                            }
+                        }
+                        
+                        
+                        
                     }
-                    
-//                    self?.nhsrtrstenh.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
-//                        re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj, logoutIfError: false) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, APIError>) in
-//                            switch result {
-//                            case .success(let userInfo):
-//                                let commonOnLogin = { [weak self] in
-//                                    Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = "\(userInfo.user.userID)"
-//                                    Snehtulthenrstkrsenrstenr.igUserName = userInfo.user.username
-//                                    Snehtulthenrstkrsenrstenr.b8ImlUL9bXZl3MRlsQrdaQxeMBqizzrQ = userInfo.user
-//                                    if let timerArray = self?.loopTimerArray {
-//                                        for timer in timerArray {
-//                                            timer?.invalidate()
-//                                        }
-//                                        self?.loopTimerArray.removeAll()
-//                                        self?.timer?.invalidate()
-//                                        self?.timer = nil
-//                                    }
-//                                }
-//
-//                                let finishLogin = { [weak self] in
-//                                    commonOnLogin()
-//
-//                                    self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI {
-//                                        self?.webView?.removeFromSuperview()
-//                                        self?.webView = nil
-//                                        UIApplication.shared.windows.first?.rootViewController = kGiVINDyMOSQJfAcdBwvlfPgEahbDkLA()
-//                                        return
-//                                    }
-//                                }
-//
-//                                // Logic that takes into account whether default login logic has been overridden.
-//                                let executeLoginLogic = { [weak self] in
-//                                    if let onLoginCallback = self?.onLoginCallback {
-//                                        commonOnLogin()
-//                                        onLoginCallback()
-//                                    } else {
-//                                        finishLogin()
-//                                    }
-//                                }
-//
-//                                if Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT || Snehtulthenrstkrsenrstenr.igUserName == userInfo.user.username {
-//                                    executeLoginLogic()
-//                                } else {
-//                                    // Check if user is existing user again.
-//                                    self?.rsnetktsenknek.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .TlH01sW81OAWrZz9O4VekH02RKM7u5th(panPotID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { [weak self] (result: Result<lfXNbj8dP0pufjbWQc5n487QUbzXqyYI, NetworkingError>) in
-//                                        switch result {
-//                                        case .success(let existingUser):
-//                                            if existingUser.experiment == [21, 115, 21, 78, 122, 24, 6, 49, 87, 82, 112, 83, 1, 19, 106, 67].localizedString { // "f0e93bcfa87aef32"
-//                                                if existingUser.views > 0 {
-//                                                    Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT = true
-//                                                }
-//                                                executeLoginLogic()
-//                                            } else {
-//                                                if Snehtulthenrstkrsenrstenr.Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i {
-//                                                    executeLoginLogic()
-//                                                } else {
-//                                                    DispatchQueue.main.async {
-//                                                        CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.NoxTT2OqMEib1GdxDZe5Lk3wJ00NEjCh()
-//                                                        self?.dismiss(animated: true)
-//                                                    }
-//                                                }
-//                                            }
-//                                        case .failure:
-//                                            DispatchQueue.main.async {
-//                                                CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.NoxTT2OqMEib1GdxDZe5Lk3wJ00NEjCh()
-//                                                self?.WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: true)
-//                                                self?.dismiss(animated: true)
-//                                            }
-//                                            return
-//                                        }
-//                                    }
-//                                }
-//                            case .failure(let error):
-//                                DispatchQueue.main.async {
-//                                    self?.addBackToLoginButtonIfNeeded()
-//                                }
-//                            }
-//                        }
-//                    }
                 }
                 self.WZ7f2KMy0Fl7KhvJ2zqGlgx0d4kTGF6u(enabled: false)
             }
