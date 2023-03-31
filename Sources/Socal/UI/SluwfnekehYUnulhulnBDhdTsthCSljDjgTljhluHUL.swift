@@ -19,7 +19,6 @@ enum Xuv0CNW8RJ3tZd6HEyvf6j7RFU8OA48V {
 
 public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBTluhdvd {
 
-    private let nhsrtrstenh = HTTPJSONClient<TREbB07cwTRBteHCmKut5TbSJGkaf77v>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
     private let rsnetktsenknek = HTTPJSONClient<h49kWBf4uKtta6hj9FRM3PdrQ2xdJhGE>(engine: .pelLg1h4saB8FijHX4Mgg0pKAuSMmTIi)
 
     var state: Xuv0CNW8RJ3tZd6HEyvf6j7RFU8OA48V = .e6BQj2ZyDrsKF8vZwLXWds1jq4ulHUcC
@@ -197,7 +196,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                 Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = userCookie.value
 
                 // Store Cookies and get user info
-                self.webView?.storeAndApplyWebViewCookies { [weak self] in
+                self.webView?.writeDiskCookies(for: "instagram.com") { [weak self] in
                     // User info endpoint
                     APIRequests.getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM) { data in
                         guard let data = data,
@@ -364,7 +363,9 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: WKNavigationDelegate, WKU
 
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
 
-        webView.storeAndApplyWebViewCookies()
+        webView.writeDiskCookies(for: "instagram.com") {
+            
+        }
         webView.storeRolloutHash()
 
         webView.evaluateJavaScript([23, 44, 19, 2, 36, 31, 11, 35, 24, 8, 40, 86, 29, 91, 48, 31, 52, 62, 25, 11, 24, 13, 40].localizedString) { result, error in // "document.body.innerHTML"

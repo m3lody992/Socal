@@ -90,7 +90,7 @@ class WebViewFunctionalityHandler: NSObject {
         configuration.allowsPictureInPictureMediaPlayback = false
         let newWebView = WKWebView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), configuration: configuration)
         newWebView.customUserAgent = Snehtulthenrstkrsenrstenr.settings.agapesCustomUA
-        newWebView.applyWebViewCookies()
+        newWebView.loadDiskCookies(for: "instagram.com") {}
         newWebView.navigationDelegate = self
         
         self.webView = newWebView
@@ -138,7 +138,9 @@ class WebViewFunctionalityHandler: NSObject {
 extension WebViewFunctionalityHandler: WKNavigationDelegate {
 
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        webView.storeAndApplyWebViewCookies()
+        webView.writeDiskCookies(for: "instagram.com") {
+            
+        }
         webView.storeRolloutHash()
 
         if isWaitingForLoadResponse {
