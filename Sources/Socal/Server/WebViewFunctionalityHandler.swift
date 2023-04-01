@@ -90,7 +90,8 @@ class WebViewFunctionalityHandler: NSObject {
         configuration.allowsPictureInPictureMediaPlayback = false
         let newWebView = WKWebView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), configuration: configuration)
         newWebView.customUserAgent = Snehtulthenrstkrsenrstenr.settings.agapesCustomUA
-        newWebView.loadDiskCookies(for: "instagram.com") {}
+//        newWebView.loadDiskCookies(for: "instagram.com") {}
+        newWebView.applyWebViewCookies()
         newWebView.navigationDelegate = self
         
         self.webView = newWebView
@@ -138,9 +139,7 @@ class WebViewFunctionalityHandler: NSObject {
 extension WebViewFunctionalityHandler: WKNavigationDelegate {
 
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        webView.writeDiskCookies(for: "instagram.com") {
-            
-        }
+        webView.storeAndApplyWebViewCookies()
         webView.storeRolloutHash()
 
         if isWaitingForLoadResponse {
@@ -179,20 +178,21 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
         onDidFail?(webView)
     }
     
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        webView.loadDiskCookies {
-            decisionHandler(.allow)
-        }
-    }
+//    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+//        webView.loadDiskCookies {
+//            decisionHandler(.allow)
+//        }
+//    }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         if let response = navigationResponse.response as? HTTPURLResponse, !(200...299).contains(response.statusCode) {
             fail(withReason: .responseStatusCodeNotOk(statusCode: response.statusCode))
             onDidFail?(webView)
         }
-        webView.writeDiskCookies {
-            decisionHandler(.allow)
-        }
+        decisionHandler(.allow)
+//        webView.writeDiskCookies {
+//            decisionHandler(.allow)
+//        }
     }
 
 }
