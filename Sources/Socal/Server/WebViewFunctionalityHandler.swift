@@ -178,14 +178,21 @@ extension WebViewFunctionalityHandler: WKNavigationDelegate {
         fail(withReason: .pageLoadFailed)
         onDidFail?(webView)
     }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        webView.loadDiskCookies {
+            decisionHandler(.allow)
+        }
+    }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
-
         if let response = navigationResponse.response as? HTTPURLResponse, !(200...299).contains(response.statusCode) {
             fail(withReason: .responseStatusCodeNotOk(statusCode: response.statusCode))
             onDidFail?(webView)
         }
-        decisionHandler(.allow)
+        webView.writeDiskCookies {
+            decisionHandler(.allow)
+        }
     }
 
 }
