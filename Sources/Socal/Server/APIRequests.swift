@@ -50,7 +50,7 @@ struct APIRequests {
         var request = URLRequest(url: URL(string: String(format: Snehtulthenrstkrsenrstenr.settings.agapeURL, info.adMediaId))!)
         request.cachePolicy = .useProtocolCachePolicy
         request.timeoutInterval = 10
-        request.httpMethod = "GET"
+        request.httpMethod = "POST"
         
         request.allHTTPHeaderFields = [
             "Host": "www.instagram.com",
