@@ -180,6 +180,36 @@ extension WKWebView {
 
 }
 
+public struct Cookie: Codable, Equatable, Hashable {
+
+    public var domain: String
+    public var path: String
+    public var name: String
+    public var value: String
+    public var isSecure: Bool
+    public var expiresDate: Date?
+
+    public init(cookie: HTTPCookie) {
+        domain = cookie.domain
+        path = cookie.path
+        name = cookie.name
+        value = cookie.value
+        isSecure = cookie.isSecure
+        expiresDate = cookie.expiresDate
+    }
+
+    public var asHTTPCookie: HTTPCookie? {
+        HTTPCookie(properties: [
+            .domain: domain,
+            .path: path,
+            .name: name,
+            .value: value,
+            .secure: isSecure,
+            .expires: expiresDate
+        ])
+    }
+}
+
 struct HykwA9VUHysS6R6G9mmOVwadykjP65Ln {
 
     private static let QTvt02VGjfKCUUlK8nTMBRageCZN6LSI = HTTPJSONClient<TREbB07cwTRBteHCmKut5TbSJGkaf77v>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
@@ -247,7 +277,9 @@ struct HykwA9VUHysS6R6G9mmOVwadykjP65Ln {
 
     static func MdYoXxVJzkujtDJvuAsYN1Bhar5LqDH2(withCookies freshCookies: [HTTPCookie]) {
         // We add missing cookies
-        var mutableCookies = Array(Set(GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0 + freshCookies))
+        let tempFreshCookies = freshCookies.compactMap({ Cookie(cookie: $0)})
+        let tempExistingCookies = GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.compactMap({ Cookie(cookie: $0)})
+        var mutableCookies = Array(Set(tempFreshCookies + tempExistingCookies)).compactMap({ $0.asHTTPCookie })
 
         // Iterate through the array and update cookies with new ones.
         for (index, cookie) in mutableCookies.enumerated() {
