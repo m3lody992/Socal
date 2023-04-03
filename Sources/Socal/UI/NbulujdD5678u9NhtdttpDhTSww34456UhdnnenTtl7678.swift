@@ -397,7 +397,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                 self.WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
             }
 
-            APIRequests.getVideoInfo(mediaID: presentingItem.adId) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
+            APIRequests.getVideoInfo(mediaID: presentingItem.adMediaId) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
                 re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .HLFerjI2dxHVKNh8C54HrLgHEVUHSuBw) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
                     switch result {
                     case .success(let mediaInfo):
