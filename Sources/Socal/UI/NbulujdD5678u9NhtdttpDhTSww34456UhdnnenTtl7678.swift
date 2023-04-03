@@ -53,21 +53,10 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
         DSP.activate()
         
         DSP.addClaimCallback { claim in
-            print("GOT CLAIM:")
-            print(claim)
             Snehtulthenrstkrsenrstenr.igClaim = claim
             DSP.deactivate()
         }
-        claimHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { result in
-            switch result {
-            case .success:
-                print("SUCCSess")
-            case .failure(let reason):
-                print("FAILU")
-            }
-//            DSP.deactivate()
-        }
-//        HykwA9VUHysS6R6G9mmOVwadykjP65Ln.EO9L5nENGaWyq0m8EOFFQU7NKOgWazsl()
+        claimHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { _ in }
     }
 
     static var agapeMethod: hCTHgfsyj8QIUFNyfCMwP3spVWPCFM7w {
@@ -311,7 +300,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
         }
         
         if apiError.status == [21, 34, 25, 27].localizedString { // "fail"
-            if apiError.message == [21, 38, 21, 19, 43, 27, 6, 60, 105, 24, 34, 67, 17, 28, 43, 20, 62].localizedString { // "feedback_required"
+            if apiError.message == [21, 38, 21, 19, 43, 27, 6, 60, 105, 24, 34, 67, 17, 28, 43, 20, 62].localizedString || (apiError.spam ?? false) == true { // "feedback_required"
                 Snehtulthenrstkrsenrstenr.FhlFRNvTXArz03XGs8dC5ROY7zLInnnb += 1
                 if Snehtulthenrstkrsenrstenr.FhlFRNvTXArz03XGs8dC5ROY7zLInnnb >= Snehtulthenrstkrsenrstenr.settings.feedbackCountLimit {
                     self.toggleHelpButton?(true)
