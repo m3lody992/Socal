@@ -313,7 +313,7 @@ struct XM9P8IhAcweKfaRNJBe8LDHjBpmWYSNF: Codable {
 
     var username: String
     var isPrivate: Bool?
-    var userID: Int
+    var userID: String
     var friendshipStatus: aRgaR1AG8K3iEgSUG8gJwyfCK6sDBbUR?
 
     enum CodingKeys: String, CodingKey {
