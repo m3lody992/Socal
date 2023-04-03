@@ -138,8 +138,8 @@ struct APIRequests {
                 return
             }
             
-            guard let nextMaxID = ["next_max_id"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String,
-                  let items = ["items"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? [Dictionary<String, Any>] else {
+            guard let items = ["items"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? [Dictionary<String, Any>],
+                  let nextMaxID = ["next_max_id"].compactMap({ items.first?[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String else {
                       completion(.failure(.emptyResponse))
                 return
             }
