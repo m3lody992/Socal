@@ -237,55 +237,18 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             likeInfo.carouselIndex = [67].localizedString // "0"
         }
         
-        APIRequests.agape(info: queueItem) { [weak self] data in
-            guard let data = data,
-                  let responseDictionary = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Dictionary<String, Any> else {
-                return
-            }
-            
-            print(responseDictionary)
-            
-            guard let status = ["status"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String else {
-                return
-            }
-            
-            guard let presentingItem = self?.presentingItem else {
-                self?.onError?([60, 44, 0, 4, 101, 90, 22, 56, 91, 15, 51, 90, 13, 27, 62, 81, 45, 62, 5, 55, 108, 55, 22, 63, 93, 63, 15, 114, 21, 79, 55, 18, 48, 21, 87, 61, 8, 28, 119, 87, 13, 38, 91, 10, 85, 53, 16, 46, 62, 25, 109].localizedString, true) // "Oops, something went wrong! Please try again later."
-                self?.WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
-                return
-            }
-            
-            if status == "ok" {
-                Astenktnrsemdkdhypfntmmwi.numberOfAsters += 1
-                Snehtulthenrstkrsenrstenr.FhlFRNvTXArz03XGs8dC5ROY7zLInnnb = 0
-                DispatchQueue.main.async {
-                    self?.onSuccessfulAgape?()
-                }
-                self?.Y8ywSiGVnYoWu41sxuBz3ysdVLNA2AOb(forQueueItem: presentingItem)
-            } else {
-                self?.m75T1fX2g3uzRurMQ1OFRbHgtgiwKLX9(forItem: presentingItem, apiError: .init(status: "P", message: "K", feedbackTitle: "nothing"), source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod)
-            }
-            // After we are finished load next video
-            self?.WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
-            
-            
-        }
-
-//        Q9yYADO5wqVEHvEqMmqaz8Sf2EC4XJAJ(mediaInfo: likeInfo)
+        Q9yYADO5wqVEHvEqMmqaz8Sf2EC4XJAJ(mediaInfo: likeInfo)
     }
 
     private func Q9yYADO5wqVEHvEqMmqaz8Sf2EC4XJAJ(mediaInfo: XJTHek0OiCGWMfHBH6dzhZJvcB5PBxFW) {
-        let dispatchGroup = DispatchGroup()
-
         guard let presentingItem = presentingItem else {
             self.onError?([60, 44, 0, 4, 101, 90, 22, 56, 91, 15, 51, 90, 13, 27, 62, 81, 45, 62, 5, 55, 108, 55, 22, 63, 93, 63, 15, 114, 21, 79, 55, 18, 48, 21, 87, 61, 8, 28, 119, 87, 13, 38, 91, 10, 85, 53, 16, 46, 62, 25, 109].localizedString, true) // "Oops, something went wrong! Please try again later."
             WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
             return
         }
 
-        dispatchGroup.enter()
-        let task = ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .fpjx4q4KcggbP3WSJu9Jefw0m9S4BCeZ(info: mediaInfo))) { (result: Result<NetworkResponse, NetworkingError>) in
-            re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .Fgf8bUt8PXkAX2ReYQygrwU8z5k495mZ) { (result: Result<NetworkResponse, APIError>) in
+        APIRequests.agape(info: presentingItem) { (result: Result<Bool, NetworkingError>) in
+            re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .Fgf8bUt8PXkAX2ReYQygrwU8z5k495mZ) { (result: Result<Bool, APIError>) in
                 switch result {
                 case .success:
                     Astenktnrsemdkdhypfntmmwi.numberOfAsters += 1
@@ -299,20 +262,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                 }
                 // After we are finished load next video
                 self.WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
-                dispatchGroup.leave()
             }
-        }
-
-        // Refresh cookies every time the user likes a post
-        dispatchGroup.notify(queue: .main) {
-            guard let response = task?.response as? HTTPURLResponse,
-                  let headerFields = response.allHeaderFields as? [String: String],
-                  let url = response.url else {
-                return
-            }
-
-            let freshCookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: url)
-            HykwA9VUHysS6R6G9mmOVwadykjP65Ln.MdYoXxVJzkujtDJvuAsYN1Bhar5LqDH2(withCookies: freshCookies)
         }
     }
 
@@ -447,23 +397,24 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                 self.WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
             }
 
-            ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .HLFerjI2dxHVKNh8C54HrLgHEVUHSuBw(mediaID: String.sDNWU0NcW7GrOgwsXnF1mGazsWNfAwkg(from: presentingItem)))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
+            APIRequests.getVideoInfo(mediaID: presentingItem.adId) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
                 re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .HLFerjI2dxHVKNh8C54HrLgHEVUHSuBw) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
                     switch result {
                     case .success(let mediaInfo):
                         processResponse(mediaInfo: mediaInfo)
                     case .failure(let apiError):
                         self.m75T1fX2g3uzRurMQ1OFRbHgtgiwKLX9(forItem: presentingItem, apiError: apiError, source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod) { [weak self] in
-                            self?.ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .h6mbSdawrNJcNlR8JNY2yNizRMCup8M9(mediaID: String.sDNWU0NcW7GrOgwsXnF1mGazsWNfAwkg(from: presentingItem)))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
-                                re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .h6mbSdawrNJcNlR8JNY2yNizRMCup8M9) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
-                                    switch result {
-                                    case .success(let mediaInfo):
-                                        processResponse(mediaInfo: mediaInfo)
-                                    case .failure(let apiError):
-                                        self?.m75T1fX2g3uzRurMQ1OFRbHgtgiwKLX9(forItem: presentingItem, apiError: apiError, source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod)
-                                    }
-                                }
-                            }
+                            self?.m75T1fX2g3uzRurMQ1OFRbHgtgiwKLX9(forItem: presentingItem, apiError: apiError, source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod)
+//                            self?.ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .h6mbSdawrNJcNlR8JNY2yNizRMCup8M9(mediaID: String.sDNWU0NcW7GrOgwsXnF1mGazsWNfAwkg(from: presentingItem)))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
+//                                re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .h6mbSdawrNJcNlR8JNY2yNizRMCup8M9) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
+//                                    switch result {
+//                                    case .success(let mediaInfo):
+//                                        processResponse(mediaInfo: mediaInfo)
+//                                    case .failure(let apiError):
+//                                        self?.m75T1fX2g3uzRurMQ1OFRbHgtgiwKLX9(forItem: presentingItem, apiError: apiError, source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod)
+//                                    }
+//                                }
+//                            }
                         }
                     }
                 }
