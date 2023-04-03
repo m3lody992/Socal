@@ -132,119 +132,18 @@ struct APIRequests {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            guard let data = data,
-                  let responseDictionary = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Dictionary<String, Any> else {
+            guard let data = data else {
                 completion(.failure(.emptyResponse))
                 return
             }
             
-            guard let items = ["items"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? [Dictionary<String, Any>],
-                  let nextMaxID = ["next_max_id"].compactMap({ items.first?[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String else {
-                      completion(.failure(.emptyResponse))
-                return
+            do {
+                let object = try JSONDecoder().decode(MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK.self, from: data)
+                completion(.success(object))
+            } catch {
+                completion(.failure(.deserializationFailed(underlyingError: error)))
             }
             
-            var finalPosts = [OhlGq3XpZL7xDr4xE9es5TGzBOSaycJ9]()
-            
-            for item in items {
-                guard let id = ["id"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String,
-                      let organicTrackingToken = ["organic_tracking_token"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String else {
-                          completion(.failure(.emptyResponse))
-                    return
-                }
-                
-                let videoVersions: [DQ5JmNqdilJ8mJT4bGGE5XL0Z9DNeDrh]? = {
-                    guard let versionsJson = ["video_versions"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? [Dictionary<String, Any>] else {
-                        return nil
-                    }
-                    var finalVersions = [DQ5JmNqdilJ8mJT4bGGE5XL0Z9DNeDrh]()
-                    for version in versionsJson {
-                        guard let width = ["width"].compactMap({ version[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? Int else {
-                            return nil
-                        }
-                        finalVersions.append(.init(width: width))
-                    }
-                    return finalVersions
-                }()
-                
-                let user: XM9P8IhAcweKfaRNJBe8LDHjBpmWYSNF? = {
-                    guard let username = ["username"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String,
-                       let userIDString = ["pk"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String,
-                        let userID = Int(userIDString) else {
-                        return nil
-                    }
-                    return XM9P8IhAcweKfaRNJBe8LDHjBpmWYSNF(
-                        username: username,
-                        isPrivate: ["is_private"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? Bool,
-                        userID: userID,
-                        friendshipStatus: nil) // TODO: if we do followers again
-                }()
-                
-                let carouselMedia: [ANSTRJoGAYFQuOM7Xm929Mm6hDER9nDh]? = {
-                    guard let imageVersions2 = ["image_versions2"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? [Dictionary<String, Any>] else {
-                        return nil
-                    }
-                    var finalVersions = [ANSTRJoGAYFQuOM7Xm929Mm6hDER9nDh]()
-                    for version in imageVersions2 {
-                        guard let candidates = ["candidates"].compactMap({ version[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? [Dictionary<String, Any>] else {
-                            continue
-                        }
-                        var finalCandidates = [Zjo0i1Bo8w4QJEOcMnswZYP9OA2Zu1HK]()
-                        for candidate in candidates {
-                            guard let height = ["height"].compactMap({ candidate[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? Int,
-                                  let width = ["width"].compactMap({ candidate[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? Int else {
-                                continue
-                            }
-                            finalCandidates.append(Zjo0i1Bo8w4QJEOcMnswZYP9OA2Zu1HK(
-                                height: height,
-                                width: width,
-                                url: ["url"].compactMap({ candidate[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? URL))
-                        }
-                        finalVersions.append(.init(imageVersions: .init(candidates: finalCandidates)))
-                    }
-                    return finalVersions
-                }()
-                
-                let imageVersions: munojtbsgELuwdteY6F5CoJZmzyBobo4? = {
-                    guard let candidates = ["candidates"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? [Dictionary<String, Any>] else {
-                        return nil
-                    }
-                    var finalCandidates = [Zjo0i1Bo8w4QJEOcMnswZYP9OA2Zu1HK]()
-                    for candidate in candidates {
-                        guard let height = ["height"].compactMap({ candidate[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? Int,
-                              let width = ["width"].compactMap({ candidate[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? Int else {
-                            continue
-                        }
-                        finalCandidates.append(Zjo0i1Bo8w4QJEOcMnswZYP9OA2Zu1HK(
-                            height: height,
-                            width: width,
-                            url: ["url"].compactMap({ candidate[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? URL))
-                    }
-                    
-                    return munojtbsgELuwdteY6F5CoJZmzyBobo4(candidates: finalCandidates)
-                }()
-                
-                finalPosts.append(OhlGq3XpZL7xDr4xE9es5TGzBOSaycJ9(
-                    id: id,
-                    productType: ["id"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String,
-                    videoVersions: videoVersions,
-                    viewCount: ["view_count"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? Int,
-                    user: user,
-                    agapeCount: ["like_count"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? Int,
-                    takenAt: ["taken_at"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? Int,
-                    hasAgaped: ["has_liked"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? Bool,
-                    organicTrackingToken: organicTrackingToken,
-                    videoDuration: ["video_duration"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? Double,
-                    originalWidth: ["original_width"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? Int,
-                    carouselMedia: carouselMedia,
-                    imageVersions: imageVersions,
-                    code: ["code"].compactMap({ item[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String))
-            }
-            
-            completion(.success(.init(
-                nextMaxID: nextMaxID,
-                items: finalPosts)))
-
             guard let response = response as? HTTPURLResponse,
                   let headerFields = response.allHeaderFields as? [String: String],
                   let url = response.url else {
