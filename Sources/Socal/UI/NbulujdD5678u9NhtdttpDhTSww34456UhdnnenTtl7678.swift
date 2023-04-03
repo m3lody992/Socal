@@ -403,19 +403,8 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                     case .success(let mediaInfo):
                         processResponse(mediaInfo: mediaInfo)
                     case .failure(let apiError):
-                        self.m75T1fX2g3uzRurMQ1OFRbHgtgiwKLX9(forItem: presentingItem, apiError: apiError, source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod) { [weak self] in
-                            self?.m75T1fX2g3uzRurMQ1OFRbHgtgiwKLX9(forItem: presentingItem, apiError: apiError, source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod)
-//                            self?.ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .h6mbSdawrNJcNlR8JNY2yNizRMCup8M9(mediaID: String.sDNWU0NcW7GrOgwsXnF1mGazsWNfAwkg(from: presentingItem)))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
-//                                re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .h6mbSdawrNJcNlR8JNY2yNizRMCup8M9) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
-//                                    switch result {
-//                                    case .success(let mediaInfo):
-//                                        processResponse(mediaInfo: mediaInfo)
-//                                    case .failure(let apiError):
-//                                        self?.m75T1fX2g3uzRurMQ1OFRbHgtgiwKLX9(forItem: presentingItem, apiError: apiError, source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod)
-//                                    }
-//                                }
-//                            }
-                        }
+                        self.m75T1fX2g3uzRurMQ1OFRbHgtgiwKLX9(forItem: presentingItem, apiError: apiError, source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod)
+                        self.WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
                     }
                 }
             }
