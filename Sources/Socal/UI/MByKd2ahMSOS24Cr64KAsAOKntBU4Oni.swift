@@ -24,7 +24,7 @@ class MByKd2ahMSOS24Cr64KAsAOKntBU4Oni: NSObject {
 
     var nextMaxID: String?
 
-    private let ighttp = HTTPJSONClient<TREbB07cwTRBteHCmKut5TbSJGkaf77v>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
+//    private let ighttp = HTTPJSONClient<TREbB07cwTRBteHCmKut5TbSJGkaf77v>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
 
     func hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi(reloadAll: Bool = false) {
         guard isLoading == false else {
@@ -43,7 +43,8 @@ class MByKd2ahMSOS24Cr64KAsAOKntBU4Oni: NSObject {
         }
 
         isLoading = true
-        ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi(maxID: nextMaxID))) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, NetworkingError>) in
+
+        APIRequests.getUserPosts(username: Snehtulthenrstkrsenrstenr.igUserName, nextMaxID: nextMaxID) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, NetworkingError>) in
             re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, APIError>) in
                 switch result {
                 case .success(let userMedia):
