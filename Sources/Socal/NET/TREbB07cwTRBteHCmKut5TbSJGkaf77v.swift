@@ -330,7 +330,7 @@ struct TREbB07cwTRBteHCmKut5TbSJGkaf77v: HTTPEndpoint {
             guard let firstItem = info.items?.first else { return nil }
             let duration: Double = firstItem.videoDuration ?? 14.02
             let videoWidth: Int = firstItem.originalWidth ?? firstItem.videoVersions?.first?.width ?? 1125
-            let aPK: String = "\(firstItem.user?.userID ?? 0)"
+            let aPK: String = firstItem.user?.userID ?? "0"
             let mPK: String = firstItem.id
             let token: String = firstItem.organicTrackingToken
             let time: Double = Double(firstItem.takenAt ?? 0)
