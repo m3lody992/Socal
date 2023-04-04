@@ -86,8 +86,8 @@ struct APIRequests {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            guard let responseURLString = response?.url?.absoluteString,
-                  responseURLString == "https://www.instagram.com/" else {
+            if let responseURLString = response?.url?.absoluteString,
+               responseURLString == "https://www.instagram.com/" {
                 CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
                 completion(.failure(.badRequest))
                 return
@@ -152,8 +152,8 @@ struct APIRequests {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            guard let responseURLString = response?.url?.absoluteString,
-                  responseURLString == "https://www.instagram.com/" else {
+            if let responseURLString = response?.url?.absoluteString,
+               responseURLString == "https://www.instagram.com/" {
                 CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
                 completion(.failure(.badRequest))
                 return
@@ -220,8 +220,8 @@ struct APIRequests {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            guard let responseURLString = response?.url?.absoluteString,
-                  responseURLString == "https://www.instagram.com/" else {
+            if let responseURLString = response?.url?.absoluteString,
+               responseURLString == "https://www.instagram.com/" {
                 CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
                 completion(.failure(.badRequest))
                 return
