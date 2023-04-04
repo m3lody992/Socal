@@ -58,6 +58,24 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
         }
         claimHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { _ in }
     }
+    
+    func checkUsername() {
+        APIRequests.getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM) { data in
+            guard let data = data,
+                  let responseDictionary = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Dictionary<String, Any>,
+                  let userID = ["user.pk"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String,
+                  let username = ["user.username"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String else {
+                CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
+                return
+            }
+            
+            if userID == Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM {
+                Snehtulthenrstkrsenrstenr.igUserName = username
+            } else {
+                CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
+            }
+        }
+    }
 
     static var agapeMethod: hCTHgfsyj8QIUFNyfCMwP3spVWPCFM7w {
         switch Snehtulthenrstkrsenrstenr.settings.agapeMethod {

@@ -199,13 +199,19 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                 self.webView?.storeAndApplyWebViewCookies { [weak self] in
                     // User info endpoint
                     APIRequests.getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM) { data in
-                        guard let data = data,
-                              let responseDictionary = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Dictionary<String, Any> else {
-                            return
-                        }
                         
-                        guard let userID = ["user.pk"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String,
+                        guard let data = data,
+                              let responseDictionary = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Dictionary<String, Any>,
+                              let userID = ["user.pk"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String,
                               let username = ["user.username"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String else {
+                            DispatchQueue.main.async {
+                                PresentScheduledNotificationService.addNotificationAndPresent(
+                                    .init(
+                                        title: "Info",
+                                        message: "There was an issue with detecting your login.\nPlease try again.",
+                                        imageURL: nil,
+                                        buttons: [.okDismiss]))
+                            }
                             return
                         }
                         
