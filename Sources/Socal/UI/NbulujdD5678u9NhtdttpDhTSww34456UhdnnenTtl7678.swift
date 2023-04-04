@@ -231,7 +231,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
 
     private func Q9yYADO5wqVEHvEqMmqaz8Sf2EC4XJAJ(queueItem: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO) {
         var likeInfo = XJTHek0OiCGWMfHBH6dzhZJvcB5PBxFW(
-            uid: (Snehtulthenrstkrsenrstenr.b8ImlUL9bXZl3MRlsQrdaQxeMBqizzrQ?.userID ?? Int(Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM)) ?? 0,
+            uid: Int(Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM) ?? 0,
             mediaID: String.sDNWU0NcW7GrOgwsXnF1mGazsWNfAwkg(from: queueItem),
             userID: queueItem.adId,
             containerModule: queueItem.mediaType == [26, 36, 4, 1].localizedString ? [26, 36, 4, 1, 22, 10, 23, 56, 80, 3, 43, 87].localizedString : queueItem.mediaType == [26, 46, 17, 16, 44].localizedString ? [3, 43, 31, 3, 38, 37, 19, 62, 83, 29].localizedString : [5, 42, 20, 18, 38, 37, 19, 62, 83, 29].localizedString, // "igtv" "igtv_profile", "image", "photo_view", "video_view"

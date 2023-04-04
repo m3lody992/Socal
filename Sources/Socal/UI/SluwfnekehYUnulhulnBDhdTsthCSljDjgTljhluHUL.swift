@@ -205,7 +205,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                             switch result {
                             case .success(let userInfo):
                                 let commonOnLogin = { [weak self] in
-                                    Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = "\(userInfo.user.userID)"
+                                    Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM = userInfo.user.userID
                                     Snehtulthenrstkrsenrstenr.igUserName = userInfo.user.username
                                     Snehtulthenrstkrsenrstenr.b8ImlUL9bXZl3MRlsQrdaQxeMBqizzrQ = userInfo.user
                                     if let timerArray = self?.loopTimerArray {

@@ -247,7 +247,7 @@ struct qU3aroa4yJbm5XWQcpQJqAFMY2P9ormS: Codable {
 
     var username: String
     var isPrivate: Bool?
-    var userID: Int
+    var userID: String
 
     enum CodingKeys: String, CodingKey {
         case username
