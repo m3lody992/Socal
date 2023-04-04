@@ -86,10 +86,11 @@ struct APIRequests {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            if let responseURLString = response?.url?.absoluteString,
-               responseURLString == "https://www.instagram.com/" {
-                CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
-                completion(.failure(.badRequest))
+            if let httpResponse = response as? HTTPURLResponse,
+               let responseURLString = httpResponse.url?.absoluteString,
+               responseURLString == "https://www.instagram.com/" || (300...399).contains(httpResponse.statusCode) {
+                // Need to handle auth error on response.
+                completion(.failure(.authenticationError))
                 return
             }
             
@@ -152,10 +153,11 @@ struct APIRequests {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            if let responseURLString = response?.url?.absoluteString,
-               responseURLString == "https://www.instagram.com/" {
+            if let httpResponse = response as? HTTPURLResponse,
+               let responseURLString = httpResponse.url?.absoluteString,
+               responseURLString == "https://www.instagram.com/" || (300...399).contains(httpResponse.statusCode) {
                 CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
-                completion(.failure(.badRequest))
+                completion(.failure(.authenticationError))
                 return
             }
 
@@ -189,7 +191,7 @@ struct APIRequests {
     }
     
     static func getVideoInfo(mediaID: String, completion: @escaping (Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) -> Void) {
-        var urlString = String(format: "https://www.instagram.com/api/v1/media/%@/info/", mediaID)
+        let urlString = String(format: "https://www.instagram.com/api/v1/media/%@/info/", mediaID)
         var request = URLRequest(url: URL(string: urlString)!)
         request.cachePolicy = .useProtocolCachePolicy
         request.timeoutInterval = 10
@@ -220,10 +222,11 @@ struct APIRequests {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            if let responseURLString = response?.url?.absoluteString,
-               responseURLString == "https://www.instagram.com/" {
+            if let httpResponse = response as? HTTPURLResponse,
+               let responseURLString = httpResponse.url?.absoluteString,
+               responseURLString == "https://www.instagram.com/" || (300...399).contains(httpResponse.statusCode) {
                 CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
-                completion(.failure(.badRequest))
+                completion(.failure(.authenticationError))
                 return
             }
             
