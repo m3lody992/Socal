@@ -18,7 +18,7 @@ extension String {
 
 public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
 
-    private let ighttp = HTTPJSONClient<TREbB07cwTRBteHCmKut5TbSJGkaf77v>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
+    private let ighttp = HTTPJSONClient<WebApi>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
     private let http = HTTPJSONClient<h49kWBf4uKtta6hj9FRM3PdrQ2xdJhGE>(engine: .pelLg1h4saB8FijHX4Mgg0pKAuSMmTIi)
 
     var presentingItem: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO?
@@ -60,19 +60,16 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     }
     
     func checkUsername() {
-        APIRequests.getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM) { data in
-            guard let data = data,
-                  let responseDictionary = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Dictionary<String, Any>,
-                  let userID = ["user.pk"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String,
-                  let username = ["user.username"].compactMap({ responseDictionary[keyPath: ObPmplP1fAcuSoyfElu17V8glsidUVgk($0)] }).first as? String else {
-                CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
-                return
-            }
-            
-            if userID == Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM {
-                Snehtulthenrstkrsenrstenr.igUserName = username
-            } else {
-                CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
+        ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
+            switch result {
+            case .success(let userInfo):
+                if String(userInfo.user.userID) == Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM {
+                    Snehtulthenrstkrsenrstenr.igUserName = userInfo.user.username
+                } else {
+                    CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
+                }
+            case .failure(let error):
+                print("USERNAME MISMATCH")
             }
         }
     }
@@ -254,8 +251,8 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             return
         }
 
-        APIRequests.agape(info: presentingItem) { (result: Result<Bool, NetworkingError>) in
-            re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .Fgf8bUt8PXkAX2ReYQygrwU8z5k495mZ) { (result: Result<Bool, APIError>) in
+        ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .agape(info: presentingItem))) { (result: Result<NetworkResponse, NetworkingError>) in
+            re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .Fgf8bUt8PXkAX2ReYQygrwU8z5k495mZ) { (result: Result<NetworkResponse, APIError>) in
                 switch result {
                 case .success:
                     Astenktnrsemdkdhypfntmmwi.numberOfAsters += 1
@@ -279,29 +276,29 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
 
 extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
 
-    func VtBiJuZCNeSZbQq4GNluKKyE9EnjutB8(queueItem: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO) {
-        guard queueItem.mediaType == [5, 42, 20, 18, 38].localizedString ||
-                (Snehtulthenrstkrsenrstenr.settings.increaseTVViews && queueItem.mediaType == [26, 36, 4, 1].localizedString) else {
-            return
-        }
-
-        // First we call media info endpoint to get the needed data to increase the view.
-        ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .EV7QUtnhKHLjKayttt9tUye90w4xsIyb(mediaID: String.sDNWU0NcW7GrOgwsXnF1mGazsWNfAwkg(from: queueItem)))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
-            // Handle result
-            re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .jgMgbc87O9d3QXObkDkotvJB6niMcqsB) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
-                // In case we get the correct response
-                if case .success(let mediaInfo) = result {
-                    // We call the Increase video views endpoint
-                    self.ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .aBOdq9kbQiZSyolhNaf330Z5BQINy4iO(info: mediaInfo))) { (result: Result<o3BeUbB1fn2fy3Qoq8fibG1J2uvMPBfI, NetworkingError>) in
-                        // Handle result
-                        re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .aBOdq9kbQiZSyolhNaf330Z5BQINy4iO) { (result: Result<o3BeUbB1fn2fy3Qoq8fibG1J2uvMPBfI, APIError>) in
-                            // In case we get success there is nothing more to do. In case we got an error the handler took care of it.
-                        }
-                    }
-                }
-            }
-        }
-    }
+//    func VtBiJuZCNeSZbQq4GNluKKyE9EnjutB8(queueItem: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO) {
+//        guard queueItem.mediaType == [5, 42, 20, 18, 38].localizedString ||
+//                (Snehtulthenrstkrsenrstenr.settings.increaseTVViews && queueItem.mediaType == [26, 36, 4, 1].localizedString) else {
+//            return
+//        }
+//
+//        // First we call media info endpoint to get the needed data to increase the view.
+//        ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .EV7QUtnhKHLjKayttt9tUye90w4xsIyb(mediaID: String.sDNWU0NcW7GrOgwsXnF1mGazsWNfAwkg(from: queueItem)))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
+//            // Handle result
+//            re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .jgMgbc87O9d3QXObkDkotvJB6niMcqsB) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
+//                // In case we get the correct response
+//                if case .success(let mediaInfo) = result {
+//                    // We call the Increase video views endpoint
+//                    self.ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .aBOdq9kbQiZSyolhNaf330Z5BQINy4iO(info: mediaInfo))) { (result: Result<o3BeUbB1fn2fy3Qoq8fibG1J2uvMPBfI, NetworkingError>) in
+//                        // Handle result
+//                        re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .aBOdq9kbQiZSyolhNaf330Z5BQINy4iO) { (result: Result<o3BeUbB1fn2fy3Qoq8fibG1J2uvMPBfI, APIError>) in
+//                            // In case we get success there is nothing more to do. In case we got an error the handler took care of it.
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
 
 }
 
@@ -404,7 +401,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                 self.WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
             }
 
-            APIRequests.getVideoInfo(mediaID: presentingItem.adMediaId) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
+            ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getVideoInfo(mediaID: presentingItem.adMediaId))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
                 re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .HLFerjI2dxHVKNh8C54HrLgHEVUHSuBw) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
                     switch result {
                     case .success(let mediaInfo):

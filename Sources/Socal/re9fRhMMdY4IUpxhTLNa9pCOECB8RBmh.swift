@@ -53,6 +53,9 @@ struct re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh {
                     }
                     vULrR9Tr4opBhOHXAJmkZvsdcrbyds13.dOPsc0f0MLLWhYcXA0M5iNsg0Hwem8vA(info: .caGjHIwgpSBNRgNwDIgd4XRxEquVmt2z(location: location, reason: [22, 49, 2, 24, 59, 37].localizedString + "\(apiError.status)_\(apiError.message ?? [6, 45, 27, 25, 38, 13, 11].localizedString)")) // "unknown"
                     completion?(.failure(apiError))
+                } else if apiError.status == "session_error" {
+                    Snehtulthenrstkrsenrstenr.FhlFRNvTXArz03XGs8dC5ROY7zLInnnb += 999
+                    completion?(.failure(apiError))
                 } else {
                     completion?(.failure(APIError(status: [21, 34, 25, 27].localizedString, message: [21, 34, 25, 27].localizedString, spam: false, feedbackTitle: nil)))
                     vULrR9Tr4opBhOHXAJmkZvsdcrbyds13.dOPsc0f0MLLWhYcXA0M5iNsg0Hwem8vA(info: .HGE1asUKRxKjGSPlnPVbY2Qna2tpE8sE(location: location, reason: error.debugDescription))

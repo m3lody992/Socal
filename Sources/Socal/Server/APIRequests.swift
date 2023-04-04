@@ -2,7 +2,7 @@
 //  File.swift
 //  
 //
-//  Created by Miha Perne on 28/03/2023.
+//  Created by st on 28/03/2023.
 //
 
 import Foundation
@@ -10,7 +10,7 @@ import Networking
 
 struct APIRequests {
     
-    static func getUserInfo(userID: String, completion: @escaping (Data?) -> Void) {
+    static func getUserInfo(userID: String, completion: @escaping (Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) -> Void) {
         var request = URLRequest(url: URL(string: String(format: "https://www.instagram.com/api/v1/users/%@/info/", userID))!)
         request.cachePolicy = .useProtocolCachePolicy
         request.timeoutInterval = 10
@@ -42,7 +42,33 @@ struct APIRequests {
         request.setValue("ig_did=\(HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.igDID?.value ?? "");mid=\(HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.A4pXfEk2FPho7TAH2TS2ix30iRPqfo7L?.value ?? "");csrftoken=\(HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.bbxC2rMSGYNfOY3H8ViSj0jVXmKcVRgW?.value ?? "");ds_user_id=\(HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.dsUserID?.value ?? "");sessionid=\(HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.MGwHqtzS3ZNNTh6vpbDebt32JcEikEYj?.value ?? "");shbid=\(HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.shbid?.value ?? "");shbts=\(HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.shbts?.value ?? "");rur=\(HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.rur?.value ?? "");datr=\(HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.datr?.value ?? "");dpr=2;oo=v1", forHTTPHeaderField: "Cookie")
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            completion(data)
+            
+            if let httpResponse = response as? HTTPURLResponse,
+               let responseURLString = httpResponse.url?.absoluteString,
+               responseURLString == "https://www.instagram.com/" || (300...399).contains(httpResponse.statusCode) {
+                CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
+                completion(.failure(.authenticationError))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.emptyResponse))
+                return
+            }
+            
+            if let parsedError = try? JSONDecoder().decode(APIError.self, from: data),
+               parsedError.status != "ok" { // "ok"
+                completion(.failure(.errorObject(parsedError, rawData: data, statusCode: (response as? HTTPURLResponse)?.statusCode ?? 1337)))
+                return
+            }
+            
+            do {
+                let object = try JSONDecoder().decode(iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC.self, from: data)
+                completion(.success(object))
+            } catch {
+                completion(.failure(.deserializationFailed(underlyingError: error)))
+            }
+            
             guard let response = response as? HTTPURLResponse,
                   let headerFields = response.allHeaderFields as? [String: String],
                   let url = response.url else {

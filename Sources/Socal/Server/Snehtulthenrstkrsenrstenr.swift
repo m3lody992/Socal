@@ -106,7 +106,6 @@ public class Snehtulthenrstkrsenrstenr {
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .BtivtLXDGuAGME3o0RFXe8A9D20R2agg)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .FhlFRNvTXArz03XGs8dC5ROY7zLInnnb)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .I45KPzHSxrwMtpzbK3Zu1Cnc0krLMiMB)
-        UserDefaults.standard.removeObject(forKey: (WKWebView.PrefKey.cookie + WKWebView.appDomain))
         HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS()
     }
 

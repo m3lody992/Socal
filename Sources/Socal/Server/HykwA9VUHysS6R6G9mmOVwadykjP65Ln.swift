@@ -49,86 +49,7 @@ extension Array where Element == HTTPCookie {
         first(where: { $0.name == "datr" })
     }
 
-    var fbm: HTTPCookie? {
-        first(where: { $0.name == "fbm_124024574287414" })
-    }
-    
-    var fbsr: HTTPCookie? {
-        first(where: { $0.name == "fbsr_124024574287414" })
-    }
 }
-
-extension WKWebView {
-    
-    enum PrefKey {
-        static let cookie = "cookies"
-    }
-    
-    static var appDomain: String {
-        "instagram.com"
-    }
-    
-//    var diskCookies: Dictionary<String, Any>? {
-//        UserDefaults.standard.dictionary(forKey: (PrefKey.cookie + WKWebView.appDomain))
-//    }
-//
-//    func writeDiskCookies(for domain: String = WKWebView.appDomain, completion: (() -> ())? = nil) {
-//        fetchInMemoryCookies(for: domain) { data in
-//            UserDefaults.standard.setValue(data, forKey: PrefKey.cookie + domain)
-//            completion?()
-//        }
-//    }
-//
-//
-//    func loadDiskCookies(for domain: String = WKWebView.appDomain, completion: (() -> ())? = nil) {
-//        guard let diskCookie = UserDefaults.standard.dictionary(forKey: (PrefKey.cookie + domain)) else {
-//            completion?()
-//            return
-//        }
-//        fetchInMemoryCookies(for: domain) { freshCookie in
-//
-//            let mergedCookie = diskCookie.merging(freshCookie) { (_, new) in new }
-//
-//            for (cookieName, cookieConfig) in mergedCookie {
-//                let cookie = cookieConfig as! Dictionary<String, Any>
-//
-//                var expire : Any? = nil
-//
-//                if let expireTime = cookie["Expires"] as? Double{
-//                    expire = Date(timeIntervalSinceNow: expireTime)
-//                }
-//
-//                let newCookie = HTTPCookie(properties: [
-//                    .domain: cookie["Domain"] as Any,
-//                    .path: cookie["Path"] as Any,
-//                    .name: cookie["Name"] as Any,
-//                    .value: cookie["Value"] as Any,
-//                    .secure: cookie["Secure"] as Any,
-//                    .expires: expire as Any
-//                ])
-//
-//                self.configuration.websiteDataStore.httpCookieStore.setCookie(newCookie!)
-//                HTTPCookieStorage.shared.setCookie(newCookie!)
-//            }
-//
-//            completion?()
-//        }
-//    }
-//
-//    func fetchInMemoryCookies(for domain: String = WKWebView.appDomain, completion: (([String: Any]) -> ())? = nil) {
-//        var cookieDict = [String: AnyObject]()
-//        WKWebsiteDataStore.default().httpCookieStore.getAllCookies { (cookies) in
-//            print(cookies)
-//            for cookie in cookies {
-//                if cookie.domain.contains(domain) {
-//                    cookieDict[cookie.name] = cookie.properties as AnyObject?
-//                }
-//            }
-//            completion?(cookieDict)
-//        }
-//    }
-}
-
 
 extension WKWebView {
     
@@ -216,27 +137,9 @@ struct HykwA9VUHysS6R6G9mmOVwadykjP65Ln {
 
     static var GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0: [HTTPCookie] {
         get {
-//            return UserDefaults.standard.dictionary(forKey: (WKWebView.PrefKey.cookie + WKWebView.appDomain))?.compactMap { cookieName, cookieConfig in
-//                let cookie = cookieConfig as! Dictionary<String, Any>
-//                var expire : Any? = nil
-//
-//                if let expireTime = cookie["Expires"] as? Double{
-//                    expire = Date(timeIntervalSinceNow: expireTime)
-//                }
-//
-//                return HTTPCookie(properties: [
-//                    .domain: cookie["Domain"] as Any,
-//                    .path: cookie["Path"] as Any,
-//                    .name: cookie["Name"] as Any,
-//                    .value: cookie["Value"] as Any,
-//                    .secure: cookie["Secure"] as Any,
-//                    .expires: expire as Any
-//                ])
-//            } ?? []
             return (UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0) ?? [Cookie]()).compactMap { $0.asHTTPCookie }
         }
         set {
-//            UserDefaults.standard.setValue(newValue, forKey: WKWebView.PrefKey.cookie + WKWebView.appDomain)
             UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(newValue.compactMap { Cookie(cookie: $0) }, forKey: .GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0)
         }
     }

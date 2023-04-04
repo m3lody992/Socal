@@ -81,16 +81,15 @@ class ZYpqlSLad1bv3jtN3VYeaVBU0dgFJVfD: nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBT
         navigationItem.setRightBarButton(.init(customView: button), animated: false)
 
         UOPtM8q0RMfAeZlGbe3cwQwe5dUNZfCT()
-        
 
-        let reelsButton = UIButton(type: .custom)
-        reelsButton.tintColor = Socal.theme.Xk2QApS1DtuCNs8JBd3byRdvMgeyIBKk
-        reelsButton.setTitle("Add Reels", for: .normal)
-        reelsButton.titleLabel?.font = .systemFont(ofSize: 16)
-        reelsButton.setTitleColor(Socal.theme.Xk2QApS1DtuCNs8JBd3byRdvMgeyIBKk, for: .normal)
+//        let reelsButton = UIButton(type: .custom)
+//        reelsButton.tintColor = Socal.theme.Xk2QApS1DtuCNs8JBd3byRdvMgeyIBKk
+//        reelsButton.setTitle("Add Reels", for: .normal)
+//        reelsButton.titleLabel?.font = .systemFont(ofSize: 16)
+//        reelsButton.setTitleColor(Socal.theme.Xk2QApS1DtuCNs8JBd3byRdvMgeyIBKk, for: .normal)
         
-        reelsButton.addTarget(self, action: #selector(getReels), for: .touchUpInside)
-        navigationItem.setLeftBarButton(.init(customView: reelsButton), animated: false)
+//        reelsButton.addTarget(self, action: #selector(getReels), for: .touchUpInside)
+//        navigationItem.setLeftBarButton(.init(customView: reelsButton), animated: false)
     }
     
     @objc func getReels() {
