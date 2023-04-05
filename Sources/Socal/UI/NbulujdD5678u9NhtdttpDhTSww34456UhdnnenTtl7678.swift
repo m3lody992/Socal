@@ -50,13 +50,13 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     var tapCount = 0
 
     func EPjnvXNElTGXsReEp9nQvgpdXSJWlTHz() {
-        DSP.activate()
-        
-        DSP.addClaimCallback { claim in
-            Snehtulthenrstkrsenrstenr.igClaim = claim
-            DSP.deactivate()
-        }
-        claimHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { _ in }
+//        DSP.activate()
+//        
+//        DSP.addClaimCallback { claim in
+//            Snehtulthenrstkrsenrstenr.igClaim = claim
+//            DSP.deactivate()
+//        }
+//        claimHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { _ in }
     }
     
     func checkUsername() {
