@@ -235,7 +235,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             mediaID: String.sDNWU0NcW7GrOgwsXnF1mGazsWNfAwkg(from: queueItem),
             userID: queueItem.adId,
             containerModule: queueItem.mediaType == [26, 36, 4, 1].localizedString ? [26, 36, 4, 1, 22, 10, 23, 56, 80, 3, 43, 87].localizedString : queueItem.mediaType == [26, 46, 17, 16, 44].localizedString ? [3, 43, 31, 3, 38, 37, 19, 62, 83, 29].localizedString : [5, 42, 20, 18, 38, 37, 19, 62, 83, 29].localizedString, // "igtv" "igtv_profile", "image", "photo_view", "video_view"
-            csrfToken: HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.bbxC2rMSGYNfOY3H8ViSj0jVXmKcVRgW?.value)
+            csrfToken: HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.csrf?.value)
 
         if queueItem.mediaType == [16, 34, 2, 24, 60, 9, 0, 59].localizedString { // "carousel"
             likeInfo.carouselIndex = [67].localizedString // "0"

@@ -474,7 +474,7 @@ struct VHCVtjNadH8DQVFGO42W1rhwwl2CfQoX: Codable {
         UIDevice.current.isBatteryMonitoringEnabled = true
         return VHCVtjNadH8DQVFGO42W1rhwwl2CfQoX(
             phoneID: p0Mkb0JKrti7rmJDE0eg28NkQREjE7gv.ILAAhLSKtqSpVEZLmWjalUb0D6StYVGu,
-            csrfToken: HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.bbxC2rMSGYNfOY3H8ViSj0jVXmKcVRgW?.value,
+            csrfToken: HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.csrf?.value,
             timezoneOffset: NSTimeZone.local.secondsFromGMT(),
             isCharging: UIDevice.current.batteryState == .charging ? 1 : 0,
             batteryLevel: Int(UIDevice.current.batteryLevel * 100),

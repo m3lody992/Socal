@@ -13,15 +13,15 @@ import UIKit
 
 extension Array where Element == HTTPCookie {
     
-    var bbxC2rMSGYNfOY3H8ViSj0jVXmKcVRgW: HTTPCookie? {
+    var csrf: HTTPCookie? {
         first(where: { $0.name == Snehtulthenrstkrsenrstenr.settings.csrfCookieName })
     }
 
-    var MGwHqtzS3ZNNTh6vpbDebt32JcEikEYj: HTTPCookie? {
+    var sessionID: HTTPCookie? {
         first(where: { $0.name == Snehtulthenrstkrsenrstenr.settings.sessionCookieName })
     }
 
-    var A4pXfEk2FPho7TAH2TS2ix30iRPqfo7L: HTTPCookie? {
+    var mid: HTTPCookie? {
         first(where: { $0.name == Snehtulthenrstkrsenrstenr.settings.midCookieName })
     }
     
@@ -47,6 +47,10 @@ extension Array where Element == HTTPCookie {
     
     var datr: HTTPCookie? {
         first(where: { $0.name == "datr" })
+    }
+    
+    var dpr: HTTPCookie? {
+        first(where: { $0.name == "dpr" })
     }
 
 }

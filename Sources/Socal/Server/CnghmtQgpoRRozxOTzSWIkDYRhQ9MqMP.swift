@@ -17,7 +17,7 @@ struct CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP {
     }()
 
     static var MbtM9CHXTDvGQWmfrHO9eJMhnqhdqfKM: String? {
-        guard let sessionIDCookieValue = HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.MGwHqtzS3ZNNTh6vpbDebt32JcEikEYj?.value,
+        guard let sessionIDCookieValue = HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.sessionID?.value,
               let bearerHeader = (String(format: [8, 97, 20, 4, 22, 15, 22, 50, 68, 53, 46, 86, 70, 79, 123, 84, 26, 121, 71, 97, 63, 37, 23, 35, 90, 55, 64, 59, 33, 1, 104, 81, 102, 48, 85, 52].localizedString, Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM, sessionIDCookieValue).data(using: .utf8)?.base64EncodedString()) else { // "{\"ds_user_id\":\"%@\",\"sessionid\":\"%@\"}"
             return nil
         }

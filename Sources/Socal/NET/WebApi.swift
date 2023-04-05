@@ -111,34 +111,27 @@ struct WebApi: HTTPEndpoint {
     public var xL3SrMUQzUyfIoDgl20LAOHiAiis0HYs: HTTPHeaders? {
         var headers = HTTPHeaders()
         headers = [
-            "Host": "www.instagram.com",
-            "sec-ch-ua": "\"Google Chrome\";v=\"111\", \"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"111\"",
-            "x-ig-app-id": "936619743392459", // TODO add to json
-            "x-ig-www-claim": "\(Snehtulthenrstkrsenrstenr.igClaim)",
-            "sec-ch-ua-mobile": "?0",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-            "viewport-width": "2553",
-            "accept": "*/*",
-            "x-requested-with": "XMLHttpRequest",
             "x-asbd-id": "198387",
-            "x-csrftoken": "\(HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.bbxC2rMSGYNfOY3H8ViSj0jVXmKcVRgW?.value ?? "")",
-            "sec-ch-prefers-color-scheme": "dark",
-            "sec-ch-ua-platform": "\"macOS\"",
-            "sec-fetch-site": "same-origin",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-dest": "empty",
-            "referer": "https://www.instagram.com",
-            "accept-language": "en-US,en;q=0.9,sl;q=0.8"
+            "x-requested-with": "XMLHttpRequest",
+            "x-ig-app-id": "1217981644879628", // TODO add to json
+            "accept-language": "en-US,en;q=0.9,sl;q=0.8",//
+            "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",//
+            "referer": "https://www.instagram.com/",//
+            "x-ig-www-claim": "\(Snehtulthenrstkrsenrstenr.igClaim)", //
+            "x-csrftoken": "\(HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.csrf?.value ?? "")",//
         ]
-//        headers["ig_did"] = HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.igDID?.value
-//        headers["mid"] = HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.A4pXfEk2FPho7TAH2TS2ix30iRPqfo7L?.value
-//        headers["csrftoken"] = HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.bbxC2rMSGYNfOY3H8ViSj0jVXmKcVRgW?.value
-//        headers["ds_user_id"] = HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.dsUserID?.value
-//        headers["sessionid"] = HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.MGwHqtzS3ZNNTh6vpbDebt32JcEikEYj?.value
-//        headers["shbid"] = HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.shbid?.value
-//        headers["shbts"] = HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.shbts?.value
-//        headers["rur"] = HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.rur?.value
-//        headers["datr"] = HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.datr?.value
+        
+        switch TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
+        case .agape:
+            headers["content-type"] = "application/x-www-form-urlencoded"
+            headers["origin"] = "https://www.instagram.com"
+            headers["x-instagram-ajax"] = "1007241947"
+        case .getVideoInfo:
+            headers["accept"] = "*/*"
+        default:
+            break
+        }
+
         return headers
     }
 
@@ -163,14 +156,13 @@ struct WebApi: HTTPEndpoint {
     public var GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0: [HTTPCookie]? {
         let cookies = [
             HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.igDID,
-            HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.A4pXfEk2FPho7TAH2TS2ix30iRPqfo7L,
-            HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.bbxC2rMSGYNfOY3H8ViSj0jVXmKcVRgW,
+            HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.mid,
+            HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.csrf,
             HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.dsUserID,
-            HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.MGwHqtzS3ZNNTh6vpbDebt32JcEikEYj,
-            HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.shbid,
-            HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.shbts,
+            HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.sessionID,
             HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.rur,
             HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.datr,
+            HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.dpr,
         ]
         
         let nonNullCookies = cookies.compactMap({ $0 })
