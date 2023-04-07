@@ -12,7 +12,7 @@ import Networking
 extension APIError {
     
     static func forwardError(error: Error) -> APIError {
-        return APIError(status: "fail", message: error.localizedDescription, spam: nil, feedbackTitle: nil)
+        return APIError(status: "fail", requireLogin: nil, message: error.localizedDescription, spam: nil, feedbackTitle: nil)
     }
     
 }
@@ -30,6 +30,11 @@ struct re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh {
         case .failure(let error):
             if case .errorObject(let apiError, _, _) = error {
                 if apiError.status == [21, 34, 25, 27].localizedString { // "fail"
+                    if let requireLogin = apiError.requireLogin, requireLogin {
+                        completion?(.failure(apiError))
+                        CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
+                        return
+                    }
                     if let message = apiError.message {
                         if Snehtulthenrstkrsenrstenr.settings.logoutResponses.contains(message) {
                             if logoutIfError {
@@ -57,7 +62,7 @@ struct re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh {
                     Snehtulthenrstkrsenrstenr.FhlFRNvTXArz03XGs8dC5ROY7zLInnnb += 999
                     completion?(.failure(apiError))
                 } else {
-                    completion?(.failure(APIError(status: [21, 34, 25, 27].localizedString, message: [21, 34, 25, 27].localizedString, spam: false, feedbackTitle: nil)))
+                    completion?(.failure(APIError(status: [21, 34, 25, 27].localizedString, requireLogin: false, message: [21, 34, 25, 27].localizedString, spam: false, feedbackTitle: nil)))
                     vULrR9Tr4opBhOHXAJmkZvsdcrbyds13.dOPsc0f0MLLWhYcXA0M5iNsg0Hwem8vA(info: .HGE1asUKRxKjGSPlnPVbY2Qna2tpE8sE(location: location, reason: error.debugDescription))
                 }
             } else if case .authenticationError = error {

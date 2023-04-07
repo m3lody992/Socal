@@ -50,26 +50,28 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     var tapCount = 0
 
     func EPjnvXNElTGXsReEp9nQvgpdXSJWlTHz() {
-//        DSP.activate()
-//        
-//        DSP.addClaimCallback { claim in
-//            Snehtulthenrstkrsenrstenr.igClaim = claim
-//            DSP.deactivate()
-//        }
-//        claimHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { _ in }
+        DSP.activate()
+
+        DSP.addClaimCallback { claim in
+            Snehtulthenrstkrsenrstenr.igClaim = claim
+            DSP.deactivate()
+        }
+        claimHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { _ in }
     }
     
     func checkUsername() {
         ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
-            switch result {
-            case .success(let userInfo):
-                if String(userInfo.user.userID) == Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM {
-                    Snehtulthenrstkrsenrstenr.igUserName = userInfo.user.username
-                } else {
-                    CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
+            re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, APIError>) in
+                switch result {
+                case .success(let userInfo):
+                    if String(userInfo.user.userID) == Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM {
+                        Snehtulthenrstkrsenrstenr.igUserName = userInfo.user.username
+                    } else {
+                        CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu()
+                    }
+                case .failure(let apiError):
+                    print(apiError)
                 }
-            case .failure(let error):
-                print("USERNAME MISMATCH")
             }
         }
     }
