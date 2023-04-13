@@ -56,6 +56,9 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
     private var agapeButton: RiennnYpFPttsFsWqsvBneuYueHDDT!
     private var helpButton: UIBarButtonItem!
     private var reloadButton: UIButton!
+    private var modeButton: RiennnYpFPttsFsWqsvBneuYueHDDT!
+    
+    var mode: hCTHgfsyj8QIUFNyfCMwP3spVWPCFM7w = Snehtulthenrstkrsenrstenr.settings.agapeMethod
 
     func YGafeJHPLCrSy6HQXYAZOCvbv2hXcemu() {
         view.backgroundColor = .systemBackground
@@ -93,6 +96,22 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
         let ratioConstraint = imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 16/9)
         ratioConstraint.priority = .init(rawValue: 999)
         
+        modeButton = RiennnYpFPttsFsWqsvBneuYueHDDT()
+        modeButton.titleLabel?.font = .systemFont(ofSize: 15)
+        modeButton.setTitle(mode.rawValue, for: .normal)
+        modeButton.onTap { [weak self] in
+            if self?.mode == .igApp {
+                self?.mode = .inApp
+                self?.modeButton.setTitle(self?.mode.rawValue, for: .normal)
+            } else if self?.mode == .inApp {
+                self?.mode = .igApp
+                self?.modeButton.setTitle(self?.mode.rawValue, for: .normal)
+            }
+            NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.forceMode = self?.mode
+        }
+        modeButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(modeButton)
+        
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 32),
             imageView.trailingAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
@@ -123,6 +142,11 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             unavailableVideoImageView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
             unavailableVideoImageView.widthAnchor.constraint(equalToConstant: 50),
             unavailableVideoImageView.heightAnchor.constraint(equalToConstant: 50),
+            
+            modeButton.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -16),
+            modeButton.topAnchor.constraint(equalTo: imageView.topAnchor, constant: -32),
+            modeButton.widthAnchor.constraint(equalToConstant: 120),
+            modeButton.heightAnchor.constraint(equalToConstant: 36),
         ])
     }
 
