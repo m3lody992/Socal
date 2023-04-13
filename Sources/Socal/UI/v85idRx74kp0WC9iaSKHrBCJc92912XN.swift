@@ -14,7 +14,8 @@ import CryptoSwift
 class v85idRx74kp0WC9iaSKHrBCJc92912XN: NSObject {
 
     private let http = HTTPJSONClient<h49kWBf4uKtta6hj9FRM3PdrQ2xdJhGE>(engine: .pelLg1h4saB8FijHX4Mgg0pKAuSMmTIi)
-    private let ighttp = HTTPJSONClient<TREbB07cwTRBteHCmKut5TbSJGkaf77v>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
+    private let ighttpWeb = HTTPJSONClient<WebApi>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
+    private let ighttpiOS = HTTPJSONClient<TREbB07cwTRBteHCmKut5TbSJGkaf77v>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
 
     var onSuccess: (() -> Void)?
     var onError: ((_ title: String?, _ message: String, _ error: Error?) -> Void)?
@@ -118,16 +119,34 @@ class v85idRx74kp0WC9iaSKHrBCJc92912XN: NSObject {
     }
 
     func YSviifrNZxaL5kjICn6WGRZZv7gUchzr(completion: @escaping (Bool) -> Void) {
-        ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
-            re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, APIError>) in
-                switch result {
-                case .success(let info):
-                    DispatchQueue.main.async {
-                        completion(info.user.isPrivate == true)
+        switch Snehtulthenrstkrsenrstenr.settings.igAPIVersion {
+        case .web:
+            ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
+                re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, APIError>) in
+                    switch result {
+                    case .success(let info):
+                        DispatchQueue.main.async {
+                            completion(info.user.isPrivate == true)
+                        }
+                    case .failure:
+                        DispatchQueue.main.async {
+                            completion(false)
+                        }
                     }
-                case .failure:
-                    DispatchQueue.main.async {
-                        completion(false)
+                }
+            }
+        case .ios:
+            ighttpiOS.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
+                re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, APIError>) in
+                    switch result {
+                    case .success(let info):
+                        DispatchQueue.main.async {
+                            completion(info.user.isPrivate == true)
+                        }
+                    case .failure:
+                        DispatchQueue.main.async {
+                            completion(false)
+                        }
                     }
                 }
             }

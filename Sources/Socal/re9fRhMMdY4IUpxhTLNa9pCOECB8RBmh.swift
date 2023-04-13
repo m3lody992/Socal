@@ -61,6 +61,7 @@ struct re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh {
                 } else if apiError.status == "session_error" {
                     Snehtulthenrstkrsenrstenr.FhlFRNvTXArz03XGs8dC5ROY7zLInnnb += 999
                     completion?(.failure(apiError))
+                    CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu(removeFeedbacks: false)
                 } else {
                     completion?(.failure(APIError(status: [21, 34, 25, 27].localizedString, requireLogin: false, message: [21, 34, 25, 27].localizedString, spam: false, feedbackTitle: nil)))
                     vULrR9Tr4opBhOHXAJmkZvsdcrbyds13.dOPsc0f0MLLWhYcXA0M5iNsg0Hwem8vA(info: .HGE1asUKRxKjGSPlnPVbY2Qna2tpE8sE(location: location, reason: error.debugDescription))

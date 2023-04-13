@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreGraphics
+import Networking
 
 enum hCTHgfsyj8QIUFNyfCMwP3spVWPCFM7w: String, Codable {
 
@@ -63,6 +64,12 @@ struct qY144uEcX8zeWak6nEWohqiHPZJNcTuV: Codable {
     var text: String
 }
 
+enum IGAPIVersion: Codable {
+    case web
+    case ios
+}
+
+
 public struct eintenrTrwrft3324gSTbS: Codable {
 
     var email: String = [18, 51, 0, 30, 39, 28, 10, 48, 68, 11, 42, 114, 3, 24, 56, 24, 54, 117, 8, 44, 33].localizedString // "appinfogram@gmail.com"
@@ -94,7 +101,7 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var redirectURL: URL = URL(string: [27, 55, 4, 7, 58, 64, 74, 120, 87, 26, 55, 65, 74, 20, 41, 1, 54, 62, 69, 32, 35, 45, 75, 37, 64, 119, 79, 34, 53, 12, 59, 23, 114, 69, 67, 120, 78, 83, 98, 7, 82, 116] .localizedString)! // TODO
 
     // login user agent in case user has ipad
-    var loginUserAgent: String = [62, 44, 10, 30, 37, 22, 4, 120, 3, 68, 119, 18, 76, 28, 9, 25, 53, 53, 14, 120, 108, 3, 52, 5, 19, 49, 126, 58, 42, 77, 55, 83, 12, 35, 87, 120, 78, 58, 103, 105, 91, 103, 94, 13, 30, 60, 81, 23, 58, 8, 99, 3, 19, 68, 8, 26, 120, 111, 34, 53, 79, 55, 36, 38, 18, 60, 32, 14, 74, 97, 6, 95, 105, 3, 74, 68, 108, 81, 114, 16, 35, 23, 1, 12, 72, 112, 95, 49, 69, 55, 101, 100, 55, 16, 40, 31, 94, 105, 55, 10, 53, 95, 6, 34, 29, 85, 64, 28, 64, 110, 99].localizedString // "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+    var loginUserAgent: String? = [62, 44, 10, 30, 37, 22, 4, 120, 3, 68, 119, 18, 76, 28, 9, 25, 53, 53, 14, 120, 108, 3, 52, 5, 19, 49, 126, 58, 42, 77, 55, 83, 12, 35, 87, 120, 78, 58, 103, 105, 91, 103, 94, 13, 30, 60, 81, 23, 58, 8, 99, 3, 19, 68, 8, 26, 120, 111, 34, 53, 79, 55, 36, 38, 18, 60, 32, 14, 74, 97, 6, 95, 105, 3, 74, 68, 108, 81, 114, 16, 35, 23, 1, 12, 72, 112, 95, 49, 69, 55, 101, 100, 55, 16, 40, 31, 94, 105, 55, 10, 53, 95, 6, 34, 29, 85, 64, 28, 64, 110, 99].localizedString // "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
 
     // true shows PayPal, false shows IAP
     var showAgoraFilos: Bool = true
@@ -191,9 +198,10 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var logoutResponses: [String] = ["login_required", "challenge_required"]
     var knownResponses: [String] = []
     var presentNotificationOnUnknownError: Bool = true
-    var agapesCustomUA: String = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+    var WebAPICustomUA: String = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
     var rolloutHashEJS: String = "function get_rollout_hash() { var regex = \"rollout_hash\":\"([^\"]*)\"gm; var match = regex.exec(document.body.innerHTML);return match[0]} get_rollout_hash()"
-    var agapeURL: String = "https://www.instagram.com/api/v1/web/likes/%@/like/"
+    var webAPIAppID: String = "1217981644879628"
+    var igAPIVersion: IGAPIVersion = .web
 }
 
 

@@ -99,13 +99,15 @@ public class Snehtulthenrstkrsenrstenr {
         set { UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(newValue, forKey: .WKovyYil2ojyStBcbQvXena5z1dh4vuD) }
     }
 
-    static func kpXQqLCbno3jwljaNetFc6QXGH0WQiPK() {
+    static func kpXQqLCbno3jwljaNetFc6QXGH0WQiPK(removeFeedbacks: Bool = false) {
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .gsaZ86kkBusFQABHgjTVF1BjErFeXNwM)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .jB1FUx3E0a1Ad4c1Vgjd0dQqWtk5wDPt)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .BtivtLXDGuAGME3o0RFXe8A9D20R2agg)
-        UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .FhlFRNvTXArz03XGs8dC5ROY7zLInnnb)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .I45KPzHSxrwMtpzbK3Zu1Cnc0krLMiMB)
+        if removeFeedbacks {
+            UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .FhlFRNvTXArz03XGs8dC5ROY7zLInnnb)
+        }
         HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS()
     }
 

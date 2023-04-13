@@ -89,7 +89,7 @@ class WebViewFunctionalityHandler: NSObject {
         configuration.allowsInlineMediaPlayback = true
         configuration.allowsPictureInPictureMediaPlayback = false
         let newWebView = WKWebView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), configuration: configuration)
-        newWebView.customUserAgent = Snehtulthenrstkrsenrstenr.settings.agapesCustomUA
+        newWebView.customUserAgent = Snehtulthenrstkrsenrstenr.settings.loginUserAgent // TODO: is this ok?
 //        newWebView.loadDiskCookies(for: "instagram.com") {}
         newWebView.applyWebViewCookies()
         newWebView.navigationDelegate = self

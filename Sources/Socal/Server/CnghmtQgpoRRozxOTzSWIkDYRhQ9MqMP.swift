@@ -54,7 +54,7 @@ struct CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP {
         UIApplication.getTopViewController() as? nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBTluhdvd
     }
 
-    static func Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu(message: String? = nil) {
+    static func Bp3OiuUb0qoB59Qq6e54NLBoVHmUlalu(message: String? = nil, removeFeedbacks: Bool = false) {
         vULrR9Tr4opBhOHXAJmkZvsdcrbyds13.o3CAZydKeqMUJVmxCOZEAJCfuWvJE1DT()
         // "Login Error", "We are having trouble detecting your login. Please try loging in again."
         DispatchQueue.main.async {
@@ -75,8 +75,8 @@ struct CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP {
         }
     }
 
-    static func NoxTT2OqMEib1GdxDZe5Lk3wJ00NEjCh() {
-        Snehtulthenrstkrsenrstenr.kpXQqLCbno3jwljaNetFc6QXGH0WQiPK()
+    static func NoxTT2OqMEib1GdxDZe5Lk3wJ00NEjCh(removeFeedbacks: Bool = false) {
+        Snehtulthenrstkrsenrstenr.kpXQqLCbno3jwljaNetFc6QXGH0WQiPK(removeFeedbacks: removeFeedbacks)
         p0Mkb0JKrti7rmJDE0eg28NkQREjE7gv.JLqbmILyviMRaJDglSRmB73XaeiYszb2()
         JU1OB5fUy9sNVDkWOOThLdVDphmLRZSy.cvQfOokwGsH2Fq18o9AfmP2KafrRnFKR()
         NotificationCenter.default.post(name: Constants.LnBojknk4FwVeY6DcE9LfOaMBoiZG5dX.BMH3F3BWqREQq1ziAjgSqH7RcNafWlfE, object: nil)

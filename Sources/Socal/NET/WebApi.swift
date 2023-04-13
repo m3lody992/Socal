@@ -113,12 +113,12 @@ struct WebApi: HTTPEndpoint {
         headers = [
             "x-asbd-id": "198387",
             "x-requested-with": "XMLHttpRequest",
-            "x-ig-app-id": "1217981644879628", // TODO add to json
-            "accept-language": "en-US,en;q=0.9,sl;q=0.8",//
-            "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",//
-            "referer": "https://www.instagram.com/",//
-            "x-ig-www-claim": "\(Snehtulthenrstkrsenrstenr.igClaim)", //
-            "x-csrftoken": "\(HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.csrf?.value ?? "")",//
+            "x-ig-app-id": Snehtulthenrstkrsenrstenr.settings.webAPIAppID,
+            "accept-language": "en-US,en;q=0.9,sl;q=0.8",
+            "user-agent": Snehtulthenrstkrsenrstenr.settings.WebAPICustomUA,
+            "referer": "https://www.instagram.com/",
+            "x-ig-www-claim": Snehtulthenrstkrsenrstenr.igClaim,
+            "x-csrftoken": HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.csrf?.value ?? "",
         ]
         
         switch TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
@@ -166,10 +166,6 @@ struct WebApi: HTTPEndpoint {
         ]
         
         let nonNullCookies = cookies.compactMap({ $0 })
-        
-        if cookies.count != nonNullCookies.count {
-            print("COOKIES MISSING")
-        }
         
         return nonNullCookies
     }

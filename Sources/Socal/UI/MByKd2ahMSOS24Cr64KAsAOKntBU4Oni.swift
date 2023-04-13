@@ -11,8 +11,9 @@ import Networking
 
 class MByKd2ahMSOS24Cr64KAsAOKntBU4Oni: NSObject {
     
-    private let ighttp = HTTPJSONClient<WebApi>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
-    
+    private let ighttpWeb = HTTPJSONClient<WebApi>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
+    private let ighttpiOS = HTTPJSONClient<TREbB07cwTRBteHCmKut5TbSJGkaf77v>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
+
     var onVideoFeedRefreshed: (() -> Void)?
     var onVideoAdded: ((_ video: bE7kBpmwsO9xKor3rUS5heuFjBdXeOlj) -> Void)?
     var onError: ((_ error: Error?, _ message: String?) -> Void)?
@@ -25,8 +26,6 @@ class MByKd2ahMSOS24Cr64KAsAOKntBU4Oni: NSObject {
     var isLoading = false
 
     var nextMaxID: String?
-
-//    private let ighttp = HTTPJSONClient<TREbB07cwTRBteHCmKut5TbSJGkaf77v>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
 
     func hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi(reloadAll: Bool = false) {
         guard isLoading == false else {
@@ -45,28 +44,56 @@ class MByKd2ahMSOS24Cr64KAsAOKntBU4Oni: NSObject {
         }
 
         isLoading = true
+        
+        switch Snehtulthenrstkrsenrstenr.settings.igAPIVersion {
+        case .web:
+            ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserPosts(username: Snehtulthenrstkrsenrstenr.igUserName, nextMaxID: nextMaxID))) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, NetworkingError>) in
+                re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, APIError>) in
+                    switch result {
+                    case .success(let userMedia):
+                        if reloadAll {
+                            self.userVideos.removeAll()
+                        }
+                        if userMedia.items.isEmpty {
+                            self.onNoVideos?()
+                        } else {
+                            self.userVideos.append(contentsOf: userMedia.items.compactMap({ $0.asUserVideo }))
+                            self.nextMaxID = userMedia.nextMaxID
+                        }
+                    case .failure:
+                        self.onError?(nil, [36, 38, 80, 22, 59, 31, 69, 63, 87, 28, 46, 92, 3, 85, 45, 3, 53, 46, 9, 47, 41, 96, 8, 63, 82, 60, 71, 60, 34, 3, 43, 28, 54, 2, 87, 57, 21, 22, 35, 69, 75].localizedString) // "We are having trouble loading your posts!"
+                    }
+                    self.isFirstLoad = false
+                    self.isLoading = false
 
-        ighttp.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserPosts(username: Snehtulthenrstkrsenrstenr.igUserName, nextMaxID: nextMaxID))) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, NetworkingError>) in
-            re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, APIError>) in
-                switch result {
-                case .success(let userMedia):
-                    if reloadAll {
-                        self.userVideos.removeAll()
+                    DispatchQueue.main.async {
+                        self.onVideoFeedRefreshed?()
                     }
-                    if userMedia.items.isEmpty {
-                        self.onNoVideos?()
-                    } else {
-                        self.userVideos.append(contentsOf: userMedia.items.compactMap({ $0.asUserVideo }))
-                        self.nextMaxID = userMedia.nextMaxID
-                    }
-                case .failure:
-                    self.onError?(nil, [36, 38, 80, 22, 59, 31, 69, 63, 87, 28, 46, 92, 3, 85, 45, 3, 53, 46, 9, 47, 41, 96, 8, 63, 82, 60, 71, 60, 34, 3, 43, 28, 54, 2, 87, 57, 21, 22, 35, 69, 75].localizedString) // "We are having trouble loading your posts!"
                 }
-                self.isFirstLoad = false
-                self.isLoading = false
+            }
+        case .ios:
+            ighttpiOS.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi(maxID: nextMaxID))) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, NetworkingError>) in
+                re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, APIError>) in
+                    switch result {
+                    case .success(let userMedia):
+                        if reloadAll {
+                            self.userVideos.removeAll()
+                        }
+                        if userMedia.items.isEmpty {
+                            self.onNoVideos?()
+                        } else {
+                            self.userVideos.append(contentsOf: userMedia.items.compactMap({ $0.asUserVideo }))
+                            self.nextMaxID = userMedia.nextMaxID
+                        }
+                    case .failure:
+                        self.onError?(nil, [36, 38, 80, 22, 59, 31, 69, 63, 87, 28, 46, 92, 3, 85, 45, 3, 53, 46, 9, 47, 41, 96, 8, 63, 82, 60, 71, 60, 34, 3, 43, 28, 54, 2, 87, 57, 21, 22, 35, 69, 75].localizedString) // "We are having trouble loading your posts!"
+                    }
+                    self.isFirstLoad = false
+                    self.isLoading = false
 
-                DispatchQueue.main.async {
-                    self.onVideoFeedRefreshed?()
+                    DispatchQueue.main.async {
+                        self.onVideoFeedRefreshed?()
+                    }
                 }
             }
         }
