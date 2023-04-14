@@ -84,6 +84,10 @@ class MByKd2ahMSOS24Cr64KAsAOKntBU4Oni: NSObject {
                 
                 let freshCookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: url)
                 HykwA9VUHysS6R6G9mmOVwadykjP65Ln.MdYoXxVJzkujtDJvuAsYN1Bhar5LqDH2(withCookies: freshCookies)
+                
+                if let claim = headerFields["x-ig-set-www-claim"] {
+                    Snehtulthenrstkrsenrstenr.igClaim = claim
+                }
             }
         case .ios:
             ighttpiOS.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi(maxID: nextMaxID))) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, NetworkingError>) in

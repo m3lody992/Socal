@@ -299,6 +299,10 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                             
                             let freshCookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: url)
                             HykwA9VUHysS6R6G9mmOVwadykjP65Ln.MdYoXxVJzkujtDJvuAsYN1Bhar5LqDH2(withCookies: freshCookies)
+                            
+                            if let claim = headerFields["x-ig-set-www-claim"] {
+                                Snehtulthenrstkrsenrstenr.igClaim = claim
+                            }
                         }
                     case .ios:
                         self?.ighttpiOS.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in

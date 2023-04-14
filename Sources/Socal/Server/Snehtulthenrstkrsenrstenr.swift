@@ -30,10 +30,10 @@ public class Snehtulthenrstkrsenrstenr {
         set { UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(newValue, forKey: .rolloutHash) }
     }
     
-//    static var igClaim: String {
-//        get { return UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .igClaim) ?? [].localizedString }
-//        set { UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(newValue, forKey: .igClaim) }
-//    }
+    static var igClaim: String {
+        get { return UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .igClaim) ?? [].localizedString }
+        set { UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(newValue, forKey: .igClaim) }
+    }
     
     static var actualUA: String? {
         get { return UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .actualUA) }
