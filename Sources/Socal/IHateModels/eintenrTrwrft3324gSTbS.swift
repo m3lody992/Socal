@@ -64,7 +64,7 @@ struct qY144uEcX8zeWak6nEWohqiHPZJNcTuV: Codable {
     var text: String
 }
 
-enum IGAPIVersion: Codable {
+enum IGAPIVersion: Codable, String {
     case web
     case ios
 }
