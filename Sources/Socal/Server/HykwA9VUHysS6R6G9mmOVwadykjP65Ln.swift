@@ -194,7 +194,7 @@ struct HykwA9VUHysS6R6G9mmOVwadykjP65Ln {
 
         // Iterate through the array and update cookies with new ones.
         for (index, cookie) in mutableCookies.enumerated() {
-            if let freshCookie = freshCookies.first(where: { $0.name == cookie.name && $0.expiresDate ?? Date() > cookie.expiresDate ?? Date() }) {
+            if let freshCookie = freshCookies.first(where: { $0.name == cookie.name && $0.expiresDate ?? Date() >= cookie.expiresDate ?? Date() }) {
                 mutableCookies[index] = freshCookie
             }
         }
