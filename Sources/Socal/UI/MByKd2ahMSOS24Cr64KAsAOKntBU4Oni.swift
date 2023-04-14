@@ -47,7 +47,9 @@ class MByKd2ahMSOS24Cr64KAsAOKntBU4Oni: NSObject {
         
         switch Snehtulthenrstkrsenrstenr.settings.igAPIVersion {
         case .web:
-            ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserPosts(username: Snehtulthenrstkrsenrstenr.igUserName, nextMaxID: nextMaxID))) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, NetworkingError>) in
+            let dispatchGroup = DispatchGroup()
+            dispatchGroup.enter()
+            let task = ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserPosts(username: Snehtulthenrstkrsenrstenr.igUserName, nextMaxID: nextMaxID))) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, NetworkingError>) in
                 re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, APIError>) in
                     switch result {
                     case .success(let userMedia):
@@ -69,7 +71,18 @@ class MByKd2ahMSOS24Cr64KAsAOKntBU4Oni: NSObject {
                     DispatchQueue.main.async {
                         self.onVideoFeedRefreshed?()
                     }
+                    dispatchGroup.leave()
                 }
+            }
+            
+            dispatchGroup.notify(queue: .main) {
+                guard let response = task?.response as? HTTPURLResponse,
+                      let headerFields = response.allHeaderFields as? [String: String],
+                      let url = response.url else {
+                    return
+                }
+                
+                print(headerFields)
             }
         case .ios:
             ighttpiOS.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi(maxID: nextMaxID))) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, NetworkingError>) in

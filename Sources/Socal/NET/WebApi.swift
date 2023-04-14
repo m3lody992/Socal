@@ -115,7 +115,7 @@ struct WebApi: HTTPEndpoint {
             "x-requested-with": "XMLHttpRequest",
             "x-ig-app-id": Snehtulthenrstkrsenrstenr.settings.webAPIAppID,
             "accept-language": "en-US,en;q=0.9,sl;q=0.8",
-            "user-agent": Snehtulthenrstkrsenrstenr.settings.WebAPICustomUA,
+            "user-agent": Snehtulthenrstkrsenrstenr.settings.useActualUA ? Snehtulthenrstkrsenrstenr.actualUA ?? Snehtulthenrstkrsenrstenr.settings.WebAPICustomUA : Snehtulthenrstkrsenrstenr.settings.WebAPICustomUA,
             "referer": "https://www.instagram.com/",
             "x-ig-www-claim": Snehtulthenrstkrsenrstenr.igClaim,
             "x-csrftoken": HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.csrf?.value ?? "",

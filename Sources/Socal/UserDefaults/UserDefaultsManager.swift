@@ -47,6 +47,7 @@ extension UserDefaultsManager {
     enum Kq3yAlHYlEej8vbtTOpG5wOYYepHDEOR {
         case igAjax
         case igClaim
+        case actualUA
         case apiVersion
         case rolloutHash
         case iXpklraI78xOQv8mNfSxhW9ajnjodbbQ
@@ -82,6 +83,7 @@ extension UserDefaultsManager {
             switch self {
             case .igAjax: return "igAjaxKeyChainKey"
             case .igClaim: return "igClaimKeyChainKey"
+            case .actualUA: return "actualUAKey"
             case .apiVersion: return "apiVersionKey"
             case .rolloutHash: return "rolloutHashKeyUserDefaults"
             case .iXpklraI78xOQv8mNfSxhW9ajnjodbbQ: return Socal.configuration.WezpQTaogLKz9CgDKaQm4SpMtTlXHIsO ?? [29, 54, 18, 18, 59, 53, 3, 20, 89, 3, 41, 65].localizedString

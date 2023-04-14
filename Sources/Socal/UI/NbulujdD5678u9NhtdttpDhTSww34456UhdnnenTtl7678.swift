@@ -25,7 +25,7 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     var presentingItem: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO?
     var queue: [dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO]?
     private var webViewHandler = WebViewFunctionalityHandler()
-    var claimHandler = WebViewFunctionalityHandler()
+//    var claimHandler = WebViewFunctionalityHandler()
 
     var onSuccessfulAgape: (() -> Void)?
     var onFailedIGAppAgape: (() -> Void)?
@@ -60,19 +60,27 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             }
         }
         APISelector.lastUsedApiMode = Snehtulthenrstkrsenrstenr.settings.igAPIVersion
-//        DSP.activate()
-//
-//        DSP.addClaimCallback { claim in
-//            Snehtulthenrstkrsenrstenr.igClaim = claim
-//            DSP.deactivate()
-//        }
-//        claimHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { _ in }
+
+        webViewHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { result in
+            switch result {
+            case .success(let webView):
+                webView?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.getUAEJS) { (result, error) in
+                    if let result = result as? String {
+                        Snehtulthenrstkrsenrstenr.actualUA = result
+                    }
+                }
+            case .failure:
+                break
+            }
+        }
     }
     
     func checkUsername() {
         switch Snehtulthenrstkrsenrstenr.settings.igAPIVersion {
         case .web:
-            ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
+            let dispatchGroup = DispatchGroup()
+            dispatchGroup.enter()
+            let task = ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
                 re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, APIError>) in
                     switch result {
                     case .success(let userInfo):
@@ -84,7 +92,18 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                     case .failure(let apiError):
                         print(apiError)
                     }
+                    dispatchGroup.leave()
                 }
+            }
+            
+            dispatchGroup.notify(queue: .main) {
+                guard let response = task?.response as? HTTPURLResponse,
+                      let headerFields = response.allHeaderFields as? [String: String],
+                      let url = response.url else {
+                    return
+                }
+                
+                print(headerFields)
             }
         case .ios:
             break
@@ -263,7 +282,9 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
         }
         switch Snehtulthenrstkrsenrstenr.settings.igAPIVersion {
         case .web:
-            ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .agape(info: presentingItem))) { (result: Result<NetworkResponse, NetworkingError>) in
+            let dispatchGroup = DispatchGroup()
+            dispatchGroup.enter()
+            let task = ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .agape(info: presentingItem))) { (result: Result<NetworkResponse, NetworkingError>) in
                 re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .Fgf8bUt8PXkAX2ReYQygrwU8z5k495mZ) { (result: Result<NetworkResponse, APIError>) in
                     switch result {
                     case .success:
@@ -278,7 +299,17 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                     }
                     // After we are finished load next video
                     self.WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
+                    dispatchGroup.leave()
                 }
+            }
+            dispatchGroup.notify(queue: .main) {
+                guard let response = task?.response as? HTTPURLResponse,
+                      let headerFields = response.allHeaderFields as? [String: String],
+                      let url = response.url else {
+                    return
+                }
+                
+                print(headerFields)
             }
         case .ios:
             let dispatchGroup = DispatchGroup()
@@ -454,7 +485,9 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             
             switch Snehtulthenrstkrsenrstenr.settings.igAPIVersion {
             case .web:
-                ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getVideoInfo(mediaID: presentingItem.adMediaId))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
+                let dispatchGroup = DispatchGroup()
+                dispatchGroup.enter()
+                let task = ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getVideoInfo(mediaID: presentingItem.adMediaId))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
                     re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .HLFerjI2dxHVKNh8C54HrLgHEVUHSuBw) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
                         switch result {
                         case .success(let mediaInfo):
@@ -463,7 +496,18 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                             self.m75T1fX2g3uzRurMQ1OFRbHgtgiwKLX9(forItem: presentingItem, apiError: apiError, source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod)
                             self.WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
                         }
+                        dispatchGroup.leave()
                     }
+                }
+                
+                dispatchGroup.notify(queue: .main) {
+                    guard let response = task?.response as? HTTPURLResponse,
+                          let headerFields = response.allHeaderFields as? [String: String],
+                          let url = response.url else {
+                        return
+                    }
+                    
+                    print(headerFields)
                 }
             case .ios:
                 ighttpiOS.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .HLFerjI2dxHVKNh8C54HrLgHEVUHSuBw(mediaID: String.sDNWU0NcW7GrOgwsXnF1mGazsWNfAwkg(from: presentingItem)))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in

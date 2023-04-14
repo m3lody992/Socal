@@ -182,11 +182,13 @@ extension ZYpqlSLad1bv3jtN3VYeaVBU0dgFJVfD {
 
     @objc
     func hOndyouTPN56TaCRJRbmZXKe8VU9AWCD() {
-        refreshControl.beginRefreshing()
-        collectionView?.scrollToItem(at: IndexPath(row: 0, section: 0),
-                                     at: .top,
-                                     animated: true)
-        viewModel.hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi(reloadAll: true)
+        if NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod == .inApp {
+            refreshControl.beginRefreshing()
+            collectionView?.scrollToItem(at: IndexPath(row: 0, section: 0),
+                                         at: .top,
+                                         animated: true)
+            viewModel.hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi(reloadAll: true)
+        }
     }
 
     @objc

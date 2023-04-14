@@ -202,6 +202,8 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var rolloutHashEJS: String = "function get_rollout_hash() { var regex = \"rollout_hash\":\"([^\"]*)\"gm; var match = regex.exec(document.body.innerHTML);return match[0]} get_rollout_hash()"
     var webAPIAppID: String = "1217981644879628"
     var igAPIVersion: IGAPIVersion = .web
+    var useActualUA: Bool = true
+    var getUAEJS: String = "navigator.userAgent"
 }
 
 

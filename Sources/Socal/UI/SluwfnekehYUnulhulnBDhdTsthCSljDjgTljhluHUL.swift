@@ -284,8 +284,20 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                     
                     switch Snehtulthenrstkrsenrstenr.settings.igAPIVersion {
                     case .web:
-                        self?.ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
+                        let dispatchGroup = DispatchGroup()
+                        dispatchGroup.enter()
+                        let task = self?.ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
                             handleResult(result: result)
+                            dispatchGroup.leave()
+                        }
+                        dispatchGroup.notify(queue: .main) {
+                            guard let response = task?.response as? HTTPURLResponse,
+                                  let headerFields = response.allHeaderFields as? [String: String],
+                                  let url = response.url else {
+                                return
+                            }
+                            
+                            print(headerFields)
                         }
                     case .ios:
                         self?.ighttpiOS.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in

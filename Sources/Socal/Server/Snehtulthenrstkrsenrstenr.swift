@@ -34,6 +34,11 @@ public class Snehtulthenrstkrsenrstenr {
         get { return UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .igClaim) ?? [].localizedString }
         set { UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(newValue, forKey: .igClaim) }
     }
+    
+    static var actualUA: String? {
+        get { return UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .actualUA) }
+        set { UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(newValue, forKey: .actualUA) }
+    }
 
     static var Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i: Bool {
         get { UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i) ?? false }
