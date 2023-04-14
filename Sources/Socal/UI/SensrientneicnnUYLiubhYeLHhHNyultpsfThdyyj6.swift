@@ -248,7 +248,19 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             self?.skipButton.alpha = isLoading ? 0.5 : 1.0
             self?.agapeButton.alpha = isLoading ? 0.5 : 1.0
         }
-
+        
+        webViewHandler.loadCustomURL(URL(string: "https://instagram.com")!) { result in
+            switch result {
+            case .success(let webview):
+                webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.rolloutHashEJS) { result, error in
+                    if let result = result as? String {
+                        Snehtulthenrstkrsenrstenr.rolloutHash = result
+                    }
+                }
+            case .failure:
+                break
+            }
+        }
     }
 
     func sB05ftvP53jknYUG4fVjMjYQIgobGV9c() {

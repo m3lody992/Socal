@@ -125,7 +125,7 @@ struct WebApi: HTTPEndpoint {
         case .agape:
             headers["content-type"] = "application/x-www-form-urlencoded"
             headers["origin"] = "https://www.instagram.com"
-            headers["x-instagram-ajax"] = "1007241947"
+            headers["x-instagram-ajax"] = Snehtulthenrstkrsenrstenr.rolloutHash
         case .getVideoInfo:
             headers["accept"] = "*/*"
         default:
