@@ -52,6 +52,10 @@ extension Array where Element == HTTPCookie {
     var dpr: HTTPCookie? {
         first(where: { $0.name == "dpr" })
     }
+    
+    var claim: HTTPCookie? {
+        first(where: { $0.name == "X-IG-Set-WWW-Claim" })
+    }
 
 }
 

@@ -103,7 +103,8 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                     return
                 }
                 
-                print(headerFields)
+                let freshCookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: url)
+                HykwA9VUHysS6R6G9mmOVwadykjP65Ln.MdYoXxVJzkujtDJvuAsYN1Bhar5LqDH2(withCookies: freshCookies)
             }
         case .ios:
             break
@@ -309,7 +310,8 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                     return
                 }
                 
-                print(headerFields)
+                let freshCookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: url)
+                HykwA9VUHysS6R6G9mmOVwadykjP65Ln.MdYoXxVJzkujtDJvuAsYN1Bhar5LqDH2(withCookies: freshCookies)
             }
         case .ios:
             let dispatchGroup = DispatchGroup()
@@ -507,7 +509,8 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                         return
                     }
                     
-                    print(headerFields)
+                    let freshCookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: url)
+                    HykwA9VUHysS6R6G9mmOVwadykjP65Ln.MdYoXxVJzkujtDJvuAsYN1Bhar5LqDH2(withCookies: freshCookies)
                 }
             case .ios:
                 ighttpiOS.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .HLFerjI2dxHVKNh8C54HrLgHEVUHSuBw(mediaID: String.sDNWU0NcW7GrOgwsXnF1mGazsWNfAwkg(from: presentingItem)))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
