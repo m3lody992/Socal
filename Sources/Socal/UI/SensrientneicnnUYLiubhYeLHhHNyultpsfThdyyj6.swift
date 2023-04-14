@@ -58,6 +58,8 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
     private var reloadButton: UIButton!
     private var modeButton: RiennnYpFPttsFsWqsvBneuYueHDDT!
     
+    private var webViewHandler = WebViewFunctionalityHandler()
+    
     var mode: hCTHgfsyj8QIUFNyfCMwP3spVWPCFM7w = Snehtulthenrstkrsenrstenr.settings.agapeMethod
 
     func YGafeJHPLCrSy6HQXYAZOCvbv2hXcemu() {
@@ -183,6 +185,15 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
         viewModel.onNewVideoLoaded = { [weak self] item in
             self?.reloadButton.isHidden = true
             self?.yYREW5u9ItKwldvE6kcfkK8hVJKW9KBv(forQueueItem: item)
+            self?.webViewHandler.loadPage(forItem: item, completion: { result in
+                switch result {
+                case .success(let webview):
+                    self?.view.addSubview(self?.webViewHandler.webView ?? WKWebView())
+                    self?.webViewHandler.webView?.frame = self?.imageView.bounds ?? .zero
+                case .failure:
+                    break
+                }
+            })
         }
 
         viewModel.onNoNewVideos = { [weak self] in
