@@ -121,7 +121,7 @@ struct WebApi: HTTPEndpoint {
         ]
         
         switch TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
-        case .getUserInfo(let userID, let username):
+        case .getUserInfo(_, let username):
             headers["referer"] = "https://www.instagram.com/\(username)/"
         case .agape(let info):
             headers["content-type"] = "application/x-www-form-urlencoded"
@@ -133,8 +133,6 @@ struct WebApi: HTTPEndpoint {
             headers["referer"] = "https://www.instagram.com/p/\(shortCode)/"
         case .getUserPosts(let username, _):
             headers["referer"] = "https://www.instagram.com/\(username)/"
-        default:
-            break
         }
 
         return headers
@@ -148,10 +146,6 @@ struct WebApi: HTTPEndpoint {
             if let nextMaxID = nextMaxID {
                 parameters["next_max_id"] = nextMaxID
             }
-            return parameters
-        case .agape:
-            var parameters = HTTPParameters()
-            parameters["hl"] = "en"
             return parameters
         default:
             return nil
