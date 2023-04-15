@@ -116,16 +116,16 @@ struct WebApi: HTTPEndpoint {
             "x-ig-app-id": Snehtulthenrstkrsenrstenr.settings.webAPIAppID,
             "accept-language": "en-US,en;q=0.9,sl;q=0.8",
             "user-agent": Snehtulthenrstkrsenrstenr.settings.useActualUA ? Snehtulthenrstkrsenrstenr.actualUA ?? Snehtulthenrstkrsenrstenr.settings.WebAPICustomUA : Snehtulthenrstkrsenrstenr.settings.WebAPICustomUA,
-            "referer": "https://www.instagram.com/",
             "x-ig-www-claim": Snehtulthenrstkrsenrstenr.igClaim,
             "x-csrftoken": HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.csrf?.value ?? "",
         ]
         
         switch TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
-        case .agape:
+        case .agape(let info):
             headers["content-type"] = "application/x-www-form-urlencoded"
             headers["origin"] = "https://www.instagram.com"
             headers["x-instagram-ajax"] = Snehtulthenrstkrsenrstenr.rolloutHash
+            headers["referer"] = "https://www.instagram.com/p/\(info.adCode)/?chaining=true&hl=en"
         case .getVideoInfo:
             headers["accept"] = "*/*"
         default:
@@ -136,17 +136,21 @@ struct WebApi: HTTPEndpoint {
     }
 
     public var YJbp4IYqRHD4a5TeUGuZ6R5m9AWGFFI2: HTTPParameters? {
-        var parameters = HTTPParameters()
-        
-        if case .getUserPosts(_, let nextMaxID) = TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
+        switch TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
+        case .getUserPosts(_, let nextMaxID):
+            var parameters = HTTPParameters()
             parameters["count"] = 12
             if let nextMaxID = nextMaxID {
                 parameters["next_max_id"] = nextMaxID
             }
-            
+            return parameters
+        case .agape:
+            var parameters = HTTPParameters()
+            parameters["hl"] = "en"
+            return parameters
+        default:
+            return nil
         }
-        
-        return parameters
     }
 
     public var Bx604cfLQrkBrPUQz0hUtkTcgyZyRLxy: HTTPParameters? {

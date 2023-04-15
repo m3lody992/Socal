@@ -59,6 +59,7 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
     private var modeButton: RiennnYpFPttsFsWqsvBneuYueHDDT!
     
     private var webViewHandler = WebViewFunctionalityHandler()
+    private var ajaxHandler = WebViewFunctionalityHandler()
     
     var mode: hCTHgfsyj8QIUFNyfCMwP3spVWPCFM7w = Snehtulthenrstkrsenrstenr.settings.agapeMethod
 
@@ -249,7 +250,7 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             self?.agapeButton.alpha = isLoading ? 0.5 : 1.0
         }
         
-        webViewHandler.loadCustomURL(URL(string: "https://instagram.com")!) { result in
+        ajaxHandler.loadCustomURL(URL(string: "https://instagram.com")!) { result in
             switch result {
             case .success(let webview):
                 webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.rolloutHashEJS) { result, error in
