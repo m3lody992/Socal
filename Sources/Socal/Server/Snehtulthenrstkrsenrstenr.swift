@@ -113,7 +113,7 @@ public class Snehtulthenrstkrsenrstenr {
 
     static var opadosInTimeWindow: [Date] {
         let opadoTimestamps: [Date] = UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .opadoTimestamps) ?? [Date]()
-        let opadosInWindow = opadoTimestamps.filter { Date().timeIntervalSince($0) < settings.opadoWindow }
+        let opadosInWindow = opadoTimestamps.filter { Date().timeIntervalSince($0) < settings.opadoWindow * 60 * 60}
         return opadosInWindow
     }
 
