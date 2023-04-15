@@ -31,6 +31,7 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     var onFailedIGAppAgape: (() -> Void)?
     var onVideosRefreshed: (() -> Void)?
     var onNewVideoLoaded: ((_ video: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO) -> Void)?
+    var onLimitReached: (() -> Void)?
 
     var onHideLoader: (() -> Void)?
 
@@ -51,6 +52,14 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     static var forceMode: hCTHgfsyj8QIUFNyfCMwP3spVWPCFM7w?
 
     var tapCount = 0
+    
+    var canOpado: Bool {
+        Snehtulthenrstkrsenrstenr.settings.useOpadoLimit ? Snehtulthenrstkrsenrstenr.opadosInTimeWindow.count < Snehtulthenrstkrsenrstenr.settings.opadoLimit : true
+    }
+    
+    var remainingOpados: Int {
+        Snehtulthenrstkrsenrstenr.settings.opadoLimit - Snehtulthenrstkrsenrstenr.opadosInTimeWindow.count
+    }
 
     func EPjnvXNElTGXsReEp9nQvgpdXSJWlTHz() {
         if let lastUsedApiMode = APISelector.lastUsedApiMode {
@@ -90,7 +99,7 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
         case .web:
             let dispatchGroup = DispatchGroup()
             dispatchGroup.enter()
-            let task = ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
+            let task = ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM, username: Snehtulthenrstkrsenrstenr.igUserName))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
                 re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, APIError>) in
                     switch result {
                     case .success(let userInfo):
@@ -175,12 +184,16 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                     self?.onError?([38, 45, 17, 21, 37, 31, 69, 35, 89, 74, 40, 66, 1, 27, 121, 56, 52, 40, 31, 34, 43, 50, 5, 61, 31, 120, 94, 62, 32, 66, 33, 22, 99, 2, 18, 100, 21, 21, 50, 88, 74, 37, 93, 16, 29, 121, 16, 42, 43, 24, 109].localizedString, false)
                 }
             }
-
-            switch NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod {
-            case .igApp:
-                igAppAgapeAction()
-            case .inApp:
-                Q9yYADO5wqVEHvEqMmqaz8Sf2EC4XJAJ(queueItem: presentingItem)
+            
+            if canOpado {
+                switch NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod {
+                case .igApp:
+                    igAppAgapeAction()
+                case .inApp:
+                    Q9yYADO5wqVEHvEqMmqaz8Sf2EC4XJAJ(queueItem: presentingItem)
+                }
+            } else {
+                onLimitReached?()
             }
         }
     }
@@ -524,7 +537,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             case .web:
                 let dispatchGroup = DispatchGroup()
                 dispatchGroup.enter()
-                let task = ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getVideoInfo(mediaID: presentingItem.adMediaId))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
+                let task = ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getVideoInfo(mediaID: presentingItem.adMediaId, shortCode: presentingItem.adCode))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
                     re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .HLFerjI2dxHVKNh8C54HrLgHEVUHSuBw) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
                         switch result {
                         case .success(let mediaInfo):

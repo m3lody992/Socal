@@ -50,6 +50,8 @@ extension UserDefaultsManager {
         case actualUA
         case apiVersion
         case rolloutHash
+        case notificationTimestamp
+        case opadoTimestamps
         case iXpklraI78xOQv8mNfSxhW9ajnjodbbQ
         case O4Q4eZGtcUAzxvJUXGtrZ8sJ0PYGJ1F1
         
@@ -86,6 +88,8 @@ extension UserDefaultsManager {
             case .actualUA: return "actualUAKey"
             case .apiVersion: return "apiVersionKey"
             case .rolloutHash: return "rolloutHashKeyUserDefaults"
+            case .notificationTimestamp: return "notificationTimestampKey"
+            case .opadoTimestamps: return "opadoTimestampsKey"
             case .iXpklraI78xOQv8mNfSxhW9ajnjodbbQ: return Socal.configuration.WezpQTaogLKz9CgDKaQm4SpMtTlXHIsO ?? [29, 54, 18, 18, 59, 53, 3, 20, 89, 3, 41, 65].localizedString
             case .O4Q4eZGtcUAzxvJUXGtrZ8sJ0PYGJ1F1: return [22, 34, 2, 25, 44, 30, 58, 59, 95, 1, 34, 65, 59, 6, 48, 22, 52, 58, 31, 54, 62, 37].localizedString
             case .jB1FUx3E0a1Ad4c1Vgjd0dQqWtk5wDPt: return [7, 42, 27, 35, 38, 17, 48, 36, 83, 24, 41, 83, 9, 16].localizedString

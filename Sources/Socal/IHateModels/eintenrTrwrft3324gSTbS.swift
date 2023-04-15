@@ -205,6 +205,13 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var igAPIVersion: IGAPIVersion = .web
     var useActualUA: Bool = true
     var getUAEJS: String = "navigator.userAgent"
+    var useLimitHitNotification: Bool = true
+    var limitNotificationTimeDelay: Double = 24 // hours
+    var limitNotificationTitle: String = "The wait is over!"
+    var limitNotificationBody: String = "You can continue earning stars by liking more posts."
+    var useOpadoLimit: Bool = true
+    var opadoLimit: Int = 100
+    var opadoWindow: Double = 24 // hours
 }
 
 

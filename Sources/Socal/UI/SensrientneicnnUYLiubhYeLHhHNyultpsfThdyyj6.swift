@@ -216,6 +216,26 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             self?.vfKUVGuyNUSpPLCrMoX6pvvD9nEvaXTE(animated: true)
             self?.zN2s6qOln2IWPGgTtJh3wzAQw35sKueU()
         }
+        
+        viewModel.onLimitReached = { [weak self] in
+            // "Enable Notifications?"
+            // "Do you wish to enable notifications for when you can continue earning stars?"
+            self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI {
+                if UserNotificationsService.isNotificationSet == false {
+                    self?.TSSmxdWLlN0IuImqD5djgvpBTPHTDMrD(
+                        withTitle: [54, 45, 17, 21, 37, 31, 69, 25, 89, 30, 46, 84, 13, 22, 56, 5, 51, 52, 5, 48, 115].localizedString,
+                        andMessage: [55, 44, 80, 14, 38, 15, 69, 32, 95, 25, 47, 18, 16, 26, 121, 20, 52, 58, 9, 47, 41, 96, 10, 63, 71, 49, 72, 59, 38, 66, 38, 26, 44, 30, 4, 105, 28, 10, 37, 22, 29, 47, 87, 10, 85, 32, 30, 47, 123, 8, 34, 34, 96, 7, 63, 93, 44, 71, 60, 48, 70, 114, 22, 34, 2, 25, 32, 20, 2, 119, 69, 30, 38, 64, 23, 74].localizedString,
+                        buttons: [.cancel, .ok]) {
+                        UserNotificationsService.presentAskNotificationPopupIfNeededAndScheduleNotificationOnSuccess()
+                    }
+                } else {
+                    self?.TSSmxdWLlN0IuImqD5djgvpBTPHTDMrD(
+                        withTitle: [35, 47, 21, 22, 58, 31, 69, 52, 89, 7, 34, 18, 6, 20, 58, 26, 122, 55, 10, 55, 41, 50].localizedString, // "Please come back later"
+                        andMessage: [36, 38, 80, 0, 32, 22, 9, 119, 88, 5, 51, 91, 2, 12, 121, 8, 53, 46, 75, 52, 36, 37, 10, 112, 74, 55, 91, 114, 38, 66, 60, 83, 32, 31, 25, 61, 19, 11, 34, 83, 74, 34, 83, 22, 27, 48, 31, 61, 123, 24, 55, 45, 50, 23, 126].localizedString, // "We will notify you when you can continue earning stars."
+                        buttons: [.okDismiss])
+                }
+            }
+        }
 
         viewModel.onFailedIGAppAgape = { [weak self] in
             self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()

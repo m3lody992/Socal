@@ -63,10 +63,10 @@ struct WebApi: HTTPEndpoint {
 
     // MARK: - Cases
     enum HaGzeOxAJScExpzn6o4Rn9wggKirIesq {
-        case getUserInfo(userID: String)
+        case getUserInfo(userID: String, username: String)
         case agape(info: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO)
         case getUserPosts(username: String, nextMaxID: String? = nil)
-        case getVideoInfo(mediaID: String)
+        case getVideoInfo(mediaID: String, shortCode: String)
     }
 
     var TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: HaGzeOxAJScExpzn6o4Rn9wggKirIesq
@@ -83,11 +83,11 @@ struct WebApi: HTTPEndpoint {
         switch TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
         case .agape(let info):
             return "/web/likes/\(info.adMediaId)/like/"
-        case .getUserInfo(let userID):
+        case .getUserInfo(let userID, _):
             return "/users/\(userID)/info/"
         case .getUserPosts(let username, _):
             return "/feed/user/\(username)/username/"
-        case .getVideoInfo(let mediaID):
+        case .getVideoInfo(let mediaID, _):
             return "/media/\(mediaID)/info/"
             
         }
@@ -121,13 +121,18 @@ struct WebApi: HTTPEndpoint {
         ]
         
         switch TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
+        case .getUserInfo(let userID, let username):
+            headers["referer"] = "https://www.instagram.com/\(username)/"
         case .agape(let info):
             headers["content-type"] = "application/x-www-form-urlencoded"
             headers["origin"] = "https://www.instagram.com"
             headers["x-instagram-ajax"] = Snehtulthenrstkrsenrstenr.rolloutHash
-            headers["referer"] = "https://www.instagram.com/p/\(info.adCode)/?chaining=true&hl=en"
-        case .getVideoInfo:
+            headers["referer"] = "https://www.instagram.com/p/\(info.adCode)/"
+        case .getVideoInfo(_, let shortCode):
             headers["accept"] = "*/*"
+            headers["referer"] = "https://www.instagram.com/p/\(shortCode)/"
+        case .getUserPosts(let username, _):
+            headers["referer"] = "https://www.instagram.com/\(username)/"
         default:
             break
         }

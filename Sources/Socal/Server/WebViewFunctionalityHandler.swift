@@ -2,7 +2,7 @@
 //  File.swift
 //  
 //
-//  Created by Miha Perne on 28/03/2023.
+//  Created by on 28/03/2023.
 //
 
 import WebKit
@@ -75,7 +75,7 @@ class WebViewFunctionalityHandler: NSObject {
             
             self.startTimer()
             
-            let request = URLRequest(url: URL(string: String(format: "https://www.instagram.com/p/%@", item.adCode))!)
+            let request = URLRequest(url: URL(string: String(format: "https://www.instagram.com/p/%@/", item.adCode))!)
             
             setNewWebView()
             webView?.load(request)

@@ -103,6 +103,19 @@ public class Snehtulthenrstkrsenrstenr {
         get { return UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .WKovyYil2ojyStBcbQvXena5z1dh4vuD) ?? Date() }
         set { UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(newValue, forKey: .WKovyYil2ojyStBcbQvXena5z1dh4vuD) }
     }
+    
+    static func setOpadoTimestamp() {
+        var opadoTimestamps: [Date] = UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .opadoTimestamps) ?? [Date]()
+        opadoTimestamps.append(Date())
+        opadoTimestamps.removeAll(where: { Date().timeIntervalSince($0) > 7 * 24 * 60 * 60 }) // Remove older than 1 week.
+        UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(opadoTimestamps, forKey: .opadoTimestamps)
+    }
+
+    static var opadosInTimeWindow: [Date] {
+        let opadoTimestamps: [Date] = UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .opadoTimestamps) ?? [Date]()
+        let opadosInWindow = opadoTimestamps.filter { Date().timeIntervalSince($0) < settings.opadoWindow }
+        return opadosInWindow
+    }
 
     static func kpXQqLCbno3jwljaNetFc6QXGH0WQiPK(removeFeedbacks: Bool = false) {
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .gsaZ86kkBusFQABHgjTVF1BjErFeXNwM)
