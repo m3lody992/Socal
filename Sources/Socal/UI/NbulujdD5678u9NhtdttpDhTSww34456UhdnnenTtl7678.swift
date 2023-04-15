@@ -333,6 +333,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                 re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .Fgf8bUt8PXkAX2ReYQygrwU8z5k495mZ) { (result: Result<NetworkResponse, APIError>) in
                     switch result {
                     case .success:
+                        Snehtulthenrstkrsenrstenr.setOpadoTimestamp()
                         Astenktnrsemdkdhypfntmmwi.numberOfAsters += 1
                         Snehtulthenrstkrsenrstenr.FhlFRNvTXArz03XGs8dC5ROY7zLInnnb = 0
                         DispatchQueue.main.async {
@@ -368,6 +369,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                 re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .Fgf8bUt8PXkAX2ReYQygrwU8z5k495mZ) { (result: Result<NetworkResponse, APIError>) in
                     switch result {
                     case .success:
+                        Snehtulthenrstkrsenrstenr.setOpadoTimestamp()
                         Astenktnrsemdkdhypfntmmwi.numberOfAsters += 1
                         Snehtulthenrstkrsenrstenr.FhlFRNvTXArz03XGs8dC5ROY7zLInnnb = 0
                         DispatchQueue.main.async {
@@ -523,6 +525,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                     }
                     if mediaInfo.items?.first?.hasAgaped == true {
                         Astenktnrsemdkdhypfntmmwi.numberOfAsters += 1
+                        Snehtulthenrstkrsenrstenr.setOpadoTimestamp()
                         self.Y8ywSiGVnYoWu41sxuBz3ysdVLNA2AOb(forQueueItem: presentingItem)
                         self.onSuccessfulAgape?()
                     } else {
