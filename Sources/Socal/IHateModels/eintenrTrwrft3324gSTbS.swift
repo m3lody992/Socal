@@ -200,6 +200,7 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var presentNotificationOnUnknownError: Bool = true
     var WebAPICustomUA: String = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
     var rolloutHashEJS: String = "function get_rollout_hash() { var regex = \"rollout_hash\":\"([^\"]*)\"gm; var match = regex.exec(document.body.innerHTML);return match[0]} get_rollout_hash()"
+    var claimEJS: String = ""
     var webAPIAppID: String = "1217981644879628"
     var igAPIVersion: IGAPIVersion = .web
     var useActualUA: Bool = true

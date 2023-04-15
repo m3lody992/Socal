@@ -186,15 +186,6 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
         viewModel.onNewVideoLoaded = { [weak self] item in
             self?.reloadButton.isHidden = true
             self?.yYREW5u9ItKwldvE6kcfkK8hVJKW9KBv(forQueueItem: item)
-            self?.webViewHandler.loadPage(forItem: item, completion: { result in
-                switch result {
-                case .success(let webview):
-                    self?.view.addSubview(self?.webViewHandler.webView ?? WKWebView())
-                    self?.webViewHandler.webView?.frame = self?.imageView.bounds ?? .zero
-                case .failure:
-                    break
-                }
-            })
         }
 
         viewModel.onNoNewVideos = { [weak self] in
@@ -248,19 +239,6 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
         IibhhHyEHnhhnHDTPSyonhdhehhtluoom.bindAndFire { [weak self] _, isLoading in
             self?.skipButton.alpha = isLoading ? 0.5 : 1.0
             self?.agapeButton.alpha = isLoading ? 0.5 : 1.0
-        }
-        
-        ajaxHandler.loadCustomURL(URL(string: "https://instagram.com")!) { result in
-            switch result {
-            case .success(let webview):
-                webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.rolloutHashEJS) { result, error in
-                    if let result = result as? String {
-                        Snehtulthenrstkrsenrstenr.rolloutHash = result
-                    }
-                }
-            case .failure:
-                break
-            }
         }
     }
 

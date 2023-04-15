@@ -69,6 +69,16 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                         Snehtulthenrstkrsenrstenr.actualUA = result
                     }
                 }
+                webView?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.rolloutHashEJS) { result, error in
+                    if let result = result as? String {
+                        Snehtulthenrstkrsenrstenr.rolloutHash = result
+                    }
+                }
+                webView?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.claimEJS) { (result, error) in
+                    if let result = result as? String {
+                        Snehtulthenrstkrsenrstenr.igClaim = result
+                    }
+                }
             case .failure:
                 break
             }
@@ -185,6 +195,23 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             guard let item = item else { return }
             self.presentingItem = item
             self.onNewVideoLoaded?(item)
+            self.webViewHandler.loadPage(forItem: item, completion: { result in
+                switch result {
+                case .success(let webview):
+                    webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.rolloutHashEJS) { result, error in
+                        if let result = result as? String {
+                            Snehtulthenrstkrsenrstenr.rolloutHash = result
+                        }
+                    }
+                    webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.claimEJS) { (result, error) in
+                        if let result = result as? String {
+                            Snehtulthenrstkrsenrstenr.igClaim = result
+                        }
+                    }
+                case .failure:
+                    break
+                }
+            })
             self.VtBiJuZCNeSZbQq4GNluKKyE9EnjutB8(queueItem: item)
         }
     }
