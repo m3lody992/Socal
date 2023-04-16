@@ -142,10 +142,10 @@ struct WebApi: HTTPEndpoint {
         switch TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
         case .getUserPosts(_, let nextMaxID, _):
             var parameters = HTTPParameters()
-            parameters["count"] = 12
             if let nextMaxID = nextMaxID {
                 parameters["next_max_id"] = nextMaxID
             }
+            parameters["count"] = 12
             return parameters
         default:
             return nil
