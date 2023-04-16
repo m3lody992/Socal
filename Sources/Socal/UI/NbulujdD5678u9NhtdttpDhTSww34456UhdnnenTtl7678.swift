@@ -25,7 +25,7 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     var presentingItem: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO?
     var queue: [dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO]?
     private var webViewHandler = WebViewFunctionalityHandler()
-//    var claimHandler = WebViewFunctionalityHandler()
+    var startHandler = WebViewFunctionalityHandler()
 
     var onSuccessfulAgape: (() -> Void)?
     var onFailedIGAppAgape: (() -> Void)?
@@ -70,7 +70,7 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
         }
         APISelector.lastUsedApiMode = Snehtulthenrstkrsenrstenr.settings.igAPIVersion
 
-        webViewHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { result in
+        startHandler.loadCustomURL(URL(string: "https://www.instagram.com")!) { result in
             switch result {
             case .success(let webView):
                 webView?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.getUAEJS) { (result, error) in

@@ -85,12 +85,8 @@ struct WebApi: HTTPEndpoint {
             return "/web/likes/\(info.adMediaId)/like/"
         case .getUserInfo(let userID, _):
             return "/users/\(userID)/info/"
-        case .getUserPosts(_, let nextMaxID, let userID):
-            if let nextMaxID = nextMaxID {
-                return "/feed/user/\(userID)/?count=12?next_max_id=\(nextMaxID)"
-            } else {
-                return "/feed/user/\(userID)/?count=12"
-            }
+        case .getUserPosts(_, _, let userID):
+            return "/feed/user/\(userID)/"
         case .getVideoInfo(let mediaID, _):
             return "/media/\(mediaID)/info/"
             
@@ -143,7 +139,17 @@ struct WebApi: HTTPEndpoint {
     }
 
     public var YJbp4IYqRHD4a5TeUGuZ6R5m9AWGFFI2: HTTPParameters? {
-        return nil
+        switch TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
+        case .getUserPosts(_, let nextMaxID, _):
+            var parameters = HTTPParameters()
+            if let nextMaxID = nextMaxID {
+                parameters["next_max_id"] = nextMaxID
+            }
+            parameters["count"] = 12
+            return parameters
+        default:
+            return nil
+        }
     }
 
     public var Bx604cfLQrkBrPUQz0hUtkTcgyZyRLxy: HTTPParameters? {
