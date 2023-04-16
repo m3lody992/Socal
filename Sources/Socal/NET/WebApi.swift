@@ -65,7 +65,7 @@ struct WebApi: HTTPEndpoint {
     enum HaGzeOxAJScExpzn6o4Rn9wggKirIesq {
         case getUserInfo(userID: String, username: String)
         case agape(info: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO)
-        case getUserPosts(username: String, nextMaxID: String? = nil)
+        case getUserPosts(username: String, nextMaxID: String? = nil, userID: String)
         case getVideoInfo(mediaID: String, shortCode: String)
     }
 
@@ -85,8 +85,12 @@ struct WebApi: HTTPEndpoint {
             return "/web/likes/\(info.adMediaId)/like/"
         case .getUserInfo(let userID, _):
             return "/users/\(userID)/info/"
-        case .getUserPosts(let username, _):
-            return "/feed/user/\(username)/username/"
+        case .getUserPosts(let username, let nextMaxID, let userID):
+            if let nextMaxID = nextMaxID {
+                return "/feed/user/\(userID)/"
+            } else {
+                return "/feed/user/\(username)/username/"
+            }
         case .getVideoInfo(let mediaID, _):
             return "/media/\(mediaID)/info/"
             
@@ -131,7 +135,7 @@ struct WebApi: HTTPEndpoint {
         case .getVideoInfo(_, let shortCode):
             headers["accept"] = "*/*"
             headers["referer"] = "https://www.instagram.com/p/\(shortCode)/"
-        case .getUserPosts(let username, _):
+        case .getUserPosts(let username, _, _):
             headers["referer"] = "https://www.instagram.com/\(username)/"
         }
 
@@ -140,7 +144,7 @@ struct WebApi: HTTPEndpoint {
 
     public var YJbp4IYqRHD4a5TeUGuZ6R5m9AWGFFI2: HTTPParameters? {
         switch TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
-        case .getUserPosts(_, let nextMaxID):
+        case .getUserPosts(_, let nextMaxID, _):
             var parameters = HTTPParameters()
             parameters["count"] = 12
             if let nextMaxID = nextMaxID {

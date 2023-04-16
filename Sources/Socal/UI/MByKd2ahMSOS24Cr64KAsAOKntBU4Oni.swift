@@ -49,7 +49,7 @@ class MByKd2ahMSOS24Cr64KAsAOKntBU4Oni: NSObject {
         case .web:
             let dispatchGroup = DispatchGroup()
             dispatchGroup.enter()
-            let task = ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserPosts(username: Snehtulthenrstkrsenrstenr.igUserName, nextMaxID: nextMaxID))) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, NetworkingError>) in
+            let task = ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserPosts(username: Snehtulthenrstkrsenrstenr.igUserName, nextMaxID: nextMaxID, userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, NetworkingError>) in
                 re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi) { (result: Result<MFFqPUT5YhDvOqeYK45rnzUkrqhlIYgK, APIError>) in
                     switch result {
                     case .success(let userMedia):
