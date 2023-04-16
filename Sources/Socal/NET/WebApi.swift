@@ -82,7 +82,7 @@ struct WebApi: HTTPEndpoint {
     public var YESUez2gXXN7shFQVt6cd4kA4INFZyIr: String {
         switch TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
         case .agape(let info):
-            return "/web/likes/\(info.adMediaId)/like/"
+            return "/web/likes/\("3081694563265373910")/like/"
         case .getUserInfo(let userID, _):
             return "/users/\(userID)/info/"
         case .getUserPosts(_, _, let userID):
