@@ -85,12 +85,8 @@ struct WebApi: HTTPEndpoint {
             return "/web/likes/\(info.adMediaId)/like/"
         case .getUserInfo(let userID, _):
             return "/users/\(userID)/info/"
-        case .getUserPosts(let username, let nextMaxID, let userID):
-            if let nextMaxID = nextMaxID {
-                return "/feed/user/\(userID)/"
-            } else {
-                return "/feed/user/\(username)/username/"
-            }
+        case .getUserPosts(_, _, let userID):
+            return "/feed/user/\(userID)/"
         case .getVideoInfo(let mediaID, _):
             return "/media/\(mediaID)/info/"
             

@@ -27,7 +27,7 @@ class MByKd2ahMSOS24Cr64KAsAOKntBU4Oni: NSObject {
 
     var nextMaxID: String?
 
-    func hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi(reloadAll: Bool = false) {
+    func hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi(reloadAll: Bool = false, ignoreErrors: Bool = false) {
         guard isLoading == false else {
             return
         }
@@ -63,7 +63,9 @@ class MByKd2ahMSOS24Cr64KAsAOKntBU4Oni: NSObject {
                             self.nextMaxID = userMedia.nextMaxID
                         }
                     case .failure:
-                        self.onError?(nil, [36, 38, 80, 22, 59, 31, 69, 63, 87, 28, 46, 92, 3, 85, 45, 3, 53, 46, 9, 47, 41, 96, 8, 63, 82, 60, 71, 60, 34, 3, 43, 28, 54, 2, 87, 57, 21, 22, 35, 69, 75].localizedString) // "We are having trouble loading your posts!"
+                        if !ignoreErrors {
+                            self.onError?(nil, [36, 38, 80, 22, 59, 31, 69, 63, 87, 28, 46, 92, 3, 85, 45, 3, 53, 46, 9, 47, 41, 96, 8, 63, 82, 60, 71, 60, 34, 3, 43, 28, 54, 2, 87, 57, 21, 22, 35, 69, 75].localizedString) // "We are having trouble loading your posts!"
+                        }
                     }
                     self.isFirstLoad = false
                     self.isLoading = false
@@ -104,7 +106,9 @@ class MByKd2ahMSOS24Cr64KAsAOKntBU4Oni: NSObject {
                             self.nextMaxID = userMedia.nextMaxID
                         }
                     case .failure:
-                        self.onError?(nil, [36, 38, 80, 22, 59, 31, 69, 63, 87, 28, 46, 92, 3, 85, 45, 3, 53, 46, 9, 47, 41, 96, 8, 63, 82, 60, 71, 60, 34, 3, 43, 28, 54, 2, 87, 57, 21, 22, 35, 69, 75].localizedString) // "We are having trouble loading your posts!"
+                        if !ignoreErrors {
+                            self.onError?(nil, [36, 38, 80, 22, 59, 31, 69, 63, 87, 28, 46, 92, 3, 85, 45, 3, 53, 46, 9, 47, 41, 96, 8, 63, 82, 60, 71, 60, 34, 3, 43, 28, 54, 2, 87, 57, 21, 22, 35, 69, 75].localizedString) // "We are having trouble loading your posts!"
+                        }
                     }
                     self.isFirstLoad = false
                     self.isLoading = false

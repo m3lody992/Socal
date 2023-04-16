@@ -187,7 +187,7 @@ extension ZYpqlSLad1bv3jtN3VYeaVBU0dgFJVfD {
             collectionView?.scrollToItem(at: IndexPath(row: 0, section: 0),
                                          at: .top,
                                          animated: true)
-            viewModel.hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi(reloadAll: true)
+            viewModel.hP9nZOycmC2VGc6GRkbC1pwPSjQdCpMi(reloadAll: true, ignoreErrors: true)
         }
     }
 
