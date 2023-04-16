@@ -144,7 +144,7 @@ struct WebApi: HTTPEndpoint {
             var parameters = HTTPParameters()
             parameters["count"] = 12
             if let nextMaxID = nextMaxID {
-                parameters["next_max_id"] = nextMaxID
+                parameters["max_id"] = nextMaxID
             }
             return parameters
         default:
