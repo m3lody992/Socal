@@ -62,7 +62,7 @@ struct h49kWBf4uKtta6hj9FRM3PdrQ2xdJhGE: HTTPEndpoint {
         case wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql
         case ufimWGOpR7n6hPK6KFH1N135OkVD2VKE
         case Q9yYADO5wqVEHvEqMmqaz8Sf2EC4XJAJ(mediaID: String, panPotUserName: String, source: hCTHgfsyj8QIUFNyfCMwP3spVWPCFM7w)
-        case o8lsmUFSi4INyHsJxtEwgKN4lyax1vxx(mediaID: String, panPotID: String, source: hCTHgfsyj8QIUFNyfCMwP3spVWPCFM7w, reason: rMVoacp4QAJJMJivfUD78urrxnonUvZX)
+        case o8lsmUFSi4INyHsJxtEwgKN4lyax1vxx(mediaID: String, panPotID: String, source: hCTHgfsyj8QIUFNyfCMwP3spVWPCFM7w, reason: rMVoacp4QAJJMJivfUD78urrxnonUvZX, code: Int? = nil)
         case QXW4MwpJgzU6tp0teoqUlETUjC424DZ3
         case mIFs0cVk14xQJbQufM2rGOp3WctnBfPe(mediaID: String?, panPotID: String, info: vxyXfDSNgOCQhDdfOoHeMFEKP28aSfUb)
         case QibSiqDAnKlCIjXsSmTdbrlNGugsB2Sl(panPotUserName: String)
@@ -134,8 +134,11 @@ struct h49kWBf4uKtta6hj9FRM3PdrQ2xdJhGE: HTTPEndpoint {
             parameters[[18, 39, 61, 18, 45, 19, 4, 30, 82].localizedString] = mediaID // "adMediaId"
             parameters[[0, 54, 30].localizedString] = panPotUserName // "sun"
             parameters[[0, 44, 5, 5, 42, 31].localizedString] = source.rawValue // "source"
-        case .o8lsmUFSi4INyHsJxtEwgKN4lyax1vxx(let mediaID, let panPotID, let source, let reason):
+        case .o8lsmUFSi4INyHsJxtEwgKN4lyax1vxx(let mediaID, let panPotID, let source, let reason, let code):
             parameters[[22, 53, 21, 25, 61, 37, 11, 54, 91, 15].localizedString] = [31, 42, 27, 18, 22, 20, 10, 35, 105, 14, 34, 70, 1, 22, 45, 20, 62].localizedString // "event_name", "like_not_detected"
+            if let code = code {
+                parameters["code"] = String(code)
+            }
             parameters[[30, 42].localizedString] = mediaID // "mi"
             parameters[[6, 48, 21, 5, 22, 19, 1].localizedString] = panPotID // "user_id"
             parameters[[0, 44, 5, 5, 42, 31].localizedString] = source.rawValue // "source"

@@ -293,8 +293,8 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
         }
     }
 
-    func FGwhIlQzGektIZe2WXHKJXoEMm5gou5C(forQueueItem item: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO, reason: rMVoacp4QAJJMJivfUD78urrxnonUvZX) {
-        http.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .o8lsmUFSi4INyHsJxtEwgKN4lyax1vxx(mediaID: item.adMediaId, panPotID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM, source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod, reason: reason))) { (result: Result<NetworkResponse, NetworkingError>) in
+    func FGwhIlQzGektIZe2WXHKJXoEMm5gou5C(forQueueItem item: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO, reason: rMVoacp4QAJJMJivfUD78urrxnonUvZX, code: Int? = nil) {
+        http.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .o8lsmUFSi4INyHsJxtEwgKN4lyax1vxx(mediaID: item.adMediaId, panPotID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM, source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod, reason: reason, code: code))) { (result: Result<NetworkResponse, NetworkingError>) in
         }
     }
 
@@ -467,12 +467,12 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                 presentErrorIfNotTryAgain()
             }
             // Report the message every time
-            self.FGwhIlQzGektIZe2WXHKJXoEMm5gou5C(forQueueItem: item, reason: .IMGZh5eFBRK1ypnweoDfIQ6Ci4sgyLbZ(apiError.message))
+            self.FGwhIlQzGektIZe2WXHKJXoEMm5gou5C(forQueueItem: item, reason: .IMGZh5eFBRK1ypnweoDfIQ6Ci4sgyLbZ(apiError.message), code: apiError.code)
         } else {
             // Fallback if status isn't ok or fail
             Snehtulthenrstkrsenrstenr.FhlFRNvTXArz03XGs8dC5ROY7zLInnnb += 1
             presentErrorIfNotTryAgain()
-            self.FGwhIlQzGektIZe2WXHKJXoEMm5gou5C(forQueueItem: item, reason: .pw4US666q3l0sL1jMbWBYUABnZ5D95bX(apiError.status))
+            self.FGwhIlQzGektIZe2WXHKJXoEMm5gou5C(forQueueItem: item, reason: .pw4US666q3l0sL1jMbWBYUABnZ5D95bX(apiError.status), code: apiError.code)
         }
     }
 
