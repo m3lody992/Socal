@@ -188,6 +188,7 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             if Snehtulthenrstkrsenrstenr.settings.showWebView {
                 if let webView = webView {
                     self?.showWebView(webView: webView)
+                    self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
                 } else {
                     self?.removeWebView()
                     self?.yYREW5u9ItKwldvE6kcfkK8hVJKW9KBv(forQueueItem: item)
@@ -276,16 +277,15 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
     
     func showWebView(webView: WKWebView) {
         removeWebView()
-        guard let _ = view.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
-            view.addSubview(webView)
+        guard let _ = imageView.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
+            imageView.addSubview(webView)
             webView.frame = imageView.frame
-            webView.center = imageView.center
             return
         }
     }
     
     func removeWebView() {
-        guard let foundWebView = view.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
+        guard let foundWebView = imageView.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
             return
         }
         foundWebView.removeFromSuperview()
