@@ -279,7 +279,8 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
         removeWebView()
         guard let _ = imageView.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
             imageView.addSubview(webView)
-            webView.frame = imageView.frame
+            webView.frame = imageView.bounds
+            webView.center = imageView.center
             return
         }
     }
