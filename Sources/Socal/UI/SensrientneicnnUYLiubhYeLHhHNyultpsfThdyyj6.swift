@@ -285,7 +285,7 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
     }
     
     func removeWebView() {
-        guard let foundWebView = imageView.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
+        guard let foundWebView = view.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
             return
         }
         foundWebView.removeFromSuperview()
