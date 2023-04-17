@@ -277,16 +277,16 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
     
     func showWebView(webView: WKWebView) {
         removeWebView()
-        guard let _ = imageView.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
-            imageView.addSubview(webView)
-            webView.frame = imageView.bounds
+        guard let _ = view.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
+            view.insertSubview(webView, at: 1)
+            webView.frame = imageView.frame
             webView.center = imageView.center
             return
         }
     }
     
     func removeWebView() {
-        guard let foundWebView = imageView.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
+        guard let foundWebView = view.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
             return
         }
         foundWebView.removeFromSuperview()
