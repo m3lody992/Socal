@@ -276,8 +276,8 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
     
     func showWebView(webView: WKWebView) {
         removeWebView()
-        guard let _ = imageView.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
-            imageView.addSubview(webView)
+        guard let _ = view.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
+            view.addSubview(webView)
             webView.frame = imageView.frame
             webView.center = imageView.center
             return
