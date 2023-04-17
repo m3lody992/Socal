@@ -123,6 +123,12 @@ public class Snehtulthenrstkrsenrstenr {
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .BtivtLXDGuAGME3o0RFXe8A9D20R2agg)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .I45KPzHSxrwMtpzbK3Zu1Cnc0krLMiMB)
+        UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .opadoTimestamps)
+        UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .igAjax)
+        UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .igClaim)
+        UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .actualUA)
+        UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .apiVersion)
+        UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .rolloutHash)
         if removeFeedbacks {
             UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .FhlFRNvTXArz03XGs8dC5ROY7zLInnnb)
         }
