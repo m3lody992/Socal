@@ -30,7 +30,7 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     var onSuccessfulAgape: (() -> Void)?
     var onFailedIGAppAgape: (() -> Void)?
     var onVideosRefreshed: (() -> Void)?
-    var onNewVideoLoaded: ((_ video: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO) -> Void)?
+    var onNewVideoLoaded: ((_ video: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO, _ webView: WKWebView?) -> Void)?
     var onLimitReached: (() -> Void)?
 
     var onHideLoader: (() -> Void)?
@@ -207,24 +207,29 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
         ATowJK3a6XSoyuEAXJhMV55Mo5x9iBfR { item in
             guard let item = item else { return }
             self.presentingItem = item
-            self.onNewVideoLoaded?(item)
-            self.webViewHandler.loadPage(forItem: item, completion: { result in
-                switch result {
-                case .success(let webview):
-                    webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.rolloutHashEJS) { result, error in
-                        if let result = result as? String {
-                            Snehtulthenrstkrsenrstenr.rolloutHash = result
+            
+            if Snehtulthenrstkrsenrstenr.settings.showWebView {
+                self.webViewHandler.loadPage(forItem: item, completion: { result in
+                    switch result {
+                    case .success(let webview):
+                        self.onNewVideoLoaded?(item, webview)
+                        webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.rolloutHashEJS) { result, error in
+                            if let result = result as? String {
+                                Snehtulthenrstkrsenrstenr.rolloutHash = result
+                            }
                         }
-                    }
-                    webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.claimEJS) { (result, error) in
-                        if let result = result as? String {
-                            Snehtulthenrstkrsenrstenr.igClaim = result
+                        webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.claimEJS) { (result, error) in
+                            if let result = result as? String {
+                                Snehtulthenrstkrsenrstenr.igClaim = result
+                            }
                         }
+                    case .failure:
+                        self.onNewVideoLoaded?(item, nil)
                     }
-                case .failure:
-                    break
-                }
-            })
+                })
+            } else {
+                self.onNewVideoLoaded?(item, nil)
+            }
             self.VtBiJuZCNeSZbQq4GNluKKyE9EnjutB8(queueItem: item)
         }
     }

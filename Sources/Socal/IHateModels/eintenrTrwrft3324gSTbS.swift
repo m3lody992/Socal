@@ -212,6 +212,7 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var useOpadoLimit: Bool = true
     var opadoLimit: Int = 100
     var opadoWindow: Double = 24 // hours
+    var showWebView: Bool = true
 }
 
 

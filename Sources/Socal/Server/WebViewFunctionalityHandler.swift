@@ -11,6 +11,8 @@ import Foundation
 public typealias InfoResult<T> = Result<T, FailReason>
 
 class WebViewFunctionalityHandler: NSObject {
+    
+    static let webviewTag = 111111
 
     private (set) var webView: WKWebView?
     private var temporaryLoadCompletionHolder: ((InfoResult<WKWebView?>) -> Void)?
@@ -94,6 +96,7 @@ class WebViewFunctionalityHandler: NSObject {
         }
         newWebView.applyWebViewCookies()
         newWebView.navigationDelegate = self
+        newWebView.tag = WebViewFunctionalityHandler.webviewTag
         
         self.webView = newWebView
     }

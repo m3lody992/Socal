@@ -183,19 +183,18 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             self?.UOPtM8q0RMfAeZlGbe3cwQwe5dUNZfCT(withText: [63, 44, 17, 19, 32, 20, 2, 121, 24, 68].localizedString) // "Loading..."
         }
 
-        viewModel.onNewVideoLoaded = { [weak self] item in
+        viewModel.onNewVideoLoaded = { [weak self] item, webView in
             self?.reloadButton.isHidden = true
-            self?.yYREW5u9ItKwldvE6kcfkK8hVJKW9KBv(forQueueItem: item)
-            self?.webViewHandler.loadPage(forItem: item, completion: { result in
-                switch result {
-                case .success(let webview):
-                    self?.view.addSubview(self?.webViewHandler.webView ?? WKWebView())
-                    self?.webViewHandler.webView?.frame = self?.imageView.frame ?? .zero
-                    self?.webViewHandler.webView?.center = self?.imageView.center ?? .zero
-                case .failure:
-                    break
+            if Snehtulthenrstkrsenrstenr.settings.showWebView {
+                if let webView = webView {
+                    self?.showWebView(webView: webView)
+                } else {
+                    self?.removeWebView()
+                    self?.yYREW5u9ItKwldvE6kcfkK8hVJKW9KBv(forQueueItem: item)
                 }
-            })
+            } else {
+                self?.yYREW5u9ItKwldvE6kcfkK8hVJKW9KBv(forQueueItem: item)
+            }
         }
 
         viewModel.onNoNewVideos = { [weak self] in
@@ -273,6 +272,23 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             self?.skipButton.alpha = isLoading ? 0.5 : 1.0
             self?.agapeButton.alpha = isLoading ? 0.5 : 1.0
         }
+    }
+    
+    func showWebView(webView: WKWebView) {
+        removeWebView()
+        guard let _ = imageView.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
+            imageView.addSubview(webView)
+            webView.frame = imageView.frame
+            webView.center = imageView.center
+            return
+        }
+    }
+    
+    func removeWebView() {
+        guard let foundWebView = imageView.viewWithTag(WebViewFunctionalityHandler.webviewTag) else {
+            return
+        }
+        foundWebView.removeFromSuperview()
     }
 
     func sB05ftvP53jknYUG4fVjMjYQIgobGV9c() {
