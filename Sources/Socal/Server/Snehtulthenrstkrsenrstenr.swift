@@ -129,9 +129,8 @@ public class Snehtulthenrstkrsenrstenr {
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .actualUA)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .apiVersion)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .rolloutHash)
-        if removeFeedbacks {
-            UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .FhlFRNvTXArz03XGs8dC5ROY7zLInnnb)
-        }
+        UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .FhlFRNvTXArz03XGs8dC5ROY7zLInnnb)
+        
         HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS()
     }
 
