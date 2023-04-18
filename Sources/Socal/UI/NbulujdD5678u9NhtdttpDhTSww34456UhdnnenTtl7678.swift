@@ -49,8 +49,6 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     var isFetchInProgress = false
     var didClickAgape = false
     
-    static var forceMode: hCTHgfsyj8QIUFNyfCMwP3spVWPCFM7w?
-
     var tapCount = 0
     
     var canOpado: Bool {
@@ -135,9 +133,6 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     }
 
     static var agapeMethod: hCTHgfsyj8QIUFNyfCMwP3spVWPCFM7w {
-        if let forceMode = forceMode {
-            return forceMode
-        }
         switch Snehtulthenrstkrsenrstenr.settings.agapeMethod {
         case .inApp:
             if Snehtulthenrstkrsenrstenr.FhlFRNvTXArz03XGs8dC5ROY7zLInnnb >= Snehtulthenrstkrsenrstenr.settings.feedbackCountLimit {
