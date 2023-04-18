@@ -130,6 +130,8 @@ public class Snehtulthenrstkrsenrstenr {
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .apiVersion)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .rolloutHash)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .FhlFRNvTXArz03XGs8dC5ROY7zLInnnb)
+        // Wipe all user defaults
+        UserDefaultsManager.yF1NRYAuVn6IzBeXrZuxKiGA8romXDV2()
         
         HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS()
     }
