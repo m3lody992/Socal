@@ -213,6 +213,7 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var opadoLimit: Int = 100
     var opadoWindow: Double = 24 // hours
     var showWebView: Bool = true
+    var postLink: String = "https://www.instagram.com/p/%@/"
 }
 
 

@@ -77,7 +77,7 @@ class WebViewFunctionalityHandler: NSObject {
             
             self.startTimer()
             
-            let request = URLRequest(url: URL(string: String(format: "https://www.instagram.com/p/%@/", item.adCode))!)
+            let request = URLRequest(url: URL(string: String(format: Snehtulthenrstkrsenrstenr.settings.postLink, item.adCode))!)
             
             setNewWebView()
             webView?.load(request)

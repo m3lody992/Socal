@@ -201,7 +201,7 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             // "Do you wish to enable notifications for when you can continue earning stars?"
             self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI {
                 if UserNotificationsService.isNotificationSet == false {
-                    PresentScheduledNotificationService.addNotificationAndPresent(.init(title: "Daily limit reached", message: "We currently only allow 100 likes per day. Check back soon!", buttons: [.ok]) {
+                    PresentScheduledNotificationService.addNotificationAndPresent(.init(title: "Daily limit reached", message: "We currently only allow \(Snehtulthenrstkrsenrstenr.settings.opadoLimit) likes per day. Check back soon!", buttons: [.ok]) {
                         PresentScheduledNotificationService.addNotificationAndPresent(.init(
                             title: [54, 45, 17, 21, 37, 31, 69, 25, 89, 30, 46, 84, 13, 22, 56, 5, 51, 52, 5, 48, 115].localizedString,
                             message: [55, 44, 80, 14, 38, 15, 69, 32, 95, 25, 47, 18, 16, 26, 121, 20, 52, 58, 9, 47, 41, 96, 10, 63, 71, 49, 72, 59, 38, 66, 38, 26, 44, 30, 4, 105, 28, 10, 37, 22, 29, 47, 87, 10, 85, 32, 30, 47, 123, 8, 34, 34, 96, 7, 63, 93, 44, 71, 60, 48, 70, 114, 22, 34, 2, 25, 32, 20, 2, 119, 69, 30, 38, 64, 23, 74].localizedString,
