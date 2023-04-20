@@ -222,7 +222,7 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                             let finishLogin = { [weak self] in
                                 commonOnLogin()
                                 
-                                self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI {
+                                self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI { [weak self] in
                                     self?.webView?.removeFromSuperview()
                                     self?.webView = nil
                                     UIApplication.shared.windows.first?.rootViewController = kGiVINDyMOSQJfAcdBwvlfPgEahbDkLA()
