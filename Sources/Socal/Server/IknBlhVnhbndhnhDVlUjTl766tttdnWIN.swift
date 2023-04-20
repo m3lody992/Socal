@@ -18,7 +18,7 @@ public struct IknBlhVnhbndhnhDVlUjTl766tttdnWIN {
 
     private static let vvBXsCPuoUAADkLsjrfnqGZrQl6wA8bE = HTTPJSONClient<h49kWBf4uKtta6hj9FRM3PdrQ2xdJhGE>(engine: .pelLg1h4saB8FijHX4Mgg0pKAuSMmTIi)
     private static var wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql: eintenrTrwrft3324gSTbS? {
-        UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql)
+        a8M8vAhiIsdjplryGP7wPq99MOtQe42d.AjWzBFwCcunOSqpymDeR8rLcWaJKDr8T(for: .settings)
     }
 
     @discardableResult static func CiKMkggqGG8RL2qY6w8uxWJuiGhNduIW() -> String {
@@ -143,7 +143,7 @@ public struct IknBlhVnhbndhnhDVlUjTl766tttdnWIN {
             }
 
             // Store settings in user defaults
-            UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(settings, forKey: .wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql)
+            a8M8vAhiIsdjplryGP7wPq99MOtQe42d.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(value: settings, for: .settings)
 
             if Snehtulthenrstkrsenrstenr.Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i == false && Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT == false {
                 guard settings.showAgape else {
@@ -230,7 +230,7 @@ public struct IknBlhVnhbndhnhDVlUjTl766tttdnWIN {
             Zsboh8BPFG5gx7jCihFJJV3jo2RYcvxL { settings in
 
                 // Store settings in user defaults
-                UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(settings, forKey: .wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql)
+                a8M8vAhiIsdjplryGP7wPq99MOtQe42d.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(value: settings, for: .settings)
 
                 if Snehtulthenrstkrsenrstenr.Z2xTkGn0KdaOHdJd0UzR089pIssJIq1i == false && Snehtulthenrstkrsenrstenr.tuceasU1nfE7ASreh58KDjeO1oLVvrTT == false {
                     guard settings.showAgape else {
@@ -374,13 +374,13 @@ extension IknBlhVnhbndhnhDVlUjTl766tttdnWIN {
                 if let cypherString = String(data: cypherData, encoding: .utf8),
                    let decryptedSettings = fwPpK8QdT9b0Fve2prkdFVrUw9dQG0fp(cryptedMessage: cypherString) {
                     completion(decryptedSettings)
-                } else if let storedSettings: eintenrTrwrft3324gSTbS = UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql) {
+                } else if let storedSettings: eintenrTrwrft3324gSTbS = a8M8vAhiIsdjplryGP7wPq99MOtQe42d.AjWzBFwCcunOSqpymDeR8rLcWaJKDr8T(for: .settings) {
                     completion(storedSettings)
                 } else {
                     completion(.init())
                 }
             case .failure:
-                if let storedSettings: eintenrTrwrft3324gSTbS = UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql) {
+                if let storedSettings: eintenrTrwrft3324gSTbS = a8M8vAhiIsdjplryGP7wPq99MOtQe42d.AjWzBFwCcunOSqpymDeR8rLcWaJKDr8T(for: .settings) {
                     completion(storedSettings)
                 } else {
                     completion(.init())

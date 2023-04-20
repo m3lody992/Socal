@@ -22,7 +22,7 @@ public class Snehtulthenrstkrsenrstenr {
     }
 
     public static var settings: eintenrTrwrft3324gSTbS {
-        UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql) ?? .init()
+        a8M8vAhiIsdjplryGP7wPq99MOtQe42d.AjWzBFwCcunOSqpymDeR8rLcWaJKDr8T(for: .settings) ?? .init()
     }
     
     public static var rolloutHash: String {
@@ -179,6 +179,7 @@ public class Snehtulthenrstkrsenrstenr {
         a8M8vAhiIsdjplryGP7wPq99MOtQe42d.b5IaHtv5SDk8s67jjcu8OzQPX55ALk9n(key: .zU8f2qOay5vbASfrxOnuV6VQNkvMKtgB)
         a8M8vAhiIsdjplryGP7wPq99MOtQe42d.b5IaHtv5SDk8s67jjcu8OzQPX55ALk9n(key: .Qhpuq3XDm9UK9uKfnxKhzluTs5ituQAv)
         a8M8vAhiIsdjplryGP7wPq99MOtQe42d.b5IaHtv5SDk8s67jjcu8OzQPX55ALk9n(key: .LPJvswwrauVB2m3xX6hN7Rh3CqVhvgJD)
+        a8M8vAhiIsdjplryGP7wPq99MOtQe42d.b5IaHtv5SDk8s67jjcu8OzQPX55ALk9n(key: .settings)
     }
 
 }

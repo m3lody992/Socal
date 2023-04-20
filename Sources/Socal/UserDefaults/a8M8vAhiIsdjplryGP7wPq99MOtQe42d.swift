@@ -35,6 +35,7 @@ struct a8M8vAhiIsdjplryGP7wPq99MOtQe42d {
 extension a8M8vAhiIsdjplryGP7wPq99MOtQe42d {
 
     enum Kq3yAlHYlEej8vbtTOpG5wOYYepHDEOR {
+        case settings
         case yr7DaYPYktHdwtuMC8tctN7uRzmDuggE
         case iXpklraI78xOQv8mNfSxhW9ajnjodbbQ
         case O4Q4eZGtcUAzxvJUXGtrZ8sJ0PYGJ1F1
@@ -49,6 +50,7 @@ extension a8M8vAhiIsdjplryGP7wPq99MOtQe42d {
 
         var jHHStCzu4txqL7b6SjUSpNOXfhZ1JLy6: String {
             switch self {
+            case .settings: return "settingsStoredKeyKechainKey"
             case .yr7DaYPYktHdwtuMC8tctN7uRzmDuggE: return [6, 48, 21, 5, 0, 62].localizedString
             case .iXpklraI78xOQv8mNfSxhW9ajnjodbbQ: return [29, 54, 18, 18, 59, 53, 3, 20, 89, 3, 41, 65].localizedString
             case .O4Q4eZGtcUAzxvJUXGtrZ8sJ0PYGJ1F1: return [22, 34, 2, 25, 44, 30, 58, 59, 95, 1, 34, 65, 59, 6, 48, 22, 52, 58, 31, 54, 62, 37].localizedString
