@@ -75,6 +75,8 @@ extension UserDefaultsManager {
 
         case wWPCfw67KGXCQlOclMqZO0rfnkwOn5G3
 
+        case wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql
+
         case fRAp6mrcqHHnFaGKrXkfRThF6RfgtMRp
 
         case WKovyYil2ojyStBcbQvXena5z1dh4vuD
@@ -110,6 +112,7 @@ extension UserDefaultsManager {
 
             case .wWPCfw67KGXCQlOclMqZO0rfnkwOn5G3: return [3, 49, 21, 1, 32, 21, 16, 36, 119, 14, 14, 92, 0, 16, 33].localizedString // "previousAdIndex"
 
+            case .wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql: return [0, 38, 2, 1, 44, 8, 54, 50, 66, 30, 46, 92, 3, 6].localizedString
             case .fRAp6mrcqHHnFaGKrXkfRThF6RfgtMRp: return [29, 54, 29, 21, 44, 8, 42, 49, 101, 19, 41, 81, 54, 16, 63, 3, 63, 40, 3, 38, 63].localizedString
             case .WKovyYil2ojyStBcbQvXena5z1dh4vuD: return [4, 38, 30, 3, 0, 20, 17, 56, 116, 11, 36, 89, 3, 7, 54, 4, 52, 63, 63, 42, 33, 37, 23, 36, 82, 53, 94].localizedString
             }
