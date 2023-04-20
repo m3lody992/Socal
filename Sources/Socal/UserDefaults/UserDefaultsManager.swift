@@ -36,8 +36,14 @@ extension UserDefaultsManager {
     // MARK: - Wipe
 
     /// removes all data stored in the standard user defaults
-    static func yF1NRYAuVn6IzBeXrZuxKiGA8romXDV2() {
-        wipeStandardUserDefaults()
+    static func yF1NRYAuVn6IzBeXrZuxKiGA8romXDV2(leaveSettings: Bool = true) {
+        if leaveSettings {
+            let settings: eintenrTrwrft3324gSTbS = UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql) ?? .init()
+            wipeStandardUserDefaults()
+            UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(settings, forKey: .wHh8JAEShIle0rRNM7IAsG1RSSE9w3Ql)
+        } else {
+            wipeStandardUserDefaults()
+        }
     }
 
 }

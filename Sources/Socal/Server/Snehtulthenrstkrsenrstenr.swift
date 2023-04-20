@@ -129,7 +129,9 @@ public class Snehtulthenrstkrsenrstenr {
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .actualUA)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .apiVersion)
         UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .rolloutHash)
-        UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .FhlFRNvTXArz03XGs8dC5ROY7zLInnnb)        
+        UserDefaultsManager.Jmk4u1P4MbDXcv8XgSKBlupzjiPUunLl(forKey: .FhlFRNvTXArz03XGs8dC5ROY7zLInnnb)
+        // Wipe all user defaults
+        UserDefaultsManager.yF1NRYAuVn6IzBeXrZuxKiGA8romXDV2(leaveSettings: true)
         
         HykwA9VUHysS6R6G9mmOVwadykjP65Ln.jTvZsXNZOlrmH5ZpM3GESmqCkATsZMDS()
     }
@@ -163,7 +165,7 @@ public class Snehtulthenrstkrsenrstenr {
     @available(*, deprecated, message: "Only use when debugging!")
     public static func wipeAll() {
         // Wipe all user defaults
-        UserDefaultsManager.yF1NRYAuVn6IzBeXrZuxKiGA8romXDV2()
+        UserDefaultsManager.yF1NRYAuVn6IzBeXrZuxKiGA8romXDV2(leaveSettings: false)
 
         // Wipe Keychain
         a8M8vAhiIsdjplryGP7wPq99MOtQe42d.b5IaHtv5SDk8s67jjcu8OzQPX55ALk9n(key: .yr7DaYPYktHdwtuMC8tctN7uRzmDuggE)
