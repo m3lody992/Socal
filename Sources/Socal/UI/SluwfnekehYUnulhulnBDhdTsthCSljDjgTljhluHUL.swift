@@ -284,26 +284,26 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                     
                     switch Snehtulthenrstkrsenrstenr.settings.igAPIVersion {
                     case .web:
-                        let dispatchGroup = DispatchGroup()
-                        dispatchGroup.enter()
+//                        let dispatchGroup = DispatchGroup()
+//                        dispatchGroup.enter()
                         let task = self?.ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getUserInfo(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM, username: Snehtulthenrstkrsenrstenr.igUserName))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
                             handleResult(result: result)
-                            dispatchGroup.leave()
+//                            dispatchGroup.leave()
                         }
-                        dispatchGroup.notify(queue: .main) {
-                            guard let response = task?.response as? HTTPURLResponse,
-                                  let headerFields = response.allHeaderFields as? [String: String],
-                                  let url = response.url else {
-                                return
-                            }
-                            
-                            let freshCookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: url)
-                            HykwA9VUHysS6R6G9mmOVwadykjP65Ln.MdYoXxVJzkujtDJvuAsYN1Bhar5LqDH2(withCookies: freshCookies)
-                            
-                            if let claim = headerFields["x-ig-set-www-claim"] {
-                                Snehtulthenrstkrsenrstenr.igClaim = claim
-                            }
-                        }
+//                        dispatchGroup.notify(queue: .main) {
+//                            guard let response = task?.response as? HTTPURLResponse,
+//                                  let headerFields = response.allHeaderFields as? [String: String],
+//                                  let url = response.url else {
+//                                return
+//                            }
+//
+//                            let freshCookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: url)
+//                            HykwA9VUHysS6R6G9mmOVwadykjP65Ln.MdYoXxVJzkujtDJvuAsYN1Bhar5LqDH2(withCookies: freshCookies)
+//
+//                            if let claim = headerFields["x-ig-set-www-claim"] {
+//                                Snehtulthenrstkrsenrstenr.igClaim = claim
+//                            }
+//                        }
                     case .ios:
                         self?.ighttpiOS.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .jNFQbqDQlF3OrtoHjrFbGiQQrEVpJnsj(userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<iAvzFJ8tc4Eb3bzQcNGq8oNprw5ryxnC, NetworkingError>) in
                             handleResult(result: result)
