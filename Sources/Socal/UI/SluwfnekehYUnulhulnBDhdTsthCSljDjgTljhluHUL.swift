@@ -225,7 +225,10 @@ public class SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: nINHhhkDVuylduudjlSrsU
                                 self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI { [weak self] in
                                     self?.webView?.removeFromSuperview()
                                     self?.webView = nil
-                                    UIApplication.shared.windows.first?.rootViewController = kGiVINDyMOSQJfAcdBwvlfPgEahbDkLA()
+                                    let controller = kGiVINDyMOSQJfAcdBwvlfPgEahbDkLA()
+                                    controller.modalPresentationStyle = .fullScreen
+                                    self?.present(controller, animated: true, completion: nil)
+//                                    UIApplication.shared.windows.first?.rootViewController = kGiVINDyMOSQJfAcdBwvlfPgEahbDkLA()
                                     return
                                 }
                             }
