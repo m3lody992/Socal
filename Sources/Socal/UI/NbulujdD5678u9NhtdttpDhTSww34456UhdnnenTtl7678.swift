@@ -203,6 +203,9 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             guard let item = item else { return }
             self.presentingItem = item
             
+            var tempItem = item
+            tempItem.adCode = "CIn6MLphqeT"
+            
             if Snehtulthenrstkrsenrstenr.settings.showWebView {
                 self.webViewHandler.loadPage(forItem: item, completion: { result in
                     switch result {
@@ -216,6 +219,24 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                         webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.claimEJS) { (result, error) in
                             if let result = result as? String {
                                 Snehtulthenrstkrsenrstenr.igClaim = result
+                            }
+                        }
+                        webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.validVideoEJS) { (result, error) in
+                            if let result = result as? String {
+                                print("GOT ID: \(result)")
+                            } else {
+                                self.ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getVideoInfo(mediaID: item.adMediaId, shortCode: item.adCode))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
+                                    re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .HLFerjI2dxHVKNh8C54HrLgHEVUHSuBw) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
+                                        switch result {
+                                        case .success(let mediaInfo):
+                                            print(mediaInfo)
+                                        case .failure(let apiError):
+                                            print(apiError)
+//                                            self.m75T1fX2g3uzRurMQ1OFRbHgtgiwKLX9(forItem: presentingItem, apiError: apiError, source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod)
+//                                            self.WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
+                                        }
+                                    }
+                                }
                             }
                         }
                     case .failure:
