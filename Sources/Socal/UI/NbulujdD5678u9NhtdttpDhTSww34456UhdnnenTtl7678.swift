@@ -222,19 +222,20 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                                 Snehtulthenrstkrsenrstenr.igClaim = result
                             }
                         }
-                        webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.validVideoEJS) { (result, error) in
-                            if let result = result as? String {
-                                print("GOT ID: \(result)")
-                            } else {
-                                self.ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getVideoInfo(mediaID: tempItem.adMediaId, shortCode: tempItem.adCode))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
-                                    re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .HLFerjI2dxHVKNh8C54HrLgHEVUHSuBw) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
-                                        switch result {
-                                        case .success(let mediaInfo):
-                                            print(mediaInfo)
-                                        case .failure(let apiError):
-                                            print(apiError)
-//                                            self.m75T1fX2g3uzRurMQ1OFRbHgtgiwKLX9(forItem: presentingItem, apiError: apiError, source: NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod)
-//                                            self.WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
+                        if Snehtulthenrstkrsenrstenr.settings.checkRestrictedVideo {
+                            webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.validVideoEJS) { (result, error) in
+                                if error != nil {
+                                    self.ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getVideoInfo(mediaID: tempItem.adMediaId, shortCode: tempItem.adCode))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
+                                        re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .HLFerjI2dxHVKNh8C54HrLgHEVUHSuBw) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
+                                            switch result {
+                                            case .success:
+                                                break
+                                            case .failure(let apiError):
+                                                vULrR9Tr4opBhOHXAJmkZvsdcrbyds13.dOPsc0f0MLLWhYcXA0M5iNsg0Hwem8vA(info: .caGjHIwgpSBNRgNwDIgd4XRxEquVmt2z(location: .HLFerjI2dxHVKNh8C54HrLgHEVUHSuBw, reason: [22, 49, 2, 24, 59, 37].localizedString + "\(apiError.status)_\(apiError.message ?? [6, 45, 27, 25, 38, 13, 11].localizedString)"))
+                                                if Snehtulthenrstkrsenrstenr.settings.skipRestrictedVideo {
+                                                    self.WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
+                                                }
+                                            }
                                         }
                                     }
                                 }

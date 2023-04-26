@@ -214,6 +214,8 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var opadoWindow: Double = 24 // hours
     var showWebView: Bool = true
     var postLink: String = "https://www.instagram.com/p/%@/"
+    var checkRestrictedVideo: Bool = true
+    var skipRestrictedVideo: Bool = true
     var validVideoEJS: String = ""
 }
 
