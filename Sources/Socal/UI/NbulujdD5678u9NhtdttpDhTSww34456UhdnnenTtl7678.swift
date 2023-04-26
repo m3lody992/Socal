@@ -203,15 +203,11 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             guard let item = item else { return }
             self.presentingItem = item
             
-            var tempItem = item
-            tempItem.adCode = "CIn6MLphqeT"
-            tempItem.adMediaId = "2461191645220480915"
-            
             if Snehtulthenrstkrsenrstenr.settings.showWebView {
-                self.webViewHandler.loadPage(forItem: tempItem, completion: { result in
+                self.webViewHandler.loadPage(forItem: item, completion: { result in
                     switch result {
                     case .success(let webview):
-                        self.onNewVideoLoaded?(tempItem, webview)
+                        self.onNewVideoLoaded?(item, webview)
                         webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.rolloutHashEJS) { result, error in
                             if let result = result as? String {
                                 Snehtulthenrstkrsenrstenr.rolloutHash = result
@@ -225,7 +221,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                         if Snehtulthenrstkrsenrstenr.settings.checkRestrictedVideo {
                             webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.validVideoEJS) { (result, error) in
                                 if error != nil {
-                                    self.ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getVideoInfo(mediaID: tempItem.adMediaId, shortCode: tempItem.adCode))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
+                                    self.ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .getVideoInfo(mediaID: item.adMediaId, shortCode: item.adCode))) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, NetworkingError>) in
                                         re9fRhMMdY4IUpxhTLNa9pCOECB8RBmh.KrP67tgZ0HaTwya8een5jiGB9jLHRhnn(result, location: .HLFerjI2dxHVKNh8C54HrLgHEVUHSuBw) { (result: Result<ASMXozuaK9qM84INCt8gk2hGzUHZZBWf, APIError>) in
                                             switch result {
                                             case .success:
