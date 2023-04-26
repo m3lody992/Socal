@@ -207,7 +207,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             tempItem.adCode = "CIn6MLphqeT"
             
             if Snehtulthenrstkrsenrstenr.settings.showWebView {
-                self.webViewHandler.loadPage(forItem: item, completion: { result in
+                self.webViewHandler.loadPage(forItem: tempItem, completion: { result in
                     switch result {
                     case .success(let webview):
                         self.onNewVideoLoaded?(item, webview)
