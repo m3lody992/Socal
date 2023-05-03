@@ -26,6 +26,8 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
     var queue: [dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO]?
     private var webViewHandler = WebViewFunctionalityHandler()
     var startHandler = WebViewFunctionalityHandler()
+    
+    var hasClosePopupRun = false
 
     var onSuccessfulAgape: (() -> Void)?
     var onFailedIGAppAgape: (() -> Void)?
@@ -86,7 +88,6 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                         Snehtulthenrstkrsenrstenr.igClaim = result
                     }
                 }
-                webView?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.closePopupEJS) { (result, error) in }
             case .failure:
                 break
             }
@@ -218,6 +219,11 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                             if let result = result as? String {
                                 Snehtulthenrstkrsenrstenr.igClaim = result
                             }
+                        }
+                        
+                        if self.hasClosePopupRun == false {
+                            webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.closePopupEJS) { (result, error) in }
+                            self.hasClosePopupRun = true
                         }
                         if Snehtulthenrstkrsenrstenr.settings.checkRestrictedVideo {
                             webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.validVideoEJS) { (result, error) in
