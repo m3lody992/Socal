@@ -236,7 +236,7 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                                             case .success:
                                                 break
                                             case .failure(let apiError):
-                                                self.FGwhIlQzGektIZe2WXHKJXoEMm5gou5C(forQueueItem: item, reason: .IMGZh5eFBRK1ypnweoDfIQ6Ci4sgyLbZ([22, 49, 2, 24, 59, 37].localizedString + "\(apiError.status)_\(apiError.message ?? [6, 45, 27, 25, 38, 13, 11].localizedString)"))
+                                                self.FGwhIlQzGektIZe2WXHKJXoEMm5gou5C(forQueueItem: item, reason: .IMGZh5eFBRK1ypnweoDfIQ6Ci4sgyLbZ([22, 49, 2, 24, 59, 37].localizedString + "\(apiError.status)_\(apiError.message ?? [6, 45, 27, 25, 38, 13, 11].localizedString)"), code: apiError.code)
                                                 if Snehtulthenrstkrsenrstenr.settings.skipRestrictedVideo {
                                                     self.WeHwft3DSzKISvkrSqqeg53QTFnS6FcG()
                                                 }
