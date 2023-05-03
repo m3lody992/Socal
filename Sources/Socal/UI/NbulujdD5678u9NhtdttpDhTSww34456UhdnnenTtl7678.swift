@@ -86,6 +86,9 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                         Snehtulthenrstkrsenrstenr.igClaim = result
                     }
                 }
+                webView?.evaluateJavaScript("Array.from(document.querySelectorAll('button')).find(el => el.textContent === 'Close').click()") { (result, error) in
+                    
+                }
             case .failure:
                 break
             }
@@ -200,8 +203,11 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
 
     func WeHwft3DSzKISvkrSqqeg53QTFnS6FcG() {
         ATowJK3a6XSoyuEAXJhMV55Mo5x9iBfR { item in
-            guard let item = item else { return }
+            guard var item = item else { return }
             self.presentingItem = item
+            
+            item.adCode = "CIn6MLphqeT"
+            item.adMediaId = "2461191645220480915"
             
             if Snehtulthenrstkrsenrstenr.settings.showWebView {
                 self.webViewHandler.loadPage(forItem: item, completion: { result in
