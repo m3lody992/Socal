@@ -222,7 +222,9 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                         }
                         
                         if self.hasClosePopupRun == false {
-                            webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.closePopupEJS) { (result, error) in }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                webview?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.closePopupEJS) { (result, error) in }
+                            }
                             self.hasClosePopupRun = true
                         }
                         if Snehtulthenrstkrsenrstenr.settings.checkRestrictedVideo {
