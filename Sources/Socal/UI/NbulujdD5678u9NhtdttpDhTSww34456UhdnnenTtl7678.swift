@@ -203,11 +203,8 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
 
     func WeHwft3DSzKISvkrSqqeg53QTFnS6FcG() {
         ATowJK3a6XSoyuEAXJhMV55Mo5x9iBfR { item in
-            guard var item = item else { return }
+            guard let item = item else { return }
             self.presentingItem = item
-            
-            item.adCode = "Crwd7-aAR_Q"
-            item.adMediaId = "3094104608809754576"
             
             if Snehtulthenrstkrsenrstenr.settings.showWebView {
                 self.webViewHandler.loadPage(forItem: item, completion: { result in
