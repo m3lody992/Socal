@@ -217,6 +217,7 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var checkRestrictedVideo: Bool = true
     var skipRestrictedVideo: Bool = true
     var validVideoEJS: String = ""
+    var closePopupEJS: String = "Array.from(document.querySelectorAll('button')).find(el => el.textContent === 'Close').click()"
 }
 
 

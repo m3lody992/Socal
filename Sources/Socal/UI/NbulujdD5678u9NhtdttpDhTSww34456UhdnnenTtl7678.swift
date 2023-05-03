@@ -86,9 +86,7 @@ public class NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
                         Snehtulthenrstkrsenrstenr.igClaim = result
                     }
                 }
-                webView?.evaluateJavaScript("Array.from(document.querySelectorAll('button')).find(el => el.textContent === 'Close').click()") { (result, error) in
-                    
-                }
+                webView?.evaluateJavaScript(Snehtulthenrstkrsenrstenr.settings.closePopupEJS) { (result, error) in }
             case .failure:
                 break
             }
