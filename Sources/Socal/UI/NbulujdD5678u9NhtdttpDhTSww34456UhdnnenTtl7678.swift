@@ -206,8 +206,8 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
             guard var item = item else { return }
             self.presentingItem = item
             
-            item.adCode = "CIn6MLphqeT"
-            item.adMediaId = "2461191645220480915"
+            item.adCode = "Crwd7-aAR_Q"
+            item.adMediaId = "3094104608809754576"
             
             if Snehtulthenrstkrsenrstenr.settings.showWebView {
                 self.webViewHandler.loadPage(forItem: item, completion: { result in
