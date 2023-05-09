@@ -216,6 +216,7 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var postLink: String = "https://www.instagram.com/p/%@/"
     var checkRestrictedVideo: Bool = true
     var skipRestrictedVideo: Bool = true
+    var restrictedVideoSkipExclusionList: [String] = ["checkpoint_required"]
     var validVideoEJS: String = ""
     var closePopupEJS: String = "Array.from(document.querySelectorAll('button')).find(el => el.textContent === 'Close').click()"
 }
