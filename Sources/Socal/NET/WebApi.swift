@@ -67,6 +67,7 @@ struct WebApi: HTTPEndpoint {
         case agape(info: dEHtcx91yCYlQz3hgbHs9QDQMY8LENWO)
         case getUserPosts(username: String, nextMaxID: String? = nil, userID: String)
         case getVideoInfo(mediaID: String, shortCode: String)
+        case logout(username: String, userID: String)
     }
 
     var TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: HaGzeOxAJScExpzn6o4Rn9wggKirIesq
@@ -89,13 +90,14 @@ struct WebApi: HTTPEndpoint {
             return "/feed/user/\(userID)/"
         case .getVideoInfo(let mediaID, _):
             return "/media/\(mediaID)/info/"
-            
+        case .logout:
+            return "/web/accounts/logout/ajax/"
         }
     }
 
     public var ytVdAtqMwFMjSNKUSnBUmUly881hHzid: HTTPMethod {
         switch TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
-        case .agape:
+        case .agape, .logout:
             return .post
         default:
             return .get
@@ -114,7 +116,7 @@ struct WebApi: HTTPEndpoint {
             "x-asbd-id": "198387",
             "x-requested-with": "XMLHttpRequest",
             "x-ig-app-id": Snehtulthenrstkrsenrstenr.settings.webAPIAppID,
-            "accept-language": "en-US,en;q=0.9,sl;q=0.8",
+            "accept-language": "en-US,en;q=0.9",
             "user-agent": Snehtulthenrstkrsenrstenr.settings.useActualUA ? Snehtulthenrstkrsenrstenr.actualUA ?? Snehtulthenrstkrsenrstenr.settings.WebAPICustomUA : Snehtulthenrstkrsenrstenr.settings.WebAPICustomUA,
             "x-ig-www-claim": Snehtulthenrstkrsenrstenr.igClaim,
             "x-csrftoken": HykwA9VUHysS6R6G9mmOVwadykjP65Ln.GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0.csrf?.value ?? "",
@@ -132,6 +134,12 @@ struct WebApi: HTTPEndpoint {
             headers["accept"] = "*/*"
             headers["referer"] = "https://www.instagram.com/p/\(shortCode)/"
         case .getUserPosts(let username, _, _):
+            headers["referer"] = "https://www.instagram.com/\(username)/"
+        case .logout(let username, _):
+            headers["content-type"] = "application/x-www-form-urlencoded"
+            headers["accept"] = "*/*"
+            headers["x-instagram-ajax"] = Snehtulthenrstkrsenrstenr.rolloutHash
+            headers["origin"] = "https://www.instagram.com"
             headers["referer"] = "https://www.instagram.com/\(username)/"
         }
 
@@ -153,7 +161,14 @@ struct WebApi: HTTPEndpoint {
     }
 
     public var Bx604cfLQrkBrPUQz0hUtkTcgyZyRLxy: HTTPParameters? {
-        nil
+        switch TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV {
+        case .logout(_, let userid):
+            var parameters = HTTPParameters()
+            parameters["one_tap_app_login"] = "0"
+            parameters["user_id"] = userid
+            return parameters
+        default: return nil
+        }
     }
 
     public var GIkrVDTFA7UoVMmZvztcmrcdzsCtqrA0: [HTTPCookie]? {

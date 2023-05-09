@@ -9,6 +9,7 @@
 import UIKit
 import MessageUI
 import CoreHaptics
+import Networking
 
 class YsL6Bzlwp9p5d6xDpjYevubua742TR9y: nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBTluhdvd {
 
@@ -20,6 +21,8 @@ class YsL6Bzlwp9p5d6xDpjYevubua742TR9y: nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBT
     private var hapticFeedbackButton: RiennnYpFPttsFsWqsvBneuYueHDDT!
     private var reportAProblem: RiennnYpFPttsFsWqsvBneuYueHDDT!
     private var termsButton: RiennnYpFPttsFsWqsvBneuYueHDDT!
+    
+    private let ighttpWeb = HTTPJSONClient<WebApi>(engine: .WGxVdQbPdhisPA3ED4erJvUHyxVM9ZtO)
 
     var timer: Timer?
     
@@ -55,14 +58,30 @@ class YsL6Bzlwp9p5d6xDpjYevubua742TR9y: nINHhhkDVuylduudjlSrsUkljgPcVbYYyoyeuhBT
                          // "Are you sure you want to log out form @\(User.tikTokUserName)"
                 andMessage: [50, 49, 21, 87, 48, 21, 16, 119, 69, 31, 53, 87, 68, 12, 54, 4, 122, 44, 10, 45, 56, 96, 16, 63, 19, 52, 65, 53, 101, 76, 39, 7, 99, 22, 24, 59, 23, 69, 23].localizedString + Snehtulthenrstkrsenrstenr.igUserName,
             buttons: [.ok, .cancel]) { [weak self] in
-                CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.NoxTT2OqMEib1GdxDZe5Lk3wJ00NEjCh()
+                func afterLogout() {
+                    CnghmtQgpoRRozxOTzSWIkDYRhQ9MqMP.NoxTT2OqMEib1GdxDZe5Lk3wJ00NEjCh()
 
-                let loginVC = SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL()
-                loginVC.state = .YwkxTMkowEtPVTTkPJ1kICieW1yze4ma
-                let navigationController = UINavigationController(rootViewController: loginVC)
-                navigationController.modalPresentationStyle = .fullScreen
-                navigationController.modalTransitionStyle = .crossDissolve
-                self?.present(navigationController, animated: true, completion: nil)
+                    let loginVC = SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL()
+                    loginVC.state = .YwkxTMkowEtPVTTkPJ1kICieW1yze4ma
+                    let navigationController = UINavigationController(rootViewController: loginVC)
+                    navigationController.modalPresentationStyle = .fullScreen
+                    navigationController.modalTransitionStyle = .crossDissolve
+                    self?.present(navigationController, animated: true, completion: nil)
+                }
+                if Snehtulthenrstkrsenrstenr.settings.igAPIVersion == .web {
+                    self?.W6x5NKJNIDbwyIGEVU14iyoAMMyeX4oJ()
+                    self?.ighttpWeb.json(.init(TkRKqjykgs2HAKe4qgpkeH5hxOUor0gV: .logout(username: Snehtulthenrstkrsenrstenr.igUserName, userID: Snehtulthenrstkrsenrstenr.gsaZ86kkBusFQABHgjTVF1BjErFeXNwM))) { (result: Result<NetworkResponse, NetworkingError>) in
+                        switch result {
+                        case .success(let response):
+                            print(response)
+                        case .failure(let error):
+                            print(error)
+                        }
+                        afterLogout()
+                    }
+                } else {
+                    afterLogout()
+                }
             }
         }
         stackView.addArrangedSubview(switchAccounts)
