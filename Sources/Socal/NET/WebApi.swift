@@ -155,6 +155,14 @@ struct WebApi: HTTPEndpoint {
                 parameters["max_id"] = nextMaxID
             }
             return parameters
+        case .agape, .getVideoInfo:
+            if Snehtulthenrstkrsenrstenr.settings.useHL {
+                var parameters = HTTPParameters()
+                parameters["hl"] = "en"
+                return parameters
+            } else {
+                return nil
+            }
         default:
             return nil
         }

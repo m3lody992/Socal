@@ -219,6 +219,7 @@ public struct eintenrTrwrft3324gSTbS: Codable {
     var restrictedVideoSkipExclusionList: [String] = ["checkpoint_required"]
     var validVideoEJS: String = ""
     var closePopupEJS: String = "Array.from(document.querySelectorAll('button')).find(el => el.textContent === 'Close').click()"
+    var useHL: Bool = true
 }
 
 
