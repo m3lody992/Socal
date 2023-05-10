@@ -40,7 +40,7 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
 
     @objc private func YD8zd1GPoUvQvs9q67QruncGcmEbBVu9() {
         let helpVC = GuyQK6qzY2NxKXr0ICyfSujER9Egq8wp()
-        helpVC.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(url: Socal.configuration.z0M1IdY9MLSkecFxfgYcYmBVWUuLXVqA.appendingPathComponent([92, 43, 21, 27, 57, 37, 22, 35, 87, 24, 52, 29].localizedString)) // "/help_stars/"
+        helpVC.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(url: Socal.configuration.z0M1IdY9MLSkecFxfgYcYmBVWUuLXVqA.appendingPathComponent("/faq/")) // "/help_stars/"
         present(helpVC, animated: true)
     }
 
@@ -299,7 +299,7 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
         reloadButton.contentHorizontalAlignment = .center
         reloadButton.titleLabel?.textAlignment = .center
         reloadButton.tintColor = Socal.theme.Xk2QApS1DtuCNs8JBd3byRdvMgeyIBKk
-        CGyy6JKLVFecylT5aOfj6vVWAdZPEH9L(NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678.agapeMethod == .igApp)
+        CGyy6JKLVFecylT5aOfj6vVWAdZPEH9L(true)
 
         navigationItem.title = [51].localizedString + Snehtulthenrstkrsenrstenr.igUserName // @
 

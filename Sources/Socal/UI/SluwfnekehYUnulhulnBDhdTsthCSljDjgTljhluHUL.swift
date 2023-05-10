@@ -326,7 +326,7 @@ extension SluwfnekehYUnulhulnBDhdTsthCSljDjgTljhluHUL: WKNavigationDelegate, WKU
 
     @objc func mprQ2EqLwNfc2CcUGTAGQp1XwcDkWOyg() {
         let helpVC = GuyQK6qzY2NxKXr0ICyfSujER9Egq8wp()
-        helpVC.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(url: Socal.configuration.z0M1IdY9MLSkecFxfgYcYmBVWUuLXVqA.appendingPathComponent([92, 43, 21, 27, 57, 37, 9, 56, 81, 3, 41, 29].localizedString)) // "/help_login/"
+        helpVC.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(url: Socal.configuration.z0M1IdY9MLSkecFxfgYcYmBVWUuLXVqA.appendingPathComponent("/faq/")) // "/help_login/"
         present(helpVC, animated: true)
     }
 
