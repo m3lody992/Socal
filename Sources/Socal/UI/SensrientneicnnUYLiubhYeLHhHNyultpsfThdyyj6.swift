@@ -179,6 +179,7 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
 
         viewModel.onNoNewVideos = { [weak self] in
             DispatchQueue.main.async {
+                self?.removeWebView()
                 self?.unavailableVideoImageView.isHidden = true
                 self?.imageView.image = nil
                 self?.GPDA7xAfrmUstbwkNL8w8L28c51RQ5GI()
