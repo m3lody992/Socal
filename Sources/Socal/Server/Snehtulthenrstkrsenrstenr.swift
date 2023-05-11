@@ -26,12 +26,12 @@ public class Snehtulthenrstkrsenrstenr {
     }
     
     public static var rolloutHash: String {
-        get { return UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .rolloutHash) ?? [].localizedString }
+        get { return UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .rolloutHash) ?? "0" }
         set { UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(newValue, forKey: .rolloutHash) }
     }
     
     static var igClaim: String {
-        get { return UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .igClaim) ?? [].localizedString }
+        get { return UserDefaultsManager.jQXRAKVj43eXoUpbah4Xgn3fsTHNSYlm(forKey: .igClaim) ?? "0" }
         set { UserDefaultsManager.FytxgduoKz4vaBzouUnRJCXRNVCSFboV(newValue, forKey: .igClaim) }
     }
     
