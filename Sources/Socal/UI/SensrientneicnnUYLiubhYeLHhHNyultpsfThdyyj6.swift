@@ -294,10 +294,10 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
         reloadButton.kf.setImage(with: Constants.o9QA65W7hyYLhG2ABWX4MHIsGQFi7ZXV.jtNA2t35qVqBSHYfSm5ry4Hnd88CpMEa.jIErgouNlNjcsTXmvS6wRcTIc5dPs9Z5, for: .normal, options: ennenehDdLbTHNBeiyjNikdtfSHCAWwliKB.Options.eKnlldDtpsfpdgHvdctsPSgdhNLJDGtvtBDHHNhj, completionHandler: { [weak self] retrieveResult in
             if case .success(let result) = retrieveResult {
                 self?.reloadButton.setImage(result.image.wMgrHmu9sm9PLf2ghUMf2LeKyGOxl6Dm(targetSize: .init(width: 32, height: 32)), for: .normal)
+                self?.reloadButton.imageView?.image?.withRenderingMode(.alwaysTemplate)
             }
         })
         reloadButton.imageView?.contentMode = .scaleAspectFit
-        reloadButton.imageView?.image?.withRenderingMode(.alwaysTemplate)
         reloadButton.setInsets(forContentPadding: .init(top: 0, left: 0, bottom: 0, right: 2), imageTitlePadding: 8)
         reloadButton.contentHorizontalAlignment = .center
         reloadButton.titleLabel?.textAlignment = .center
