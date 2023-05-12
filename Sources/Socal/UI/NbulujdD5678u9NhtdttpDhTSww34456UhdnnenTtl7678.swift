@@ -265,8 +265,6 @@ extension NbulujdD5678u9NhtdttpDhTSww34456UhdnnenTtl7678 {
         }
 
         let popQueueItemAndReturn = { [weak self] in
-            self?.onNoNewVideos?()
-            return
             guard let count = self?.queue?.count, count > 0 else {
                 self?.isFetchInProgress = false
                 self?.onNoNewVideos?()
