@@ -297,10 +297,13 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             }
         })
         reloadButton.imageView?.contentMode = .scaleAspectFit
+        reloadButton.imageView?.image?.withRenderingMode(.alwaysTemplate)
         reloadButton.setInsets(forContentPadding: .init(top: 0, left: 0, bottom: 0, right: 2), imageTitlePadding: 8)
         reloadButton.contentHorizontalAlignment = .center
         reloadButton.titleLabel?.textAlignment = .center
         reloadButton.tintColor = Socal.theme.Xk2QApS1DtuCNs8JBd3byRdvMgeyIBKk
+        reloadButton.titleLabel?.numberOfLines = 0
+        reloadButton.titleLabel?.font = .systemFont(ofSize: 13)
         CGyy6JKLVFecylT5aOfj6vVWAdZPEH9L(true)
 
         navigationItem.title = [51].localizedString + Snehtulthenrstkrsenrstenr.igUserName // @
