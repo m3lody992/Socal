@@ -172,6 +172,7 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             if item.adMeta == [53, 2, 60, 59, 11, 59, 38, 28].localizedString, Snehtulthenrstkrsenrstenr.settings.useFallback { // "Fallback"
                 self?.removeWebView()
                 self?.yYREW5u9ItKwldvE6kcfkK8hVJKW9KBv(forQueueItem: item)
+                return
             }
             
             if Snehtulthenrstkrsenrstenr.settings.showWebView {
