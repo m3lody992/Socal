@@ -295,6 +295,7 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
             if case .success(let result) = retrieveResult {
                 self?.reloadButton.setImage(result.image.wMgrHmu9sm9PLf2ghUMf2LeKyGOxl6Dm(targetSize: .init(width: 32, height: 32)), for: .normal)
                 self?.reloadButton.imageView?.image?.withRenderingMode(.alwaysTemplate)
+                self?.reloadButton.imageView?.tintColor = Socal.theme.Xk2QApS1DtuCNs8JBd3byRdvMgeyIBKk
             }
         })
         reloadButton.imageView?.contentMode = .scaleAspectFit
