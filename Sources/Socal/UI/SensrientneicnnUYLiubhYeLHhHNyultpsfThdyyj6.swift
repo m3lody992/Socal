@@ -89,7 +89,7 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
         
         reloadButton = RiennnYpFPttsFsWqsvBneuYueHDDT()
         reloadButton.backgroundColor = .darkGray
-        reloadButton.translatesAutoresizingMaskIntoConstraints = true
+        reloadButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(reloadButton)
         
         unavailableVideoImageView = UIImageView()
