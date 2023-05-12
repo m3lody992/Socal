@@ -166,9 +166,6 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
         viewModel.onNewVideoLoaded = { [weak self] item, webView in
             self?.reloadButton.isHidden = true
             
-            var item = item
-            item.adMeta = [53, 2, 60, 59, 11, 59, 38, 28].localizedString
-            
             if item.adMeta == [53, 2, 60, 59, 11, 59, 38, 28].localizedString, Snehtulthenrstkrsenrstenr.settings.useFallback { // "Fallback"
                 self?.removeWebView()
                 self?.yYREW5u9ItKwldvE6kcfkK8hVJKW9KBv(forQueueItem: item)
@@ -314,6 +311,7 @@ public class SensrientneicnnUYLiubhYeLHhHNyultpsfThdyyj6: nINHhhkDVuylduudjlSrsU
         reloadButton.tintColor = Socal.theme.Xk2QApS1DtuCNs8JBd3byRdvMgeyIBKk
         reloadButton.titleLabel?.numberOfLines = 0
         reloadButton.titleLabel?.font = .systemFont(ofSize: 13)
+        reloadButton.isHidden = true
         CGyy6JKLVFecylT5aOfj6vVWAdZPEH9L(true)
 
         navigationItem.title = [51].localizedString + Snehtulthenrstkrsenrstenr.igUserName // @
